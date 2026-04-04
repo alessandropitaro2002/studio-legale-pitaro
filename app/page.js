@@ -67,26 +67,23 @@ export default function LandingPage() {
       <main>
         <section id="home" className="relative overflow-hidden scroll-mt-24">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(123,90,54,0.12),transparent_30%),radial-gradient(circle_at_bottom_left,rgba(66,52,39,0.08),transparent_35%)]" />
-          <div className="relative mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 sm:py-20 lg:grid-cols-[1.15fr_0.85fr] lg:px-8 lg:py-28">
-            <div className="max-w-3xl">
-              <div className="mb-5 inline-flex max-w-full rounded-full border border-[#d9cec0] bg-white/60 px-3 py-2 text-[10px] font-medium uppercase tracking-[0.16em] text-[#7d6d5b] shadow-sm sm:px-4 sm:text-[11px] sm:tracking-[0.22em]">
-                Assistenza legale con serietà, chiarezza e visione strategica
+          <div className="relative mx-auto grid max-w-7xl gap-8 px-4 py-12 sm:px-6 sm:py-20 lg:grid-cols-[1.15fr_0.85fr] lg:gap-10 lg:px-8 lg:py-28">
+            x max-w-3xl flex-col items-center text-center lg:mx-0 lg:items-start lg:text-left">
+              <div className="mb-5 inline legale con serietà, chiarezza e visione strategica
               </div>
 
-              <h1 className="text-3xl font-semibold leading-[1.08] tracking-[-0.03em] sm:text-4xl md:text-6xl lg:text-7xl">
+              <h1 className="max-w-[12ch] text-4xl font-semibold leading-[1.02] tracking-[-0.04em] sm:max-w-none sm:text-4xl md:text-6xl lg:text-7xl">
                 Studio Legale
                 <br />
                 Giuseppe Pitaro
               </h1>
 
-              <p className="mt-6 max-w-2xl text-base leading-7 text-[#5f5449] sm:text-lg sm:leading-8 md:text-xl">
+         :text-xl">
                 Dal 1993 titolare dello Studio Legale Pitaro a Catanzaro, l&apos;Avv.
                 Giuseppe Pitaro offre assistenza e consulenza legale con un profilo
-                costruito su oltre 30 anni di esperienza, competenza multidisciplinare e
-                attenzione rigorosa alla tutela degli interessi del cliente.
-              </p>
+                costruito su oltre 30 anni di esperienza, competenza multidi    </p>
 
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <div className="mt-8 flex w-full max-w-sm flex-col gap-3 sm:max-w-none sm:flex-row">
                 <a
                   href="#contatti"
                   className="rounded-full bg-[#1f1a17] px-6 py-3 text-center text-sm font-medium text-white shadow-lg shadow-[#1f1a17]/10 transition hover:-translate-y-0.5 sm:px-7"
@@ -95,42 +92,28 @@ export default function LandingPage() {
                 </a>
                 <a
                   href="#aree"
-                  className="rounded-full border border-[#cdbfaa] bg-white/70 px-6 py-3 text-center text-sm font-medium text-[#1f1a17] transition hover:bg-white sm:px-7"
+              -white/70 px-6 py-3 text-center text-sm font-medium text-[#1f1a17] transition hover:bg-white sm:px-7"
                 >
-                  Scopri le aree di attività
-                </a>
-              </div>
-            </div>
-
-            <div className="lg:pl-8">
-              <div className="rounded-[2rem] border border-[#d8ccbc] bg-white/70 p-4 shadow-[0_20px_80px_rgba(40,27,16,0.08)] backdrop-blur">
-                <div className="rounded-[1.6rem] border border-[#ece3d8] bg-[#fcfaf7] p-8">
-                  <div className="flex items-center justify-between border-b border-[#eee4d8] pb-5">
+                  Scopri le aree di aiv className="rounded-[2rem] border border-[#d8ccbc] bg-white/80 p-3 shadow-[0_20px_80px_rgba(40,27,16,0.08)] backdrop-blur sm:p-4">
+                <div className="rounded-[1.6rem] border border-[#ece3d8] bg-[#fcfaf7] p-6 sm:p-8">
+                  <div className="flex items-center justify-between border-b border-[#eee4d8] pb-4 sm:pb-5">
                     <div>
                       <p className="text-xs uppercase tracking-[0.22em] text-[#8b7a68]">
                         Profilo professionale
                       </p>
-                      <h2 className="mt-2 text-2xl font-semibold tracking-tight">
-                        Esperienza, rigore e tutela legale.
-                      </h2>
+                      <h2 className="mt-2 text-xl font-semibold trac                        Esperienza, rigore e tutela legale.
                     </div>
-                    <div className="h-3 w-3 rounded-full bg-[#7b5a36]" />
-                  </div>
 
-                  <div className="mt-6 space-y-4">
+                  <div className="mt-5 space-y-3 sm:mt-6 sm:space-y-4">
                     {[
-                      'Oltre 30 anni di esperienza legale maturata in molteplici settori del diritto.',
-                      'Patrocinante in Cassazione, con attività anche dinanzi al Consiglio di Stato.',
-                      'Approccio fondato su rigore, dedizione e difesa concreta del cliente.',
-                    ].map((item) => (
+                      'Oltre 30 anni di esperi     'Patrocinante in Cassazione, con attività anche dinanzi al Consiglio di Stato.',
+                                 ].map((item) => (
                       <div
                         key={item}
-                        className="rounded-2xl border border-[#eee4d8] bg-white px-4 py-4 text-sm leading-7 text-[#5f5449]"
+                        className="rounded-2xl border border-[#eee4d8] bg-white px-4 py-3 text-sm leading-6 text-[#5f5449] sm:py-4 sm:leading-7"
                       >
                         {item}
-                      </div>
-                    ))}
-                  </div>
+            </div>
                 </div>
               </div>
             </div>
@@ -141,8 +124,7 @@ export default function LandingPage() {
           id="avvocato"
           className="mx-auto max-w-7xl scroll-mt-24 px-4 py-14 sm:px-6 sm:py-20 lg:px-8 lg:py-24"
         >
-          <div className="mb-10 max-w-3xl">
-            <p className="text-sm font-medium uppercase tracking-[0.22em] text-[#8b7a68]">
+          <div className="mb-10 max-w-3ext-sm font-medium uppercase tracking-[0.22em] text-[#8b7a68]">
               L&apos;Avv. Giuseppe Pitaro
             </p>
             <h2 className="mt-4 text-2xl font-semibold tracking-[-0.03em] sm:text-3xl md:text-5xl">
@@ -151,8 +133,7 @@ export default function LandingPage() {
           </div>
 
           <div className="grid gap-6 lg:grid-cols-[0.88fr_1.12fr] lg:items-stretch lg:gap-8">
-            <div className="rounded-[2rem] border border-[#ddd1c2] bg-white/70 p-4 shadow-[0_20px_80px_rgba(40,27,16,0.08)]">
-              <div className="overflow-hidden rounded-[1.6rem] border border-[#ece3d8] bg-[#fcfaf7]">
+            <div className="rounded-[2rem] border border-[verflow-hidden rounded-[1.6rem] border border-[#ece3d8] bg-[#fcfaf7]">
                 <img
                   src="/avv-giuseppe-pitaro.jpg"
                   alt="Avvocato Giuseppe Pitaro"
