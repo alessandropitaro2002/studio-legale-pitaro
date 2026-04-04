@@ -36,14 +36,9 @@ export default function LandingPage() {
     <div className="min-h-screen scroll-smooth bg-[#f7f4ee] text-[#1f1a17]">
       <header className="sticky top-0 z-50 border-b border-[#d9cec0]/70 bg-[#f7f4ee]/90 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
-          <div className="flex flex-col">
-            <span className="text-[11px] uppercase tracking-[0.25em] text-[#7d6d5b]">
-              Studio Legale
-            </span>
-            <span className="text-base font-semibold tracking-[0.03em] md:text-lg">
-              Giuseppe Pitaro
-            </span>
-          </div>
+          <div className="text-base font-semibold tracking-[0.03em] md:text-lg">
+              Studio Legale Giuseppe Pitaro
+            </div>
 
           <nav className="hidden items-center gap-8 text-sm font-medium md:flex">
             <a href="#home" className="transition hover:text-[#7b5a36]">
@@ -257,8 +252,14 @@ export default function LandingPage() {
 
               <div className="mt-8 space-y-4">
                 <a
-                  href="mailto:studiolegalepitaro@libero.it"
+                  href="tel:+39335286550"
                   className="block rounded-full bg-[#1f1a17] px-6 py-3 text-center text-sm font-medium text-white transition hover:opacity-95"
+                >
+                  Chiama
+                </a>
+                <a
+                  href="mailto:studiolegalepitaro@libero.it"
+                  className="block rounded-full border border-[#1f1a17] px-6 py-3 text-center text-sm font-medium text-[#1f1a17] transition hover:bg-[#1f1a17] hover:text-white"
                 >
                   Invia una email
                 </a>
@@ -277,7 +278,7 @@ export default function LandingPage() {
       <footer className="border-t border-[#ddd1c2] bg-[#f3eee6]">
         <div className="mx-auto flex max-w-7xl flex-col gap-3 px-6 py-8 text-sm text-[#6d6053] lg:flex-row lg:items-center lg:justify-between lg:px-8">
           <p>© 2026 Studio Legale Giuseppe Pitaro. Tutti i diritti riservati.</p>
-          <p>One-page moderna con navigazione interna alle sezioni e stile istituzionale premium.</p>
+          
         </div>
       </footer>
     </div>
