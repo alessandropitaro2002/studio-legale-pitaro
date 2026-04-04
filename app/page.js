@@ -111,7 +111,7 @@ export default function LandingPage() {
                         Profilo professionale
                       </p>
                       <h2 className="mt-2 text-2xl font-semibold tracking-tight">
-                        Eleganza, metodo, tutela.
+                        Esperienza, rigore e tutela legale.
                       </h2>
                     </div>
                     <div className="h-3 w-3 rounded-full bg-[#7b5a36]" />
@@ -146,7 +146,7 @@ export default function LandingPage() {
               L&apos;Avv. Giuseppe Pitaro
             </p>
             <h2 className="mt-4 text-2xl font-semibold tracking-[-0.03em] sm:text-3xl md:text-5xl">
-              Un profilo professionale autorevole, presentato con eleganza.
+              Oltre 30 anni di esperienza al servizio di privati, imprese ed enti pubblici.
             </h2>
           </div>
 
