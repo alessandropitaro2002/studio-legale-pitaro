@@ -40,7 +40,7 @@ export default function LandingPage() {
             <img
               src="/logo-pitaro.png"
               alt="Logo Studio Legale Giuseppe Pitaro"
-              className="h-10 w-auto object-contain"
+              className="h-16 w-auto object-contain"
             />
             <div className="text-base font-semibold tracking-[0.03em] md:text-lg">
               Studio Legale Giuseppe Pitaro
