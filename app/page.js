@@ -77,7 +77,7 @@ export default function LandingPage() {
           <div className="relative mx-auto grid max-w-7xl gap-14 px-6 py-20 lg:grid-cols-[1.15fr_0.85fr] lg:px-8 lg:py-28">
             <div className="max-w-3xl">
               <div className="mb-6 inline-flex rounded-full border border-[#d9cec0] bg-white/60 px-4 py-2 text-[11px] font-medium uppercase tracking-[0.22em] text-[#7d6d5b] shadow-sm">
-                Assistenza legale con serieta, chiarezza e visione strategica
+                Assistenza legale con serietà, chiarezza e visione strategica
               </div>
 
               <h1 className="text-4xl font-semibold leading-[1.05] tracking-[-0.03em] md:text-6xl lg:text-7xl">
@@ -167,7 +167,7 @@ export default function LandingPage() {
                 Titolare dal 1993 dello Studio Legale Pitaro a Catanzaro, l&apos;Avv. Giuseppe Pitaro si e distinto nel tempo per competenza, dedizione e capacita di affrontare controversie complesse in diversi ambiti del diritto. La sua esperienza professionale comprende attivita a tutela delle pubbliche amministrazioni e procedimenti promossi contro le medesime, con risultati di particolare rilievo in materia amministrativa, elettorale, urbanistica, sanitaria e negli appalti pubblici.
               </p>
               <p className="mt-6 text-lg leading-8 text-[#564b41]">
-                Tra i successi professionali piu significativi si segnala il ricorso contro lo scioglimento del Comune di Guardavalle, uno dei pochissimi casi vinti in Italia, oltre all&apos;intervento sugli espropri della S.S. 182 a tutela dei proprietari coinvolti. Patrocinante in Cassazione, garantisce assistenza e consulenza legale di alto livello con un metodo improntato a serieta, determinazione e precisione.
+                Tra i successi professionali piu significativi si segnala il ricorso contro lo scioglimento del Comune di Guardavalle, uno dei pochissimi casi vinti in Italia, oltre all&apos;intervento sugli espropri della S.S. 182 a tutela dei proprietari coinvolti. Patrocinante in Cassazione, garantisce assistenza e consulenza legale di alto livello con un metodo improntato a serietà, determinazione e precisione.
               </p>
               <div className="mt-8 grid gap-4 md:grid-cols-2">
                 {[
