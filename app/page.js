@@ -35,17 +35,10 @@ export default function LandingPage() {
   return (
     <div className="min-h-screen scroll-smooth bg-[#f7f4ee] text-[#1f1a17]">
       <header className="sticky top-0 z-50 border-b border-[#d9cec0]/70 bg-[#f7f4ee]/90 backdrop-blur-xl">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
-          <div className="flex items-center gap-3">
-            <img
-              src="/logo-pitaro.png"
-              alt="Logo Studio Legale Giuseppe Pitaro"
-              className="h-24 w-auto object-contain"
-            />
-            <div className="text-base font-semibold tracking-[0.03em] md:text-lg">
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
+          <div className="whitespace-nowrap text-sm font-serif font-semibold tracking-[0.01em] text-[#2a221d] sm:text-base md:text-lg">
               Studio Legale Giuseppe Pitaro
             </div>
-          </div>
 
           <nav className="hidden items-center gap-8 text-sm font-medium md:flex">
             <a href="#home" className="transition hover:text-[#7b5a36]">
@@ -64,7 +57,7 @@ export default function LandingPage() {
 
           <a
             href="#contatti"
-            className="rounded-full border border-[#1f1a17] px-4 py-2 text-sm font-medium transition hover:bg-[#1f1a17] hover:text-white"
+            className="rounded-full border border-[#1f1a17] px-3 py-2 text-xs font-medium transition hover:bg-[#1f1a17] hover:text-white sm:px-4 sm:text-sm"
           >
             Richiedi un contatto
           </a>
@@ -77,7 +70,7 @@ export default function LandingPage() {
           <div className="relative mx-auto grid max-w-7xl gap-14 px-6 py-20 lg:grid-cols-[1.15fr_0.85fr] lg:px-8 lg:py-28">
             <div className="max-w-3xl">
               <div className="mb-6 inline-flex rounded-full border border-[#d9cec0] bg-white/60 px-4 py-2 text-[11px] font-medium uppercase tracking-[0.22em] text-[#7d6d5b] shadow-sm">
-                Assistenza legale con serietà, chiarezza e visione strategica
+                Assistenza legale con serieta, chiarezza e visione strategica
               </div>
 
               <h1 className="text-4xl font-semibold leading-[1.05] tracking-[-0.03em] md:text-6xl lg:text-7xl">
@@ -167,7 +160,7 @@ export default function LandingPage() {
                 Titolare dal 1993 dello Studio Legale Pitaro a Catanzaro, l&apos;Avv. Giuseppe Pitaro si e distinto nel tempo per competenza, dedizione e capacita di affrontare controversie complesse in diversi ambiti del diritto. La sua esperienza professionale comprende attivita a tutela delle pubbliche amministrazioni e procedimenti promossi contro le medesime, con risultati di particolare rilievo in materia amministrativa, elettorale, urbanistica, sanitaria e negli appalti pubblici.
               </p>
               <p className="mt-6 text-lg leading-8 text-[#564b41]">
-                Tra i successi professionali piu significativi si segnala il ricorso contro lo scioglimento del Comune di Guardavalle, uno dei pochissimi casi vinti in Italia, oltre all&apos;intervento sugli espropri della S.S. 182 a tutela dei proprietari coinvolti. Patrocinante in Cassazione, garantisce assistenza e consulenza legale di alto livello con un metodo improntato a serietà, determinazione e precisione.
+                Tra i successi professionali piu significativi si segnala il ricorso contro lo scioglimento del Comune di Guardavalle, uno dei pochissimi casi vinti in Italia, oltre all&apos;intervento sugli espropri della S.S. 182 a tutela dei proprietari coinvolti. Patrocinante in Cassazione, garantisce assistenza e consulenza legale di alto livello con un metodo improntato a serieta, determinazione e precisione.
               </p>
               <div className="mt-8 grid gap-4 md:grid-cols-2">
                 {[
