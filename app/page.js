@@ -3,7 +3,7 @@ export default function LandingPage() {
     {
       title: 'Diritto amministrativo',
       description:
-        'Oltre 30 anni di esperienza in controversie amministrative, con consolidata attivita anche dinanzi al Consiglio di Stato. Particolare competenza in materia elettorale, scioglimento di comuni per infiltrazioni mafiose e interdittive antimafia.',
+        'Oltre 30 anni di esperienza in controversie amministrative, con consolidata attività anche dinanzi al Consiglio di Stato. Particolare competenza in materia elettorale, scioglimento di comuni per infiltrazioni mafiose e interdittive antimafia.',
     },
     {
       title: 'Ricorsi al TAR e appalti pubblici',
@@ -23,7 +23,7 @@ export default function LandingPage() {
     {
       title: 'Impresa, contratti e patrimonio',
       description:
-        'Attivita in ambito commerciale e societario, contrattuale, fallimentare e concorsuale, immobiliare, locazioni, sfratti, aste giudiziarie, edilizia e urbanistica, con approccio rigoroso e orientato alla prevenzione del contenzioso.',
+        'attività in ambito commerciale e societario, contrattuale, fallimentare e concorsuale, immobiliare, locazioni, sfratti, aste giudiziarie, edilizia e urbanistica, con approccio rigoroso e orientato alla prevenzione del contenzioso.',
     },
     {
       title: 'Difesa, risarcimento e patrocinio in Cassazione',
@@ -70,7 +70,7 @@ export default function LandingPage() {
           <div className="relative mx-auto grid max-w-7xl gap-14 px-6 py-20 lg:grid-cols-[1.15fr_0.85fr] lg:px-8 lg:py-28">
             <div className="max-w-3xl">
               <div className="mb-6 inline-flex rounded-full border border-[#d9cec0] bg-white/60 px-4 py-2 text-[11px] font-medium uppercase tracking-[0.22em] text-[#7d6d5b] shadow-sm">
-                Assistenza legale con serieta, chiarezza e visione strategica
+                Assistenza legale con serietà, chiarezza e visione strategica
               </div>
 
               <h1 className="text-4xl font-semibold leading-[1.05] tracking-[-0.03em] md:text-6xl lg:text-7xl">
@@ -94,7 +94,7 @@ export default function LandingPage() {
                   href="#aree"
                   className="rounded-full border border-[#cdbfaa] bg-white/70 px-7 py-3 text-center text-sm font-medium text-[#1f1a17] transition hover:bg-white"
                 >
-                  Scopri le aree di attivita
+                  Scopri le aree di attività
                 </a>
               </div>
             </div>
@@ -117,7 +117,7 @@ export default function LandingPage() {
                   <div className="mt-6 space-y-4">
                     {[
                       'Oltre 30 anni di esperienza legale maturata in molteplici settori del diritto.',
-                      'Patrocinante in Cassazione, con attivita anche dinanzi al Consiglio di Stato.',
+                      'Patrocinante in Cassazione, con attività anche dinanzi al Consiglio di Stato.',
                       'Approccio fondato su rigore, dedizione e difesa concreta del cliente.',
                     ].map((item) => (
                       <div
@@ -157,10 +157,10 @@ export default function LandingPage() {
 
             <div className="rounded-[2rem] border border-[#ddd1c2] bg-white/70 p-8 shadow-sm md:p-10">
               <p className="text-lg leading-8 text-[#564b41]">
-                Titolare dal 1993 dello Studio Legale Pitaro a Catanzaro, l&apos;Avv. Giuseppe Pitaro si e distinto nel tempo per competenza, dedizione e capacita di affrontare controversie complesse in diversi ambiti del diritto. La sua esperienza professionale comprende attivita a tutela delle pubbliche amministrazioni e procedimenti promossi contro le medesime, con risultati di particolare rilievo in materia amministrativa, elettorale, urbanistica, sanitaria e negli appalti pubblici.
+                Titolare dal 1993 dello Studio Legale Pitaro a Catanzaro, l&apos;Avv. Giuseppe Pitaro si e distinto nel tempo per competenza, dedizione e capacita di affrontare controversie complesse in diversi ambiti del diritto. La sua esperienza professionale comprende attività a tutela delle pubbliche amministrazioni e procedimenti promossi contro le medesime, con risultati di particolare rilievo in materia amministrativa, elettorale, urbanistica, sanitaria e negli appalti pubblici.
               </p>
               <p className="mt-6 text-lg leading-8 text-[#564b41]">
-                Tra i successi professionali piu significativi si segnala il ricorso contro lo scioglimento del Comune di Guardavalle, uno dei pochissimi casi vinti in Italia, oltre all&apos;intervento sugli espropri della S.S. 182 a tutela dei proprietari coinvolti. Patrocinante in Cassazione, garantisce assistenza e consulenza legale di alto livello con un metodo improntato a serieta, determinazione e precisione.
+                Tra i successi professionali piu significativi si segnala il ricorso contro lo scioglimento del Comune di Guardavalle, uno dei pochissimi casi vinti in Italia, oltre all&apos;intervento sugli espropri della S.S. 182 a tutela dei proprietari coinvolti. Patrocinante in Cassazione, garantisce assistenza e consulenza legale di alto livello con un metodo improntato a serietà, determinazione e precisione.
               </p>
               <div className="mt-8 grid gap-4 md:grid-cols-2">
                 {[
@@ -188,10 +188,10 @@ export default function LandingPage() {
                 Le aree
               </p>
               <h2 className="mt-4 text-3xl font-semibold tracking-[-0.03em] md:text-5xl">
-                Ambiti di attivita presentati con ordine, chiarezza e prestigio.
+                Ambiti di attività presentati con ordine, chiarezza e prestigio.
               </h2>
               <p className="mt-6 text-lg leading-8 text-[#5f5449]">
-                Lo studio opera in numerosi ambiti del diritto, offrendo assistenza giudiziale e stragiudiziale a privati, professionisti, imprese ed enti pubblici. Le competenze qui presentate sintetizzano le principali aree di attivita in modo chiaro e ordinato.
+                Lo studio opera in numerosi ambiti del diritto, offrendo assistenza giudiziale e stragiudiziale a privati, professionisti, imprese ed enti pubblici. Le competenze qui presentate sintetizzano le principali aree di attività in modo chiaro e ordinato.
               </p>
             </div>
 
