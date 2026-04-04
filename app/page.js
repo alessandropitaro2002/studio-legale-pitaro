@@ -65,10 +65,13 @@ export default function LandingPage() {
       </header>
 
       <main>
-        <section id="home" className="relative overflow-hidden scroll-mt-24">
+        <section
+          id="home"
+          className="relative flex items-center overflow-hidden scroll-mt-24 min-h-[calc(100svh-72px)]"
+        >
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(123,90,54,0.12),transparent_30%),radial-gradient(circle_at_bottom_left,rgba(66,52,39,0.08),transparent_35%)]" />
 
-          <div className="relative mx-auto grid max-w-7xl gap-8 px-4 py-12 sm:px-6 sm:py-20 lg:grid-cols-[1.15fr_0.85fr] lg:gap-10 lg:px-8 lg:py-28">
+          <div className="relative mx-auto grid w-full max-w-7xl gap-8 px-4 py-12 sm:px-6 sm:py-20 lg:grid-cols-[1.15fr_0.85fr] lg:gap-10 lg:px-8 lg:py-28">
             <div className="mx-auto flex max-w-3xl flex-col items-center text-center lg:mx-0 lg:items-start lg:text-left">
               <div className="mb-5 inline-flex max-w-full rounded-full border border-[#d9cec0] bg-white/80 px-3 py-2 text-[10px] font-medium uppercase tracking-[0.14em] text-[#7d6d5b] shadow-sm sm:px-4 sm:text-[11px] sm:tracking-[0.22em]">
                 Assistenza legale con serietà, chiarezza e visione strategica
@@ -80,7 +83,7 @@ export default function LandingPage() {
                 Giuseppe Pitaro
               </h1>
 
-              <p className="mt-5 max-w-xl text-[15px] leading-7 text-[#5f5449] sm:text-lg sm:leading-8 md:max-w-2xl md:text-xl">
+              <p className="mt-5 max-w-lg text-[15px] leading-7 text-[#5f5449] sm:text-lg sm:leading-8 md:max-w-2xl md:text-xl">
                 Dal 1993 titolare dello Studio Legale Pitaro a Catanzaro, l&apos;Avv.
                 Giuseppe Pitaro offre assistenza e consulenza legale con un profilo
                 costruito su oltre 30 anni di esperienza, competenza multidisciplinare e
@@ -103,8 +106,8 @@ export default function LandingPage() {
               </div>
             </div>
 
-            <div className="mx-auto w-full max-w-md lg:max-w-none lg:pl-8">
-              <div className="rounded-[2rem] border border-[#d8ccbc] bg-white/80 p-3 shadow-[0_20px_80px_rgba(40,27,16,0.08)] backdrop-blur sm:p-4">
+            <div className="mx-auto flex w-full max-w-md items-center lg:max-w-none lg:pl-8">
+              <div className="w-full rounded-[2rem] border border-[#d8ccbc] bg-white/80 p-3 shadow-[0_20px_80px_rgba(40,27,16,0.08)] backdrop-blur sm:p-4">
                 <div className="rounded-[1.6rem] border border-[#ece3d8] bg-[#fcfaf7] p-6 sm:p-8">
                   <div className="flex items-center justify-between border-b border-[#eee4d8] pb-4 sm:pb-5">
                     <div>
@@ -140,67 +143,71 @@ export default function LandingPage() {
 
         <section
           id="avvocato"
-          className="mx-auto max-w-7xl scroll-mt-24 px-4 py-14 sm:px-6 sm:py-20 lg:px-8 lg:py-24"
+          className="mx-auto flex min-h-screen max-w-7xl items-center scroll-mt-24 px-4 py-14 sm:px-6 sm:py-20 lg:px-8 lg:py-24"
         >
-          <div className="mb-10 max-w-3xl">
-            <p className="text-sm font-medium uppercase tracking-[0.22em] text-[#8b7a68]">
-              L&apos;Avv. Giuseppe Pitaro
-            </p>
-            <h2 className="mt-4 text-2xl font-semibold tracking-[-0.03em] sm:text-3xl md:text-5xl">
-              Oltre 30 anni di esperienza al servizio di privati, imprese ed enti pubblici.
-            </h2>
-          </div>
-
-          <div className="grid gap-6 lg:grid-cols-[0.88fr_1.12fr] lg:items-stretch lg:gap-8">
-            <div className="rounded-[2rem] border border-[#ddd1c2] bg-white/70 p-4 shadow-[0_20px_80px_rgba(40,27,16,0.08)]">
-              <div className="overflow-hidden rounded-[1.6rem] border border-[#ece3d8] bg-[#fcfaf7]">
-                <img
-                  src="/avv-giuseppe-pitaro.jpg"
-                  alt="Avvocato Giuseppe Pitaro"
-                  className="h-full w-full object-cover"
-                />
-              </div>
+          <div className="w-full">
+            <div className="mb-10 max-w-3xl">
+              <p className="text-sm font-medium uppercase tracking-[0.22em] text-[#8b7a68]">
+                L&apos;Avv. Giuseppe Pitaro
+              </p>
+              <h2 className="mt-4 text-2xl font-semibold tracking-[-0.03em] sm:text-3xl md:text-5xl">
+                Oltre 30 anni di esperienza al servizio di privati, imprese ed enti
+                pubblici.
+              </h2>
             </div>
 
-            <div className="rounded-[2rem] border border-[#ddd1c2] bg-white/70 p-8 shadow-sm md:p-10">
-              <p className="text-lg leading-8 text-[#564b41]">
-                Titolare dal 1993 dello Studio Legale Pitaro a Catanzaro, l&apos;Avv.
-                Giuseppe Pitaro si è distinto nel tempo per competenza, dedizione e
-                capacità di affrontare controversie complesse in diversi ambiti del
-                diritto. La sua esperienza professionale comprende attività a tutela delle
-                pubbliche amministrazioni e procedimenti promossi contro le medesime, con
-                risultati di particolare rilievo in materia amministrativa, elettorale,
-                urbanistica, sanitaria e negli appalti pubblici.
-              </p>
-              <p className="mt-6 text-lg leading-8 text-[#564b41]">
-                Tra i successi professionali più significativi si segnala il ricorso contro
-                lo scioglimento del Comune di Guardavalle, uno dei pochissimi casi vinti in
-                Italia, oltre all&apos;intervento sugli espropri della S.S. 182 a tutela dei
-                proprietari coinvolti. Patrocinante in Cassazione, garantisce assistenza e
-                consulenza legale di alto livello con un metodo improntato a serietà,
-                determinazione e precisione.
-              </p>
-              <div className="mt-8 grid gap-4 md:grid-cols-2">
-                {[
-                  'Oltre 30 anni di esperienza',
-                  'Ricorsi al TAR e Consiglio di Stato',
-                  'Patrocinante in Cassazione',
-                  'Tutela di privati e pubbliche amministrazioni',
-                ].map((item) => (
-                  <div
-                    key={item}
-                    className="rounded-2xl border border-[#eee4d8] bg-[#fcfaf7] px-5 py-4 text-sm font-medium text-[#3d332c]"
-                  >
-                    {item}
-                  </div>
-                ))}
+            <div className="grid gap-6 lg:grid-cols-[0.88fr_1.12fr] lg:items-stretch lg:gap-8">
+              <div className="rounded-[2rem] border border-[#ddd1c2] bg-white/70 p-4 shadow-[0_20px_80px_rgba(40,27,16,0.08)]">
+                <div className="overflow-hidden rounded-[1.6rem] border border-[#ece3d8] bg-[#fcfaf7]">
+                  <img
+                    src="/avv-giuseppe-pitaro.jpg"
+                    alt="Avvocato Giuseppe Pitaro"
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+              </div>
+
+              <div className="rounded-[2rem] border border-[#ddd1c2] bg-white/70 p-8 shadow-sm md:p-10">
+                <p className="text-lg leading-8 text-[#564b41]">
+                  Titolare dal 1993 dello Studio Legale Pitaro a Catanzaro, l&apos;Avv.
+                  Giuseppe Pitaro si è distinto nel tempo per competenza, dedizione e
+                  capacità di affrontare controversie complesse in diversi ambiti del
+                  diritto. La sua esperienza professionale comprende attività a tutela
+                  delle pubbliche amministrazioni e procedimenti promossi contro le
+                  medesime, con risultati di particolare rilievo in materia
+                  amministrativa, elettorale, urbanistica, sanitaria e negli appalti
+                  pubblici.
+                </p>
+                <p className="mt-6 text-lg leading-8 text-[#564b41]">
+                  Tra i successi professionali più significativi si segnala il ricorso
+                  contro lo scioglimento del Comune di Guardavalle, uno dei pochissimi
+                  casi vinti in Italia, oltre all&apos;intervento sugli espropri della S.S.
+                  182 a tutela dei proprietari coinvolti. Patrocinante in Cassazione,
+                  garantisce assistenza e consulenza legale di alto livello con un metodo
+                  improntato a serietà, determinazione e precisione.
+                </p>
+                <div className="mt-8 grid gap-4 md:grid-cols-2">
+                  {[
+                    'Oltre 30 anni di esperienza',
+                    'Ricorsi al TAR e Consiglio di Stato',
+                    'Patrocinante in Cassazione',
+                    'Tutela di privati e pubbliche amministrazioni',
+                  ].map((item) => (
+                    <div
+                      key={item}
+                      className="rounded-2xl border border-[#eee4d8] bg-[#fcfaf7] px-5 py-4 text-sm font-medium text-[#3d332c]"
+                    >
+                      {item}
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
         </section>
 
         <section id="aree" className="scroll-mt-24 border-y border-[#ddd1c2] bg-white/50">
-          <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
+          <div className="mx-auto flex min-h-screen max-w-7xl flex-col justify-center px-4 py-14 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
             <div className="max-w-3xl">
               <p className="text-sm font-medium uppercase tracking-[0.22em] text-[#8b7a68]">
                 Le aree
@@ -233,9 +240,9 @@ export default function LandingPage() {
 
         <section
           id="contatti"
-          className="mx-auto max-w-7xl scroll-mt-24 px-4 py-14 sm:px-6 sm:py-20 lg:px-8 lg:py-24"
+          className="mx-auto flex min-h-screen max-w-7xl items-center scroll-mt-24 px-4 py-14 sm:px-6 sm:py-20 lg:px-8 lg:py-24"
         >
-          <div className="grid gap-6 lg:grid-cols-[1fr_0.9fr] lg:gap-8">
+          <div className="grid w-full gap-6 lg:grid-cols-[1fr_0.9fr] lg:gap-8">
             <div className="rounded-[2rem] bg-[#1f1a17] p-8 text-white shadow-[0_25px_80px_rgba(31,26,23,0.18)] md:p-12">
               <p className="text-sm font-medium uppercase tracking-[0.22em] text-[#d1c1ae]">
                 Contatti
@@ -252,8 +259,12 @@ export default function LandingPage() {
 
               <div className="mt-8 grid gap-4 sm:grid-cols-2">
                 <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
-                  <p className="text-xs uppercase tracking-[0.2em] text-[#cdbca8]">Email</p>
-                  <p className="mt-2 text-base font-medium">studiolegalepitaro@libero.it</p>
+                  <p className="text-xs uppercase tracking-[0.2em] text-[#cdbca8]">
+                    Email
+                  </p>
+                  <p className="mt-2 text-base font-medium">
+                    studiolegalepitaro@libero.it
+                  </p>
                 </div>
                 <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
                   <p className="text-xs uppercase tracking-[0.2em] text-[#cdbca8]">
@@ -262,7 +273,9 @@ export default function LandingPage() {
                   <p className="mt-2 text-base font-medium">335 286550</p>
                 </div>
                 <div className="rounded-2xl border border-white/10 bg-white/5 p-5 sm:col-span-2">
-                  <p className="text-xs uppercase tracking-[0.2em] text-[#cdbca8]">Studio</p>
+                  <p className="text-xs uppercase tracking-[0.2em] text-[#cdbca8]">
+                    Studio
+                  </p>
                   <p className="mt-2 text-base font-medium">
                     Via Francesco Acri, 88, 88100 Catanzaro
                   </p>
