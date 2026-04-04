@@ -36,9 +36,16 @@ export default function LandingPage() {
     <div className="min-h-screen scroll-smooth bg-[#f7f4ee] text-[#1f1a17]">
       <header className="sticky top-0 z-50 border-b border-[#d9cec0]/70 bg-[#f7f4ee]/90 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
-          <div className="text-base font-semibold tracking-[0.03em] md:text-lg">
+          <div className="flex items-center gap-3">
+            <img
+              src="/logo-pitaro.png"
+              alt="Logo Studio Legale Giuseppe Pitaro"
+              className="h-10 w-auto object-contain"
+            />
+            <div className="text-base font-semibold tracking-[0.03em] md:text-lg">
               Studio Legale Giuseppe Pitaro
             </div>
+          </div>
 
           <nav className="hidden items-center gap-8 text-sm font-medium md:flex">
             <a href="#home" className="transition hover:text-[#7b5a36]">
