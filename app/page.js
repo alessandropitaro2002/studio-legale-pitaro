@@ -1,32 +1,47 @@
+import {
+  Briefcase,
+  Building2,
+  Scale,
+  Shield,
+  Users,
+  Landmark,
+} from "lucide-react";
+
 export default function LandingPage() {
   const practiceAreas = [
     {
       title: 'Diritto amministrativo',
+      icon: Landmark,
       description:
         'Oltre 30 anni di esperienza in controversie amministrative, con consolidata attività anche dinanzi al Consiglio di Stato. Particolare competenza in materia elettorale, scioglimento di comuni per infiltrazioni mafiose e interdittive antimafia.',
     },
     {
       title: 'Ricorsi al TAR e appalti pubblici',
+      icon: Building2,
       description:
         'Assistenza qualificata nei procedimenti avanti al TAR, con esperienza significativa in appalti pubblici, urbanistica, diritto sanitario ed elettorale, sia a tutela delle pubbliche amministrazioni sia nei giudizi contro le medesime.',
     },
     {
       title: 'Diritto del lavoro',
+      icon: Briefcase,
       description:
         'Assistenza in controversie tra lavoratori e aziende, con consulenza su contratti, licenziamenti, infortuni sul lavoro, procedure disciplinari, mobbing, previdenza e diritto sindacale.',
     },
     {
       title: 'Diritto civile e di famiglia',
+      icon: Users,
       description:
         'Tutela legale in materia di diritto civile, famiglia, eredità e successioni, divorzio, affidamento, adozione, tutela dei minori e incapacità giuridica, con attenzione alla persona e alla concretezza delle soluzioni.',
     },
     {
       title: 'Impresa, contratti e patrimonio',
+      icon: Scale,
       description:
         'Attività in ambito commerciale e societario, contrattuale, fallimentare e concorsuale, immobiliare, locazioni, sfratti, aste giudiziarie, edilizia e urbanistica, con approccio rigoroso e orientato alla prevenzione del contenzioso.',
     },
     {
       title: 'Difesa, risarcimento e patrocinio in Cassazione',
+      icon: Shield,
       description:
         'Assistenza in materia penale, risarcimento danni, incidenti stradali, malasanità, diritto ambientale, agrario, sportivo, arbitrato, mediazione, negoziazione assistita e patrocinio dinanzi alla Corte di Cassazione.',
     },
@@ -133,7 +148,8 @@ export default function LandingPage() {
                       >
                         {item}
                       </div>
-                    ))}
+                    );
+              })}
                   </div>
                 </div>
               </div>
@@ -223,12 +239,16 @@ export default function LandingPage() {
             </div>
 
             <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-              {practiceAreas.map((area) => (
+              {practiceAreas.map((area) => {
+                const Icon = area.icon;
+                return (
                 <div
                   key={area.title}
                   className="group rounded-[1.8rem] border border-[#ddd1c2] bg-[#fcfaf7] p-7 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#4f3a24]/5"
                 >
-                  <div className="mb-5 h-10 w-10 rounded-full border border-[#cebfae] bg-white" />
+                  <div className="mb-5 flex h-10 w-10 items-center justify-center rounded-full border border-[#cebfae] bg-white text-[#7b5a36]">
+                    <Icon size={18} strokeWidth={1.8} />
+                  </div>
                   <h3 className="text-2xl font-semibold tracking-tight">{area.title}</h3>
                   <p className="mt-4 leading-8 text-[#5f5449]">{area.description}</p>
                 </div>
