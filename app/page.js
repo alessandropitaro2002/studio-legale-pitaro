@@ -213,13 +213,12 @@ export default function LandingPage() {
                 Le aree
               </p>
               <h2 className="mt-4 text-2xl font-semibold tracking-[-0.03em] sm:text-3xl md:text-5xl">
-                Ambiti di attività presentati con ordine, chiarezza e prestigio.
+                Principali aree di assistenza e consulenza legale.
               </h2>
               <p className="mt-6 text-lg leading-8 text-[#5f5449]">
                 Lo studio opera in numerosi ambiti del diritto, offrendo assistenza
                 giudiziale e stragiudiziale a privati, professionisti, imprese ed enti
-                pubblici. Le competenze qui presentate sintetizzano le principali aree di
-                attività in modo chiaro e ordinato.
+                pubblici. Lo studio offre assistenza giudiziale e stragiudiziale in diversi ambiti del diritto, con un approccio fondato su competenza, attenzione al caso concreto e tutela effettiva degli interessi del cliente.
               </p>
             </div>
 
@@ -248,13 +247,11 @@ export default function LandingPage() {
                 Contatti
               </p>
               <h2 className="mt-4 text-2xl font-semibold tracking-[-0.03em] sm:text-3xl md:text-5xl">
-                Un contatto diretto, chiaro e professionale.
+                Contatta lo studio per una consulenza o per richiedere informazioni.
               </h2>
               <p className="mt-6 max-w-2xl text-lg leading-8 text-[#e6ddd3]">
                 Per richiedere una consulenza o un primo contatto con lo studio, è
-                possibile utilizzare i recapiti qui indicati. La sezione è progettata per
-                offrire accesso rapido alle informazioni essenziali, con una presentazione
-                chiara, sobria e professionale.
+                possibile utilizzare i recapiti qui indicati. Qui trovi i principali recapiti dello studio per richiedere informazioni, fissare un primo contatto o concordare una consulenza.
               </p>
 
               <div className="mt-8 grid gap-4 sm:grid-cols-2">
