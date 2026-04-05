@@ -148,8 +148,7 @@ export default function LandingPage() {
                       >
                         {item}
                       </div>
-                    );
-              })}
+                    ))}
                   </div>
                 </div>
               </div>
@@ -232,9 +231,7 @@ export default function LandingPage() {
                 Principali aree di assistenza e consulenza legale.
               </h2>
               <p className="mt-6 text-lg leading-8 text-[#5f5449]">
-                Lo studio opera in numerosi ambiti del diritto, offrendo assistenza
-                giudiziale e stragiudiziale a privati, professionisti, imprese ed enti
-                pubblici. Lo studio offre assistenza giudiziale e stragiudiziale in diversi ambiti del diritto, con un approccio fondato su competenza, attenzione al caso concreto e tutela effettiva degli interessi del cliente.
+                Lo studio offre assistenza giudiziale e stragiudiziale in diversi ambiti del diritto, con un approccio fondato su competenza, attenzione al caso concreto e tutela effettiva degli interessi del cliente.
               </p>
             </div>
 
@@ -242,17 +239,18 @@ export default function LandingPage() {
               {practiceAreas.map((area) => {
                 const Icon = area.icon;
                 return (
-                <div
-                  key={area.title}
-                  className="group rounded-[1.8rem] border border-[#ddd1c2] bg-[#fcfaf7] p-7 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#4f3a24]/5"
-                >
-                  <div className="mb-5 flex h-10 w-10 items-center justify-center rounded-full border border-[#cebfae] bg-white text-[#7b5a36]">
-                    <Icon size={18} strokeWidth={1.8} />
+                  <div
+                    key={area.title}
+                    className="group rounded-[1.8rem] border border-[#ddd1c2] bg-[#fcfaf7] p-7 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#4f3a24]/5"
+                  >
+                    <div className="mb-5 flex h-10 w-10 items-center justify-center rounded-full border border-[#cebfae] bg-white text-[#7b5a36]">
+                      <Icon size={18} strokeWidth={1.8} />
+                    </div>
+                    <h3 className="text-2xl font-semibold tracking-tight">{area.title}</h3>
+                    <p className="mt-4 leading-8 text-[#5f5449]">{area.description}</p>
                   </div>
-                  <h3 className="text-2xl font-semibold tracking-tight">{area.title}</h3>
-                  <p className="mt-4 leading-8 text-[#5f5449]">{area.description}</p>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </section>
