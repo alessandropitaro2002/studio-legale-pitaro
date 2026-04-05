@@ -122,45 +122,43 @@ export default function LandingPage() {
             </div>
 
             <div className="mx-auto flex w-full max-w-md items-center lg:max-w-none lg:pl-8">
-              <div className="w-full space-y-4 sm:space-y-5">
+              <div className="relative w-full">
                 <div className="overflow-hidden rounded-[2rem] border border-[#d8ccbc] bg-white/80 p-3 shadow-[0_20px_80px_rgba(40,27,16,0.08)] backdrop-blur sm:p-4">
                   <div className="overflow-hidden rounded-[1.6rem] border border-[#ece3d8] bg-[#fcfaf7]">
                     <img
                       src="/avv-giuseppe-pitaro-home.jpg"
                       alt="Avvocato Giuseppe Pitaro"
-                      className="h-full w-full object-cover"
+                      className="h-[420px] w-full object-cover object-center sm:h-[520px]"
                     />
                   </div>
                 </div>
 
-                <div className="w-full rounded-[2rem] border border-[#d8ccbc] bg-white/80 p-3 shadow-[0_20px_80px_rgba(40,27,16,0.08)] backdrop-blur sm:p-4">
-                  <div className="rounded-[1.6rem] border border-[#ece3d8] bg-[#fcfaf7] p-6 sm:p-8">
-                    <div className="flex items-center justify-between border-b border-[#eee4d8] pb-4 sm:pb-5">
-                      <div>
-                        <p className="text-xs uppercase tracking-[0.22em] text-[#8b7a68]">
-                          Profilo professionale
-                        </p>
-                        <h2 className="mt-2 text-xl font-semibold tracking-tight sm:text-2xl">
-                          Esperienza, rigore e tutela legale.
-                        </h2>
-                      </div>
-                      <div className="h-3 w-3 rounded-full bg-[#7b5a36]" />
+                <div className="relative mx-4 -mt-16 rounded-[1.6rem] border border-[#d8ccbc] bg-white/95 p-4 shadow-[0_20px_60px_rgba(40,27,16,0.10)] backdrop-blur sm:mx-6 sm:p-5 lg:absolute lg:bottom-6 lg:left-6 lg:right-6 lg:mx-0 lg:mt-0">
+                  <div className="flex items-start justify-between gap-4 border-b border-[#eee4d8] pb-3">
+                    <div>
+                      <p className="text-[10px] uppercase tracking-[0.22em] text-[#8b7a68] sm:text-xs">
+                        Profilo professionale
+                      </p>
+                      <h2 className="mt-2 text-lg font-semibold tracking-tight text-[#1f1a17] sm:text-xl">
+                        Esperienza, rigore e tutela legale.
+                      </h2>
                     </div>
+                    <div className="mt-1 h-2.5 w-2.5 rounded-full bg-[#7b5a36]" />
+                  </div>
 
-                    <div className="mt-5 space-y-3 sm:mt-6 sm:space-y-4">
-                      {[
-                        'Oltre 30 anni di esperienza legale maturata in molteplici settori del diritto.',
-                        'Patrocinante in Cassazione, con attività anche dinanzi al Consiglio di Stato.',
-                        'Approccio fondato su rigore, dedizione e difesa concreta del cliente.',
-                      ].map((item) => (
-                        <div
-                          key={item}
-                          className="rounded-2xl border border-[#eee4d8] bg-white px-4 py-3 text-sm leading-6 text-[#5f5449] sm:py-4 sm:leading-7"
-                        >
-                          {item}
-                        </div>
-                      ))}
-                    </div>
+                  <div className="mt-4 grid gap-3">
+                    {[
+                      'Oltre 30 anni di esperienza legale maturata in molteplici settori del diritto.',
+                      'Patrocinante in Cassazione, con attività anche dinanzi al Consiglio di Stato.',
+                      'Approccio fondato su rigore, dedizione e difesa concreta del cliente.',
+                    ].map((item) => (
+                      <div
+                        key={item}
+                        className="rounded-2xl border border-[#eee4d8] bg-[#fcfaf7] px-4 py-3 text-sm leading-6 text-[#5f5449]"
+                      >
+                        {item}
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
