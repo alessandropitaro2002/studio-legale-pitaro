@@ -1,6 +1,3 @@
-"use client";
-
-import { useEffect, useState } from "react";
 import {
   Briefcase,
   Building2,
@@ -10,62 +7,70 @@ import {
   Landmark,
 } from "lucide-react";
 
+import { useEffect, useState } from "react";
+
 export default function LandingPage() {
   const rotatingWords = [
-    "serietà",
-    "chiarezza",
-    "rigore",
-    "competenza",
-    "determinazione",
-    "visione strategica",
+    'serietà',
+    'chiarezza',
+    'rigore',
+    'competenza',
+    'determinazione',
+    'visione strategica',
   ];
 
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
+  const [isWordVisible, setIsWordVisible] = useState(true);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentWordIndex((prev) => (prev + 1) % rotatingWords.length);
-    }, 2200);
+      setIsWordVisible(false);
+
+      setTimeout(() => {
+        setCurrentWordIndex((prev) => (prev + 1) % rotatingWords.length);
+        setIsWordVisible(true);
+      }, 220);
+    }, 2400);
 
     return () => clearInterval(interval);
-  }, [rotatingWords.length]);
+  }, []);
 
   const practiceAreas = [
     {
-      title: "Diritto amministrativo",
+      title: 'Diritto amministrativo',
       icon: Landmark,
       description:
-        "Oltre 30 anni di esperienza in controversie amministrative, con consolidata attività anche dinanzi al Consiglio di Stato. Particolare competenza in materia elettorale, scioglimento di comuni per infiltrazioni mafiose e interdittive antimafia.",
+        'Oltre 30 anni di esperienza in controversie amministrative, con consolidata attività anche dinanzi al Consiglio di Stato. Particolare competenza in materia elettorale, scioglimento di comuni per infiltrazioni mafiose e interdittive antimafia.',
     },
     {
-      title: "Ricorsi al TAR e appalti pubblici",
+      title: 'Ricorsi al TAR e appalti pubblici',
       icon: Building2,
       description:
-        "Assistenza qualificata nei procedimenti avanti al TAR, con esperienza significativa in appalti pubblici, urbanistica, diritto sanitario ed elettorale, sia a tutela delle pubbliche amministrazioni sia nei giudizi contro le medesime.",
+        'Assistenza qualificata nei procedimenti avanti al TAR, con esperienza significativa in appalti pubblici, urbanistica, diritto sanitario ed elettorale, sia a tutela delle pubbliche amministrazioni sia nei giudizi contro le medesime.',
     },
     {
-      title: "Diritto del lavoro",
+      title: 'Diritto del lavoro',
       icon: Briefcase,
       description:
-        "Assistenza in controversie tra lavoratori e aziende, con consulenza su contratti, licenziamenti, infortuni sul lavoro, procedure disciplinari, mobbing, previdenza e diritto sindacale.",
+        'Assistenza in controversie tra lavoratori e aziende, con consulenza su contratti, licenziamenti, infortuni sul lavoro, procedure disciplinari, mobbing, previdenza e diritto sindacale.',
     },
     {
-      title: "Diritto civile e di famiglia",
+      title: 'Diritto civile e di famiglia',
       icon: Users,
       description:
-        "Tutela legale in materia di diritto civile, famiglia, eredità e successioni, divorzio, affidamento, adozione, tutela dei minori e incapacità giuridica, con attenzione alla persona e alla concretezza delle soluzioni.",
+        'Tutela legale in materia di diritto civile, famiglia, eredità e successioni, divorzio, affidamento, adozione, tutela dei minori e incapacità giuridica, con attenzione alla persona e alla concretezza delle soluzioni.',
     },
     {
-      title: "Impresa, contratti e patrimonio",
+      title: 'Impresa, contratti e patrimonio',
       icon: Scale,
       description:
-        "Attività in ambito commerciale e societario, contrattuale, fallimentare e concorsuale, immobiliare, locazioni, sfratti, aste giudiziarie, edilizia e urbanistica, con approccio rigoroso e orientato alla prevenzione del contenzioso.",
+        'Attività in ambito commerciale e societario, contrattuale, fallimentare e concorsuale, immobiliare, locazioni, sfratti, aste giudiziarie, edilizia e urbanistica, con approccio rigoroso e orientato alla prevenzione del contenzioso.',
     },
     {
-      title: "Difesa, risarcimento e patrocinio in Cassazione",
+      title: 'Difesa, risarcimento e patrocinio in Cassazione',
       icon: Shield,
       description:
-        "Assistenza in materia penale, risarcimento danni, incidenti stradali, malasanità, diritto ambientale, agrario, sportivo, arbitrato, mediazione, negoziazione assistita e patrocinio dinanzi alla Corte di Cassazione.",
+        'Assistenza in materia penale, risarcimento danni, incidenti stradali, malasanità, diritto ambientale, agrario, sportivo, arbitrato, mediazione, negoziazione assistita e patrocinio dinanzi alla Corte di Cassazione.',
     },
   ];
 
@@ -104,33 +109,38 @@ export default function LandingPage() {
       <main>
         <section
           id="home"
-          className="relative flex items-center overflow-hidden scroll-mt-24 min-h-[calc(100svh-72px)]"
+          className="relative flex items-center overflow-hidden scroll-mt-24 min-h-[calc(100svh-72px)] pt-4 sm:pt-2 lg:pt-0"
         >
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(123,90,54,0.12),transparent_30%),radial-gradient(circle_at_bottom_left,rgba(66,52,39,0.08),transparent_35%)]" />
 
-          <div className="relative mx-auto grid w-full max-w-7xl gap-8 px-4 py-12 sm:px-6 sm:py-20 lg:grid-cols-[1.15fr_0.85fr] lg:gap-10 lg:px-8 lg:py-28">
+          <div className="relative mx-auto grid w-full max-w-7xl gap-8 px-4 py-8 sm:px-6 sm:py-14 lg:grid-cols-[1.15fr_0.85fr] lg:gap-10 lg:px-8 lg:py-16">
             <div className="mx-auto flex max-w-3xl flex-col items-center text-center lg:mx-0 lg:items-start lg:text-left">
+              
+
               <h1 className="max-w-[12ch] text-4xl font-semibold leading-[1.02] tracking-[-0.04em] sm:max-w-none sm:text-4xl md:text-6xl lg:text-7xl">
                 Studio Legale
                 <br />
                 Giuseppe Pitaro
               </h1>
 
-              <div className="mt-5 inline-flex min-h-[52px] items-center rounded-2xl border border-[#ddd1c2] bg-white/70 px-4 py-3 text-left shadow-sm sm:min-h-[60px] sm:px-5">
-                <span className="text-sm font-medium text-[#5f5449] sm:text-base">
-                  Assistenza legale con{" "}
+              <div className="mt-5 flex flex-wrap items-center gap-3 text-left">
+                <span className="text-[15px] font-medium tracking-[0.01em] text-[#5f5449] sm:text-lg">
+                  Assistenza legale con
                 </span>
-                <span className="ml-2 text-sm font-semibold text-[#7b5a36] transition-all duration-300 sm:text-base">
-                  {rotatingWords[currentWordIndex]}
+                <span className="relative inline-flex min-w-[190px] items-center justify-center overflow-hidden rounded-full border border-[#d7c6b2] bg-gradient-to-r from-[#fffaf4] via-white to-[#f4ece2] px-5 py-2.5 shadow-[0_10px_30px_rgba(123,90,54,0.10)]">
+                  <span
+                    className={`text-[15px] font-semibold tracking-[0.01em] text-[#7b5a36] transition-all duration-300 sm:text-lg ${isWordVisible ? 'translate-y-0 opacity-100' : 'translate-y-2 opacity-0'}`}
+                  >
+                    {rotatingWords[currentWordIndex]}
+                  </span>
                 </span>
               </div>
 
-              <p className="mt-5 max-w-lg text-[15px] leading-7 text-[#5f5449] sm:text-lg sm:leading-8 md:max-w-2xl md:text-xl">
-                Dal 1993 titolare dello Studio Legale Pitaro a Catanzaro,
-                l&apos;Avv. Giuseppe Pitaro offre assistenza e consulenza legale
-                con un profilo costruito su oltre 30 anni di esperienza,
-                competenza multidisciplinare e attenzione rigorosa alla tutela
-                degli interessi del cliente.
+              <p className="mt-6 max-w-lg text-[15px] leading-7 text-[#5f5449] sm:text-lg sm:leading-8 md:max-w-2xl md:text-xl">
+                Dal 1993 titolare dello Studio Legale Pitaro a Catanzaro, l&apos;Avv.
+                Giuseppe Pitaro offre assistenza e consulenza legale con un profilo
+                costruito su oltre 30 anni di esperienza, competenza multidisciplinare e
+                attenzione rigorosa alla tutela degli interessi del cliente.
               </p>
 
               <div className="mt-8 flex w-full max-w-sm flex-col gap-3 sm:max-w-none sm:flex-row">
@@ -150,9 +160,9 @@ export default function LandingPage() {
 
               <div className="mt-8 grid w-full max-w-2xl gap-3 sm:grid-cols-3">
                 {[
-                  "Oltre 30 anni di esperienza legale maturata in molteplici settori del diritto.",
-                  "Patrocinante in Cassazione, con attività anche dinanzi al Consiglio di Stato.",
-                  "Approccio fondato su rigore, dedizione e difesa concreta del cliente.",
+                  'Oltre 30 anni di esperienza legale maturata in molteplici settori del diritto.',
+                  'Patrocinante in Cassazione, con attività anche dinanzi al Consiglio di Stato.',
+                  'Approccio fondato su rigore, dedizione e difesa concreta del cliente.',
                 ].map((item) => (
                   <div
                     key={item}
@@ -171,7 +181,7 @@ export default function LandingPage() {
                     <img
                       src="/avv-giuseppe-pitaro-home.jpg"
                       alt="Avvocato Giuseppe Pitaro"
-                      className="h-[480px] w-full object-cover object-center sm:h-[560px]"
+                      className="h-[430px] w-full object-cover object-center sm:h-[500px] lg:h-[540px]"
                     />
                   </div>
                 </div>
@@ -190,8 +200,8 @@ export default function LandingPage() {
                 L&apos;Avv. Giuseppe Pitaro
               </p>
               <h2 className="mt-4 text-2xl font-semibold tracking-[-0.03em] sm:text-3xl md:text-5xl">
-                Oltre 30 anni di esperienza al servizio di privati, imprese ed
-                enti pubblici.
+                Oltre 30 anni di esperienza al servizio di privati, imprese ed enti
+                pubblici.
               </h2>
             </div>
 
@@ -208,30 +218,29 @@ export default function LandingPage() {
 
               <div className="rounded-[2rem] border border-[#ddd1c2] bg-white/70 p-8 shadow-sm md:p-10">
                 <p className="text-lg leading-8 text-[#564b41]">
-                  Titolare dal 1993 dello Studio Legale Pitaro a Catanzaro,
-                  l&apos;Avv. Giuseppe Pitaro si è distinto nel tempo per
-                  competenza, dedizione e capacità di affrontare controversie
-                  complesse in diversi ambiti del diritto. La sua esperienza
-                  professionale comprende attività a tutela delle pubbliche
-                  amministrazioni e procedimenti promossi contro le medesime, con
-                  risultati di particolare rilievo in materia amministrativa,
-                  elettorale, urbanistica, sanitaria e negli appalti pubblici.
+                  Titolare dal 1993 dello Studio Legale Pitaro a Catanzaro, l&apos;Avv.
+                  Giuseppe Pitaro si è distinto nel tempo per competenza, dedizione e
+                  capacità di affrontare controversie complesse in diversi ambiti del
+                  diritto. La sua esperienza professionale comprende attività a tutela
+                  delle pubbliche amministrazioni e procedimenti promossi contro le
+                  medesime, con risultati di particolare rilievo in materia
+                  amministrativa, elettorale, urbanistica, sanitaria e negli appalti
+                  pubblici.
                 </p>
                 <p className="mt-6 text-lg leading-8 text-[#564b41]">
-                  Tra i successi professionali più significativi si segnala il
-                  ricorso contro lo scioglimento del Comune di Guardavalle, uno
-                  dei pochissimi casi vinti in Italia, oltre all&apos;intervento
-                  sugli espropri della S.S. 182 a tutela dei proprietari
-                  coinvolti. Patrocinante in Cassazione, garantisce assistenza e
-                  consulenza legale di alto livello con un metodo improntato a
-                  serietà, determinazione e precisione.
+                  Tra i successi professionali più significativi si segnala il ricorso
+                  contro lo scioglimento del Comune di Guardavalle, uno dei pochissimi
+                  casi vinti in Italia, oltre all&apos;intervento sugli espropri della S.S.
+                  182 a tutela dei proprietari coinvolti. Patrocinante in Cassazione,
+                  garantisce assistenza e consulenza legale di alto livello con un metodo
+                  improntato a serietà, determinazione e precisione.
                 </p>
                 <div className="mt-8 grid gap-4 md:grid-cols-2">
                   {[
-                    "Oltre 30 anni di esperienza",
-                    "Ricorsi al TAR e Consiglio di Stato",
-                    "Patrocinante in Cassazione",
-                    "Tutela di privati e pubbliche amministrazioni",
+                    'Oltre 30 anni di esperienza',
+                    'Ricorsi al TAR e Consiglio di Stato',
+                    'Patrocinante in Cassazione',
+                    'Tutela di privati e pubbliche amministrazioni',
                   ].map((item) => (
                     <div
                       key={item}
@@ -246,10 +255,7 @@ export default function LandingPage() {
           </div>
         </section>
 
-        <section
-          id="aree"
-          className="scroll-mt-24 border-y border-[#ddd1c2] bg-white/50"
-        >
+        <section id="aree" className="scroll-mt-24 border-y border-[#ddd1c2] bg-white/50">
           <div className="mx-auto flex min-h-screen max-w-7xl flex-col justify-center px-4 py-14 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
             <div className="max-w-3xl">
               <p className="text-sm font-medium uppercase tracking-[0.22em] text-[#8b7a68]">
@@ -259,10 +265,7 @@ export default function LandingPage() {
                 Principali aree di assistenza e consulenza legale.
               </h2>
               <p className="mt-6 text-lg leading-8 text-[#5f5449]">
-                Lo studio offre assistenza giudiziale e stragiudiziale in diversi
-                ambiti del diritto, con un approccio fondato su competenza,
-                attenzione al caso concreto e tutela effettiva degli interessi
-                del cliente.
+                Lo studio offre assistenza giudiziale e stragiudiziale in diversi ambiti del diritto, con un approccio fondato su competenza, attenzione al caso concreto e tutela effettiva degli interessi del cliente.
               </p>
             </div>
 
@@ -277,12 +280,8 @@ export default function LandingPage() {
                     <div className="mb-5 flex h-10 w-10 items-center justify-center rounded-full border border-[#cebfae] bg-white text-[#7b5a36]">
                       <Icon size={18} strokeWidth={1.8} />
                     </div>
-                    <h3 className="text-2xl font-semibold tracking-tight">
-                      {area.title}
-                    </h3>
-                    <p className="mt-4 leading-8 text-[#5f5449]">
-                      {area.description}
-                    </p>
+                    <h3 className="text-2xl font-semibold tracking-tight">{area.title}</h3>
+                    <p className="mt-4 leading-8 text-[#5f5449]">{area.description}</p>
                   </div>
                 );
               })}
@@ -300,14 +299,11 @@ export default function LandingPage() {
                 Contatti
               </p>
               <h2 className="mt-4 text-2xl font-semibold tracking-[-0.03em] sm:text-3xl md:text-5xl">
-                Contatta lo studio per una consulenza o per richiedere
-                informazioni.
+                Contatta lo studio per una consulenza o per richiedere informazioni.
               </h2>
               <p className="mt-6 max-w-2xl text-lg leading-8 text-[#e6ddd3]">
-                Per richiedere una consulenza o un primo contatto con lo studio,
-                è possibile utilizzare i recapiti qui indicati. Qui trovi i
-                principali recapiti dello studio per richiedere informazioni,
-                fissare un primo contatto o concordare una consulenza.
+                Per richiedere una consulenza o un primo contatto con lo studio, è
+                possibile utilizzare i recapiti qui indicati. Qui trovi i principali recapiti dello studio per richiedere informazioni, fissare un primo contatto o concordare una consulenza.
               </p>
 
               <div className="mt-8 grid gap-4 sm:grid-cols-2">
@@ -344,10 +340,10 @@ export default function LandingPage() {
                 Richiedi informazioni
               </h3>
               <p className="mt-4 leading-8 text-[#5f5449]">
-                Lo Studio Legale Giuseppe Pitaro offre assistenza e consulenza
-                con serietà, competenza e attenzione al caso concreto. Per
-                richiedere informazioni o fissare un primo contatto, è possibile
-                utilizzare i recapiti indicati di seguito.
+                Lo Studio Legale Giuseppe Pitaro offre assistenza e consulenza con
+                serietà, competenza e attenzione al caso concreto. Per richiedere
+                informazioni o fissare un primo contatto, è possibile utilizzare i
+                recapiti indicati di seguito.
               </p>
 
               <div className="mt-8 space-y-4">
