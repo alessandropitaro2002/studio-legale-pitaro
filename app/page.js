@@ -398,5 +398,3 @@ export default function LandingPage() {
     </div>
   );
 }
-
-Questa è la versione attuale. La aggiorni per integrare le ultime due modifiche che ti ho chiesto nel precedente messaggio?
