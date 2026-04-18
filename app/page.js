@@ -1,3 +1,11 @@
+Sì. Ti lascio il **`page.js` completo aggiornato** con l’ultima modifica sullo **sfondo mobile della home**:
+
+* foto **più visibile**
+* overlay **meno pesante**
+* aloni chiari **animati lentamente**
+* desktop invariato
+
+```jsx
 "use client";
 
 import { useEffect, useState } from "react";
@@ -114,11 +122,14 @@ export default function LandingPage() {
         >
           <div className="absolute inset-0 lg:hidden">
             <div
-              className="absolute inset-0 bg-cover bg-center opacity-25"
+              className="absolute inset-0 bg-cover bg-center opacity-40"
               style={{ backgroundImage: "url('/avv-giuseppe-pitaro-home.jpg')" }}
             />
-            <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(247,244,238,0.72),rgba(247,244,238,0.88)_35%,rgba(247,244,238,0.96)_100%)]" />
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(123,90,54,0.12),transparent_30%),radial-gradient(circle_at_bottom_left,rgba(66,52,39,0.08),transparent_35%)]" />
+            <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(247,244,238,0.40),rgba(247,244,238,0.58)_36%,rgba(247,244,238,0.84)_100%)]" />
+            <div className="absolute -left-10 top-0 h-44 w-44 animate-[pulse_7s_ease-in-out_infinite] rounded-full bg-[#f1e1cd]/45 blur-3xl" />
+            <div className="absolute right-[-20px] top-24 h-48 w-48 animate-[pulse_9s_ease-in-out_infinite] rounded-full bg-[#d8c0a1]/30 blur-3xl" />
+            <div className="absolute bottom-0 left-1/3 h-40 w-40 animate-[pulse_8s_ease-in-out_infinite] rounded-full bg-white/30 blur-3xl" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_68%_30%,rgba(255,255,255,0.02),transparent_20%),radial-gradient(circle_at_top_right,rgba(123,90,54,0.10),transparent_32%),radial-gradient(circle_at_bottom_left,rgba(66,52,39,0.06),transparent_35%)]" />
           </div>
 
           <div className="absolute inset-0 hidden lg:block bg-[radial-gradient(circle_at_top_right,rgba(123,90,54,0.14),transparent_30%),radial-gradient(circle_at_bottom_left,rgba(66,52,39,0.10),transparent_35%),linear-gradient(to_bottom,rgba(255,255,255,0.45),rgba(247,244,238,0.96))]" />
@@ -406,3 +417,4 @@ export default function LandingPage() {
     </div>
   );
 }
+```
