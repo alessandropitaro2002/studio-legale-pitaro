@@ -198,13 +198,12 @@ export default function LandingPage() {
           className="relative overflow-hidden scroll-mt-24 min-h-[calc(100svh-72px)]"
         >
           <div className="absolute inset-0">
-            <div
-              className="absolute inset-0 bg-cover bg-center"
-              style={{ backgroundImage: "url('/sfondo-home.png')" }}
-            />
-            <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(18,14,11,0.56),rgba(32,23,17,0.42)_24%,rgba(247,244,238,0.20)_58%,rgba(247,244,238,0.56)_100%)]" />
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.12),transparent_22%),radial-gradient(circle_at_top_right,rgba(123,90,54,0.16),transparent_28%),radial-gradient(circle_at_bottom_left,rgba(66,52,39,0.08),transparent_34%)]" />
-            <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(15,13,11,0.18),transparent_18%,transparent_82%,rgba(15,13,11,0.10))]" />
+            <div className="absolute -left-24 top-0 h-72 w-72 rounded-full bg-[#ead9c6]/55 blur-3xl" />
+            <div className="absolute right-[-60px] top-20 h-80 w-80 rounded-full bg-[#d8b894]/30 blur-3xl" />
+            <div className="absolute bottom-10 left-1/3 h-64 w-64 rounded-full bg-white/35 blur-3xl" />
+            <div className="absolute bottom-0 right-1/4 h-56 w-56 rounded-full bg-[#efe1d2]/45 blur-3xl" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(123,90,54,0.12),transparent_30%),radial-gradient(circle_at_bottom_left,rgba(66,52,39,0.08),transparent_35%)]" />
+            <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(252,249,245,0.72),rgba(247,244,238,0.86)_38%,rgba(247,244,238,0.98)_100%)]" />
           </div>
 
           <div className="relative mx-auto flex min-h-[calc(100svh-72px)] max-w-7xl flex-col justify-center px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
