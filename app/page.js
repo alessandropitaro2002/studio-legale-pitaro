@@ -1,11 +1,3 @@
-Sì. Ti lascio il **`page.js` completo aggiornato** con l’ultima modifica sullo **sfondo mobile della home**:
-
-* foto **più visibile**
-* overlay **meno pesante**
-* aloni chiari **animati lentamente**
-* desktop invariato
-
-```jsx
 "use client";
 
 import { useEffect, useState } from "react";
@@ -417,4 +409,3 @@ export default function LandingPage() {
     </div>
   );
 }
-```
