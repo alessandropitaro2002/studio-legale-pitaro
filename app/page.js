@@ -543,9 +543,86 @@ export default function LandingPage() {
         </section>
       </main>
 
-      <footer className="border-t border-[#ddd1c2] bg-[#f3eee6]">
-        <div className="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-8 text-sm text-[#6d6053] sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
-          <p>© 2026 Studio Legale Giuseppe Pitaro. Tutti i diritti riservati.</p>
+      <footer className="border-t border-[#d8ccbc] bg-[#efe7dc]">
+        <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 lg:grid-cols-4 lg:px-8">
+          <div>
+            <h3 className="text-xl font-semibold tracking-tight text-[#1f1a17]">
+              Studio Legale Giuseppe Pitaro
+            </h3>
+            <p className="mt-4 max-w-sm text-sm leading-7 text-[#6f6256]">
+              Assistenza e consulenza legale a Catanzaro, con oltre 30 anni di
+              esperienza e attività in diversi ambiti del diritto.
+            </p>
+          </div>
+
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#8b6a45]">
+              Navigazione
+            </p>
+            <div className="mt-4 flex flex-col gap-3 text-sm text-[#4e4339]">
+              <a href="#home" className="transition hover:text-[#1f1a17]">
+                Home
+              </a>
+              <a href="#avvocato" className="transition hover:text-[#1f1a17]">
+                L&apos;Avv. Giuseppe Pitaro
+              </a>
+              <a href="#aree" className="transition hover:text-[#1f1a17]">
+                Le aree
+              </a>
+              <a href="#contatti" className="transition hover:text-[#1f1a17]">
+                Contatti
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#8b6a45]">
+              Contatti
+            </p>
+            <div className="mt-4 flex flex-col gap-3 text-sm text-[#4e4339]">
+              <a
+                href="mailto:studiolegalepitaro@libero.it"
+                className="transition hover:text-[#1f1a17]"
+              >
+                studiolegalepitaro@libero.it
+              </a>
+              <a
+                href="tel:+39335286550"
+                className="transition hover:text-[#1f1a17]"
+              >
+                335 286550
+              </a>
+              <a
+                href="https://wa.me/39335286550"
+                className="transition hover:text-[#1f1a17]"
+              >
+                WhatsApp
+              </a>
+              <span>Via Francesco Acri, 88</span>
+              <span>88100 Catanzaro</span>
+            </div>
+          </div>
+
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#8b6a45]">
+              Legale
+            </p>
+            <div className="mt-4 flex flex-col gap-3 text-sm text-[#4e4339]">
+              <a
+                href="/privacy-policy"
+                className="transition hover:text-[#1f1a17]"
+              >
+                Privacy Policy
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className="border-t border-[#ddd1c2]">
+          <div className="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-5 text-xs text-[#7a6d61] sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
+            <p>© 2026 Studio Legale Giuseppe Pitaro. Tutti i diritti riservati.</p>
+            <p>Catanzaro, Calabria</p>
+          </div>
         </div>
       </footer>
     </div>
