@@ -1,3 +1,45 @@
+import Link from "next/link";
+
+export const metadata = {
+  title: "Privacy Policy | Studio Legale Giuseppe Pitaro",
+  description:
+    "Privacy Policy del sito dello Studio Legale Giuseppe Pitaro.",
+};
+
+export default function PrivacyPolicyPage() {
+  return (
+    <main className="min-h-screen bg-[#f7f4ee] text-[#1f1a17]">
+      <section className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+        <div className="rounded-[2rem] border border-[#ddd1c2] bg-white/80 p-8 shadow-sm md:p-12">
+          <p className="text-sm font-medium uppercase tracking-[0.22em] text-[#8b7a68]">
+            Studio Legale Giuseppe Pitaro
+          </p>
+
+          <h1 className="mt-4 text-3xl font-semibold tracking-[-0.03em] sm:text-4xl md:text-5xl">
+            Privacy Policy
+          </h1>
+
+          <p className="mt-4 text-sm text-[#6d6053]">
+            Ultimo aggiornamento: 18/04/2026
+          </p>
+
+          <div className="mt-6">
+            <Link
+              href="/"
+              className="inline-flex rounded-full border border-[#1f1a17] px-5 py-2 text-sm font-medium text-[#1f1a17] transition hover:bg-[#1f1a17] hover:text-white"
+            >
+              Torna al sito
+            </Link>
+          </div>
+
+          <div className="prose prose-neutral mt-10 max-w-none prose-headings:font-semibold prose-headings:text-[#1f1a17] prose-p:text-[#564b41] prose-li:text-[#564b41]">
+            {/* resto del testo */}
+          </div>
+        </div>
+      </section>
+    </main>
+  );
+}
 export const metadata = {
   title: "Privacy Policy | Studio Legale Giuseppe Pitaro",
   description:
