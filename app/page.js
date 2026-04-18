@@ -202,9 +202,9 @@ export default function LandingPage() {
               className="absolute inset-0 bg-cover bg-center"
               style={{ backgroundImage: "url('/sfondo-home.png')" }}
             />
-            <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(16,12,9,0.55),rgba(33,24,18,0.48)_20%,rgba(247,244,238,0.78)_58%,rgba(247,244,238,0.95)_100%)]" />
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.16),transparent_22%),radial-gradient(circle_at_top_right,rgba(123,90,54,0.18),transparent_28%),radial-gradient(circle_at_bottom_left,rgba(66,52,39,0.10),transparent_34%)]" />
-            <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(15,13,11,0.14),transparent_18%,transparent_82%,rgba(15,13,11,0.08))]" />
+            <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(18,14,11,0.56),rgba(32,23,17,0.42)_24%,rgba(247,244,238,0.20)_58%,rgba(247,244,238,0.56)_100%)]" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.12),transparent_22%),radial-gradient(circle_at_top_right,rgba(123,90,54,0.16),transparent_28%),radial-gradient(circle_at_bottom_left,rgba(66,52,39,0.08),transparent_34%)]" />
+            <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(15,13,11,0.18),transparent_18%,transparent_82%,rgba(15,13,11,0.10))]" />
           </div>
 
           <div className="relative mx-auto flex min-h-[calc(100svh-72px)] max-w-7xl flex-col justify-center px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
@@ -216,7 +216,7 @@ export default function LandingPage() {
                   Giuseppe Pitaro
                 </h1>
 
-                <div className="mt-5 inline-flex flex-wrap items-center gap-2 rounded-[1.4rem] border border-[#d7c6b2] bg-white/78 px-4 py-3 shadow-[0_10px_30px_rgba(33,24,18,0.10)] backdrop-blur-sm sm:px-5">
+                <div className="mt-5 inline-flex flex-wrap items-center gap-2 rounded-[1.4rem] border border-[#d7c6b2] bg-white/84 px-4 py-3 shadow-[0_10px_30px_rgba(33,24,18,0.12)] backdrop-blur-sm sm:px-5">
                   <span className="text-[15px] font-medium tracking-[0.01em] text-[#5f5449] sm:text-lg">
                     Assistenza legale con
                   </span>
@@ -233,7 +233,7 @@ export default function LandingPage() {
                   </span>
                 </div>
 
-                <p className="mt-5 max-w-lg text-[15px] leading-7 text-[#4f453d] sm:text-lg sm:leading-8 md:max-w-2xl md:text-xl">
+                <p className="mt-5 max-w-lg text-[15px] leading-7 text-[#463d35] sm:text-lg sm:leading-8 md:max-w-2xl md:text-xl">
                   Dal 1993 titolare dello Studio Legale Pitaro a Catanzaro,
                   l&apos;Avv. Giuseppe Pitaro offre assistenza e consulenza legale
                   con un profilo costruito su oltre 30 anni di esperienza,
@@ -250,7 +250,7 @@ export default function LandingPage() {
                   </a>
                   <a
                     href="#aree"
-                    className="w-full rounded-full border border-[#cdbfaa] bg-white/80 px-6 py-3 text-center text-sm font-medium text-[#1f1a17] transition hover:bg-white sm:w-auto sm:px-7"
+                    className="w-full rounded-full border border-[#cdbfaa] bg-white/84 px-6 py-3 text-center text-sm font-medium text-[#1f1a17] transition hover:bg-white sm:w-auto sm:px-7"
                   >
                     Scopri le aree di attività
                   </a>
@@ -259,7 +259,7 @@ export default function LandingPage() {
                 <div className="mt-8 h-px w-full max-w-2xl bg-gradient-to-r from-transparent via-[#ccbba8] to-transparent lg:hidden" />
 
                 <div className="relative z-10 mt-8 w-full max-w-2xl">
-                  <div className="rounded-[1.8rem] border border-[#e7ddd1] bg-white/78 p-5 shadow-sm backdrop-blur-sm sm:p-6">
+                  <div className="rounded-[1.8rem] border border-[#e7ddd1] bg-white/82 p-5 shadow-[0_12px_35px_rgba(33,24,18,0.10)] backdrop-blur-sm sm:p-6">
                     <div className="min-h-[84px] sm:min-h-[72px]">
                       <p
                         className={`text-sm leading-7 text-[#5f5449] transition-all duration-300 sm:text-base ${
@@ -300,7 +300,7 @@ export default function LandingPage() {
                   <span className="text-[10px] uppercase tracking-[0.22em]">
                     Scorri
                   </span>
-                  <span className="flex h-10 w-10 items-center justify-center rounded-full border border-[#d7c6b2] bg-white/78 backdrop-blur-sm">
+                  <span className="flex h-10 w-10 items-center justify-center rounded-full border border-[#d7c6b2] bg-white/84 backdrop-blur-sm">
                     <ChevronDown size={18} strokeWidth={1.8} />
                   </span>
                 </a>
@@ -308,7 +308,7 @@ export default function LandingPage() {
 
               <div className="hidden w-full items-center lg:flex lg:max-w-none lg:pl-8">
                 <div className="w-full">
-                  <div className="overflow-hidden rounded-[2rem] border border-[#d8ccbc] bg-white/82 p-3 shadow-[0_20px_80px_rgba(40,27,16,0.12)] backdrop-blur-sm sm:p-4">
+                  <div className="overflow-hidden rounded-[2rem] border border-[#d8ccbc] bg-white/86 p-3 shadow-[0_24px_80px_rgba(40,27,16,0.16)] backdrop-blur-sm sm:p-4">
                     <div className="overflow-hidden rounded-[1.6rem] border border-[#ece3d8] bg-[#fcfaf7]">
                       <img
                         src="/avv-giuseppe-pitaro-home.jpg"
@@ -329,7 +329,7 @@ export default function LandingPage() {
               <span className="text-[10px] uppercase tracking-[0.22em]">
                 Scorri
               </span>
-              <span className="flex h-10 w-10 items-center justify-center rounded-full border border-[#d7c6b2] bg-white/78 backdrop-blur-sm animate-bounce">
+              <span className="flex h-10 w-10 items-center justify-center rounded-full border border-[#d7c6b2] bg-white/84 backdrop-blur-sm animate-bounce">
                 <ChevronDown size={18} strokeWidth={1.8} />
               </span>
             </a>
