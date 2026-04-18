@@ -33,37 +33,6 @@ export default function PrivacyPolicyPage() {
           </div>
 
           <div className="prose prose-neutral mt-10 max-w-none prose-headings:font-semibold prose-headings:text-[#1f1a17] prose-p:text-[#564b41] prose-li:text-[#564b41]">
-            {/* resto del testo */}
-          </div>
-        </div>
-      </section>
-    </main>
-  );
-}
-export const metadata = {
-  title: "Privacy Policy | Studio Legale Giuseppe Pitaro",
-  description:
-    "Privacy Policy del sito dello Studio Legale Giuseppe Pitaro.",
-};
-
-export default function PrivacyPolicyPage() {
-  return (
-    <main className="min-h-screen bg-[#f7f4ee] text-[#1f1a17]">
-      <section className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
-        <div className="rounded-[2rem] border border-[#ddd1c2] bg-white/80 p-8 shadow-sm md:p-12">
-          <p className="text-sm font-medium uppercase tracking-[0.22em] text-[#8b7a68]">
-            Studio Legale Giuseppe Pitaro
-          </p>
-
-          <h1 className="mt-4 text-3xl font-semibold tracking-[-0.03em] sm:text-4xl md:text-5xl">
-            Privacy Policy
-          </h1>
-
-          <p className="mt-4 text-sm text-[#6d6053]">
-            Ultimo aggiornamento: 18/04/2026
-          </p>
-
-          <div className="prose prose-neutral mt-10 max-w-none prose-headings:font-semibold prose-headings:text-[#1f1a17] prose-p:text-[#564b41] prose-li:text-[#564b41]">
             <p>
               La presente informativa è resa ai sensi dell’art. 13 del
               Regolamento (UE) 2016/679 (“GDPR”) agli utenti che visitano il
@@ -72,9 +41,12 @@ export default function PrivacyPolicyPage() {
 
             <h2>1. Titolare del trattamento</h2>
             <p>
-              Il Titolare del trattamento è <strong>Giuseppe Pitaro</strong>,
-              con studio in <strong>Via Francesco Acri, 88, Catanzaro (CZ), Italia</strong>,
-              contattabile ai seguenti recapiti:
+              Il Titolare del trattamento è <strong>Giuseppe Pitaro</strong>, con
+              studio in{" "}
+              <strong>
+                Via Francesco Acri, 88, Catanzaro (CZ), Italia
+              </strong>
+              , contattabile ai seguenti recapiti:
             </p>
             <ul>
               <li>
@@ -96,12 +68,21 @@ export default function PrivacyPolicyPage() {
             </p>
             <p>Rientrano in questa categoria, a titolo esemplificativo:</p>
             <ul>
-              <li>indirizzi IP o nomi a dominio dei dispositivi utilizzati dagli utenti;</li>
-              <li>informazioni relative al browser, al dispositivo e al sistema operativo;</li>
+              <li>
+                indirizzi IP o nomi a dominio dei dispositivi utilizzati dagli
+                utenti;
+              </li>
+              <li>
+                informazioni relative al browser, al dispositivo e al sistema
+                operativo;
+              </li>
               <li>orario della richiesta;</li>
               <li>pagine visitate;</li>
               <li>eventuali codici di stato della risposta del server;</li>
-              <li>altri parametri tecnici relativi all’ambiente informatico dell’utente.</li>
+              <li>
+                altri parametri tecnici relativi all’ambiente informatico
+                dell’utente.
+              </li>
             </ul>
 
             <h3>b) Dati forniti volontariamente dall’utente</h3>
@@ -124,11 +105,13 @@ export default function PrivacyPolicyPage() {
 
             <h2>3. Finalità del trattamento e base giuridica</h2>
 
-            <h3>a) Consentire la navigazione e il corretto funzionamento del sito</h3>
+            <h3>
+              a) Consentire la navigazione e il corretto funzionamento del sito
+            </h3>
             <p>
-              La base giuridica del trattamento è il <strong>legittimo interesse</strong>{" "}
-              del Titolare a garantire la sicurezza, la stabilità e il corretto
-              funzionamento del sito web.
+              La base giuridica del trattamento è il{" "}
+              <strong>legittimo interesse</strong> del Titolare a garantire la
+              sicurezza, la stabilità e il corretto funzionamento del sito web.
             </p>
 
             <h3>b) Rispondere a richieste di informazioni o di contatto</h3>
@@ -145,8 +128,8 @@ export default function PrivacyPolicyPage() {
                 dall’interessato;
               </li>
               <li>
-                il <strong>legittimo interesse</strong> del Titolare a rispondere
-                alle richieste ricevute.
+                il <strong>legittimo interesse</strong> del Titolare a
+                rispondere alle richieste ricevute.
               </li>
             </ul>
 
@@ -163,8 +146,8 @@ export default function PrivacyPolicyPage() {
 
             <h2>4. Natura del conferimento dei dati</h2>
             <p>
-              Il conferimento dei dati di navigazione è necessario per consentire
-              la fruizione del sito.
+              Il conferimento dei dati di navigazione è necessario per
+              consentire la fruizione del sito.
             </p>
             <p>
               Il conferimento dei dati personali eventualmente comunicati tramite
@@ -191,18 +174,19 @@ export default function PrivacyPolicyPage() {
               I dati personali possono essere trattati da soggetti autorizzati
               dal Titolare e, ove necessario, da fornitori di servizi tecnici e
               informatici connessi alla gestione e manutenzione del sito,
-              nominati, se del caso, <strong>responsabili del trattamento</strong>{" "}
-              ai sensi dell’art. 28 GDPR.
+              nominati, se del caso,{" "}
+              <strong>responsabili del trattamento</strong> ai sensi dell’art. 28
+              GDPR.
             </p>
             <p>I dati non sono diffusi.</p>
 
             <h2>7. Trasferimento dei dati verso Paesi extra UE</h2>
             <p>
-              Il sito può avvalersi di fornitori tecnici i cui servizi potrebbero
-              comportare, in alcuni casi, il trasferimento di dati verso Paesi
-              non appartenenti allo Spazio Economico Europeo. In tali casi, il
-              trattamento avverrà nel rispetto delle garanzie previste dalla
-              normativa applicabile.
+              Il sito può avvalersi di fornitori tecnici i cui servizi
+              potrebbero comportare, in alcuni casi, il trasferimento di dati
+              verso Paesi non appartenenti allo Spazio Economico Europeo. In
+              tali casi, il trattamento avverrà nel rispetto delle garanzie
+              previste dalla normativa applicabile.
             </p>
 
             <h2>8. Periodo di conservazione dei dati</h2>
@@ -215,9 +199,9 @@ export default function PrivacyPolicyPage() {
             <p>
               I dati comunicati volontariamente dall’utente tramite email,
               telefono o WhatsApp sono conservati per il tempo necessario a
-              gestire la richiesta e, successivamente, per il tempo eventualmente
-              necessario ad adempiere a obblighi di legge o a tutelare i diritti
-              del Titolare.
+              gestire la richiesta e, successivamente, per il tempo
+              eventualmente necessario ad adempiere a obblighi di legge o a
+              tutelare i diritti del Titolare.
             </p>
 
             <h2>9. Link a servizi esterni</h2>
@@ -234,8 +218,8 @@ export default function PrivacyPolicyPage() {
 
             <h2>10. Diritti dell’interessato</h2>
             <p>
-              L’utente, in qualità di interessato, ha il diritto di ottenere, nei
-              casi previsti dal GDPR:
+              L’utente, in qualità di interessato, ha il diritto di ottenere,
+              nei casi previsti dal GDPR:
             </p>
             <ul>
               <li>l’accesso ai dati personali;</li>
@@ -258,9 +242,14 @@ export default function PrivacyPolicyPage() {
               Titolare ai seguenti recapiti:
             </p>
             <ul>
-              <li>Email: <strong>studiolegalepitaro@libero.it</strong></li>
               <li>
-                Indirizzo: <strong>Via Francesco Acri, 88, Catanzaro (CZ), Italia</strong>
+                Email: <strong>studiolegalepitaro@libero.it</strong>
+              </li>
+              <li>
+                Indirizzo:{" "}
+                <strong>
+                  Via Francesco Acri, 88, Catanzaro (CZ), Italia
+                </strong>
               </li>
             </ul>
 
@@ -273,9 +262,9 @@ export default function PrivacyPolicyPage() {
             </p>
 
             <p>
-              Per qualsiasi richiesta relativa al trattamento dei dati personali,
-              è possibile contattare lo Studio ai recapiti indicati nella
-              presente informativa.
+              Per qualsiasi richiesta relativa al trattamento dei dati
+              personali, è possibile contattare lo Studio ai recapiti indicati
+              nella presente informativa.
             </p>
           </div>
         </div>
