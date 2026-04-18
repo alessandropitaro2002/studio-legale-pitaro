@@ -9,6 +9,8 @@ import {
   Users,
   Landmark,
   ChevronDown,
+  Menu,
+  X,
 } from "lucide-react";
 
 export default function LandingPage() {
@@ -21,8 +23,19 @@ export default function LandingPage() {
     "visione strategica",
   ];
 
+  const profileHighlights = [
+    "Oltre 30 anni di esperienza legale maturata in molteplici settori del diritto.",
+    "Patrocinante in Cassazione, con attività anche dinanzi al Consiglio di Stato.",
+    "Approccio fondato su rigore, dedizione e difesa concreta del cliente.",
+  ];
+
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [isWordVisible, setIsWordVisible] = useState(true);
+
+  const [currentHighlightIndex, setCurrentHighlightIndex] = useState(0);
+  const [isHighlightVisible, setIsHighlightVisible] = useState(true);
+
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -36,6 +49,21 @@ export default function LandingPage() {
 
     return () => clearInterval(interval);
   }, [rotatingWords.length]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsHighlightVisible(false);
+
+      setTimeout(() => {
+        setCurrentHighlightIndex(
+          (prev) => (prev + 1) % profileHighlights.length
+        );
+        setIsHighlightVisible(true);
+      }, 220);
+    }, 3200);
+
+    return () => clearInterval(interval);
+  }, [profileHighlights.length]);
 
   const practiceAreas = [
     {
@@ -76,10 +104,12 @@ export default function LandingPage() {
     },
   ];
 
+  const closeMobileMenu = () => setMobileMenuOpen(false);
+
   return (
     <div className="min-h-screen scroll-smooth bg-[#f7f4ee] text-[#1f1a17]">
       <header className="sticky top-0 z-50 border-b border-[#d9cec0]/70 bg-[#f7f4ee]/90 backdrop-blur-xl">
-        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 px-4 py-3 sm:px-6 sm:py-4 lg:px-8">
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3 sm:px-6 sm:py-4 lg:px-8">
           <div className="min-w-0 text-[13px] font-semibold tracking-[0.01em] text-[#2a221d] sm:text-base md:text-lg">
             <span className="block truncate">Studio Legale Giuseppe Pitaro</span>
           </div>
@@ -99,19 +129,73 @@ export default function LandingPage() {
             </a>
           </nav>
 
-          <a
-            href="#contatti"
-            className="rounded-full border border-[#1f1a17] px-3 py-2 text-[11px] font-medium transition hover:bg-[#1f1a17] hover:text-white sm:px-4 sm:text-sm"
-          >
-            Richiedi un contatto
-          </a>
+          <div className="flex items-center gap-2">
+            <a
+              href="#contatti"
+              className="hidden rounded-full border border-[#1f1a17] px-3 py-2 text-[11px] font-medium transition hover:bg-[#1f1a17] hover:text-white sm:px-4 sm:text-sm md:inline-flex"
+            >
+              Richiedi un contatto
+            </a>
+
+            <button
+              type="button"
+              onClick={() => setMobileMenuOpen((prev) => !prev)}
+              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[#d7c6b2] bg-white/80 text-[#1f1a17] md:hidden"
+              aria-label="Apri menu"
+              aria-expanded={mobileMenuOpen}
+            >
+              {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
+            </button>
+          </div>
         </div>
+
+        {mobileMenuOpen && (
+          <div className="border-t border-[#e3d7c8] bg-[#f7f4ee]/95 px-4 py-4 shadow-sm md:hidden">
+            <nav className="flex flex-col gap-2 text-sm font-medium text-[#2a221d]">
+              <a
+                href="#home"
+                onClick={closeMobileMenu}
+                className="rounded-xl px-3 py-3 transition hover:bg-white/70"
+              >
+                Home
+              </a>
+              <a
+                href="#avvocato"
+                onClick={closeMobileMenu}
+                className="rounded-xl px-3 py-3 transition hover:bg-white/70"
+              >
+                L&apos;Avv. Giuseppe Pitaro
+              </a>
+              <a
+                href="#aree"
+                onClick={closeMobileMenu}
+                className="rounded-xl px-3 py-3 transition hover:bg-white/70"
+              >
+                Le aree
+              </a>
+              <a
+                href="#contatti"
+                onClick={closeMobileMenu}
+                className="rounded-xl px-3 py-3 transition hover:bg-white/70"
+              >
+                Contatti
+              </a>
+              <a
+                href="#contatti"
+                onClick={closeMobileMenu}
+                className="mt-2 rounded-full border border-[#1f1a17] px-4 py-3 text-center transition hover:bg-[#1f1a17] hover:text-white"
+              >
+                Richiedi un contatto
+              </a>
+            </nav>
+          </div>
+        )}
       </header>
 
       <main>
         <section
           id="home"
-          className="relative overflow-hidden scroll-mt-24 min-h-[calc(100svh-72px)] pt-4 sm:pt-2 lg:pt-0"
+          className="relative overflow-hidden scroll-mt-24 min-h-[calc(100svh-72px)]"
         >
           <div className="absolute inset-0 lg:hidden">
             <div className="absolute -left-16 top-0 h-56 w-56 animate-[pulse_8s_ease-in-out_infinite] rounded-full bg-[#e7d1b8]/55 blur-3xl" />
@@ -124,110 +208,131 @@ export default function LandingPage() {
 
           <div className="absolute inset-0 hidden lg:block bg-[radial-gradient(circle_at_top_right,rgba(123,90,54,0.14),transparent_30%),radial-gradient(circle_at_bottom_left,rgba(66,52,39,0.10),transparent_35%),linear-gradient(to_bottom,rgba(255,255,255,0.45),rgba(247,244,238,0.96))]" />
 
-          <div className="relative mx-auto grid w-full max-w-7xl gap-6 px-4 py-6 sm:px-6 sm:py-12 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:gap-10 lg:px-8 lg:py-16">
-            <div className="relative z-10 mx-auto flex max-w-3xl flex-col items-center text-center lg:mx-0 lg:items-start lg:text-left">
-              <h1 className="max-w-[12ch] text-4xl font-semibold leading-[1.02] tracking-[-0.04em] sm:max-w-none sm:text-4xl md:text-6xl lg:text-7xl">
-                Studio Legale
-                <br />
-                Giuseppe Pitaro
-              </h1>
+          <div className="relative mx-auto flex min-h-[calc(100svh-72px)] max-w-7xl flex-col justify-center px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
+            <div className="grid w-full items-center gap-6 lg:grid-cols-[1.15fr_0.85fr] lg:gap-10">
+              <div className="relative z-10 mx-auto flex max-w-3xl flex-col items-center text-center lg:mx-0 lg:items-start lg:text-left">
+                <h1 className="max-w-[12ch] text-4xl font-semibold leading-[1.02] tracking-[-0.04em] sm:max-w-none sm:text-4xl md:text-6xl lg:text-7xl">
+                  Studio Legale
+                  <br />
+                  Giuseppe Pitaro
+                </h1>
 
-              <div className="mt-5 inline-flex flex-wrap items-center gap-2 rounded-[1.4rem] border border-[#d7c6b2] bg-gradient-to-r from-[#fffaf4] via-white to-[#f4ece2] px-4 py-3 shadow-[0_10px_30px_rgba(123,90,54,0.10)] sm:px-5">
-                <span className="text-[15px] font-medium tracking-[0.01em] text-[#5f5449] sm:text-lg">
-                  Assistenza legale con
-                </span>
-                <span className="relative inline-flex min-w-[170px] items-center justify-center overflow-hidden rounded-full bg-white/80 px-4 py-2 shadow-inner">
-                  <span
-                    className={`text-[15px] font-semibold tracking-[0.01em] text-[#7b5a36] transition-all duration-300 sm:text-lg ${
-                      isWordVisible
-                        ? "translate-y-0 opacity-100"
-                        : "translate-y-2 opacity-0"
-                    }`}
-                  >
-                    {rotatingWords[currentWordIndex]}
+                <div className="mt-5 inline-flex flex-wrap items-center gap-2 rounded-[1.4rem] border border-[#d7c6b2] bg-gradient-to-r from-[#fffaf4] via-white to-[#f4ece2] px-4 py-3 shadow-[0_10px_30px_rgba(123,90,54,0.10)] sm:px-5">
+                  <span className="text-[15px] font-medium tracking-[0.01em] text-[#5f5449] sm:text-lg">
+                    Assistenza legale con
                   </span>
-                </span>
-              </div>
+                  <span className="relative inline-flex min-w-[170px] items-center justify-center overflow-hidden rounded-full bg-white/80 px-4 py-2 shadow-inner">
+                    <span
+                      className={`text-[15px] font-semibold tracking-[0.01em] text-[#7b5a36] transition-all duration-300 sm:text-lg ${
+                        isWordVisible
+                          ? "translate-y-0 opacity-100"
+                          : "translate-y-2 opacity-0"
+                      }`}
+                    >
+                      {rotatingWords[currentWordIndex]}
+                    </span>
+                  </span>
+                </div>
 
-              <p className="mt-5 max-w-lg text-[15px] leading-7 text-[#5f5449] sm:text-lg sm:leading-8 md:max-w-2xl md:text-xl">
-                Dal 1993 titolare dello Studio Legale Pitaro a Catanzaro,
-                l&apos;Avv. Giuseppe Pitaro offre assistenza e consulenza legale
-                con un profilo costruito su oltre 30 anni di esperienza,
-                competenza multidisciplinare e attenzione rigorosa alla tutela
-                degli interessi del cliente.
-              </p>
+                <p className="mt-5 max-w-lg text-[15px] leading-7 text-[#5f5449] sm:text-lg sm:leading-8 md:max-w-2xl md:text-xl">
+                  Dal 1993 titolare dello Studio Legale Pitaro a Catanzaro,
+                  l&apos;Avv. Giuseppe Pitaro offre assistenza e consulenza legale
+                  con un profilo costruito su oltre 30 anni di esperienza,
+                  competenza multidisciplinare e attenzione rigorosa alla tutela
+                  degli interessi del cliente.
+                </p>
 
-              <div className="mt-7 flex w-full max-w-sm flex-col gap-3 sm:max-w-none sm:flex-row">
-                <a
-                  href="#contatti"
-                  className="rounded-full bg-[#1f1a17] px-6 py-3 text-center text-sm font-medium text-white shadow-lg shadow-[#1f1a17]/10 transition hover:-translate-y-0.5 sm:px-7"
-                >
-                  Prenota un contatto
-                </a>
-                <a
-                  href="#aree"
-                  className="rounded-full border border-[#cdbfaa] bg-white/70 px-6 py-3 text-center text-sm font-medium text-[#1f1a17] transition hover:bg-white sm:px-7"
-                >
-                  Scopri le aree di attività
-                </a>
-              </div>
-
-              <div className="relative z-10 mt-8 grid w-full max-w-2xl gap-3 sm:grid-cols-3">
-                {[
-                  "Oltre 30 anni di esperienza legale maturata in molteplici settori del diritto.",
-                  "Patrocinante in Cassazione, con attività anche dinanzi al Consiglio di Stato.",
-                  "Approccio fondato su rigore, dedizione e difesa concreta del cliente.",
-                ].map((item) => (
-                  <div
-                    key={item}
-                    className="rounded-2xl border border-[#e7ddd1] bg-white/70 px-4 py-4 text-sm leading-6 text-[#5f5449] shadow-sm backdrop-blur-sm"
+                <div className="mt-7 flex w-full max-w-sm flex-col gap-3 sm:max-w-none sm:flex-row">
+                  <a
+                    href="#contatti"
+                    className="rounded-full bg-[#1f1a17] px-6 py-3 text-center text-sm font-medium text-white shadow-lg shadow-[#1f1a17]/10 transition hover:-translate-y-0.5 sm:px-7"
                   >
-                    {item}
+                    Prenota un contatto
+                  </a>
+                  <a
+                    href="#aree"
+                    className="rounded-full border border-[#cdbfaa] bg-white/70 px-6 py-3 text-center text-sm font-medium text-[#1f1a17] transition hover:bg-white sm:px-7"
+                  >
+                    Scopri le aree di attività
+                  </a>
+                </div>
+
+                <div className="relative z-10 mt-8 w-full max-w-2xl">
+                  <div className="rounded-[1.8rem] border border-[#e7ddd1] bg-white/75 p-5 shadow-sm backdrop-blur-sm sm:p-6">
+                    <div className="min-h-[84px] sm:min-h-[72px]">
+                      <p
+                        className={`text-sm leading-7 text-[#5f5449] transition-all duration-300 sm:text-base ${
+                          isHighlightVisible
+                            ? "translate-y-0 opacity-100"
+                            : "translate-y-2 opacity-0"
+                        }`}
+                      >
+                        {profileHighlights[currentHighlightIndex]}
+                      </p>
+                    </div>
+
+                    <div className="mt-4 flex items-center justify-between">
+                      <div className="flex gap-2">
+                        {profileHighlights.map((_, index) => (
+                          <span
+                            key={index}
+                            className={`h-2 rounded-full transition-all duration-300 ${
+                              index === currentHighlightIndex
+                                ? "w-6 bg-[#7b5a36]"
+                                : "w-2 bg-[#d7c6b2]"
+                            }`}
+                          />
+                        ))}
+                      </div>
+                      <span className="text-[10px] uppercase tracking-[0.2em] text-[#8b7a68]">
+                        Profilo
+                      </span>
+                    </div>
                   </div>
-                ))}
+                </div>
+
+                <a
+                  href="#avvocato"
+                  className="mt-8 flex flex-col items-center gap-1 text-[#7b6b5b] transition hover:text-[#7b5a36] lg:hidden"
+                  aria-label="Scorri verso il basso"
+                >
+                  <span className="text-[10px] uppercase tracking-[0.22em]">
+                    Scorri
+                  </span>
+                  <span className="flex h-10 w-10 items-center justify-center rounded-full border border-[#d7c6b2] bg-white/70 backdrop-blur-sm">
+                    <ChevronDown size={18} strokeWidth={1.8} />
+                  </span>
+                </a>
               </div>
 
-              <a
-                href="#avvocato"
-                className="mt-8 flex flex-col items-center gap-1 text-[#7b6b5b] transition hover:text-[#7b5a36] lg:hidden"
-                aria-label="Scorri verso il basso"
-              >
-                <span className="text-[10px] uppercase tracking-[0.22em]">
-                  Scorri
-                </span>
-                <span className="flex h-10 w-10 items-center justify-center rounded-full border border-[#d7c6b2] bg-white/70 backdrop-blur-sm">
-                  <ChevronDown size={18} strokeWidth={1.8} />
-                </span>
-              </a>
-            </div>
-
-            <div className="hidden w-full items-center lg:flex lg:max-w-none lg:pl-8">
-              <div className="w-full">
-                <div className="overflow-hidden rounded-[2rem] border border-[#d8ccbc] bg-white/80 p-3 shadow-[0_20px_80px_rgba(40,27,16,0.08)] backdrop-blur sm:p-4">
-                  <div className="overflow-hidden rounded-[1.6rem] border border-[#ece3d8] bg-[#fcfaf7]">
-                    <img
-                      src="/avv-giuseppe-pitaro-home.jpg"
-                      alt="Avvocato Giuseppe Pitaro"
-                      className="h-[300px] w-full object-cover object-center sm:h-[420px] lg:h-[540px]"
-                    />
+              <div className="hidden w-full items-center lg:flex lg:max-w-none lg:pl-8">
+                <div className="w-full">
+                  <div className="overflow-hidden rounded-[2rem] border border-[#d8ccbc] bg-white/80 p-3 shadow-[0_20px_80px_rgba(40,27,16,0.08)] backdrop-blur sm:p-4">
+                    <div className="overflow-hidden rounded-[1.6rem] border border-[#ece3d8] bg-[#fcfaf7]">
+                      <img
+                        src="/avv-giuseppe-pitaro-home.jpg"
+                        alt="Avvocato Giuseppe Pitaro"
+                        className="h-[300px] w-full object-cover object-center sm:h-[420px] lg:h-[540px]"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <a
-            href="#avvocato"
-            className="absolute bottom-8 left-1/2 z-20 hidden -translate-x-1/2 flex-col items-center gap-1 text-[#7b6b5b] transition hover:text-[#7b5a36] lg:flex"
-            aria-label="Scorri verso il basso"
-          >
-            <span className="text-[10px] uppercase tracking-[0.22em]">
-              Scorri
-            </span>
-            <span className="flex h-10 w-10 items-center justify-center rounded-full border border-[#d7c6b2] bg-white/70 backdrop-blur-sm animate-bounce">
-              <ChevronDown size={18} strokeWidth={1.8} />
-            </span>
-          </a>
+            <a
+              href="#avvocato"
+              className="mx-auto mt-10 hidden flex-col items-center gap-1 text-[#7b6b5b] transition hover:text-[#7b5a36] lg:flex"
+              aria-label="Scorri verso il basso"
+            >
+              <span className="text-[10px] uppercase tracking-[0.22em]">
+                Scorri
+              </span>
+              <span className="flex h-10 w-10 items-center justify-center rounded-full border border-[#d7c6b2] bg-white/70 backdrop-blur-sm animate-bounce">
+                <ChevronDown size={18} strokeWidth={1.8} />
+              </span>
+            </a>
+          </div>
         </section>
 
         <section
@@ -342,7 +447,7 @@ export default function LandingPage() {
 
         <section
           id="contatti"
-          className="mx-auto flex min-h-screen max-w-7xl items-center scroll-mt-24 px-4 py-14 sm:px-6 sm:py-20 lg:px-8 lg:py-24"
+          className="mx-auto max-w-7xl scroll-mt-24 px-4 py-14 sm:px-6 sm:py-20 lg:px-8 lg:py-24"
         >
           <div className="grid w-full gap-6 lg:grid-cols-[1fr_0.9fr] lg:gap-8">
             <div className="rounded-[2rem] bg-[#1f1a17] p-8 text-white shadow-[0_25px_80px_rgba(31,26,23,0.18)] md:p-12">
@@ -383,6 +488,19 @@ export default function LandingPage() {
                     Via Francesco Acri, 88, 88100 Catanzaro
                   </p>
                 </div>
+              </div>
+
+              <div className="mt-8 overflow-hidden rounded-[1.8rem] border border-white/10 bg-white/5 shadow-lg">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3104.5940077166874!2d16.588876077191703!3d38.910398545935045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13400657afc14ba3%3A0x8cdb558eff6af5fd!2sAvv.%20Giuseppe%20Pitaro%20detto%20Pino!5e0!3m2!1sit!2sit!4v1776531339489!5m2!1sit!2sit"
+                  width="100%"
+                  height="280"
+                  style={{ border: 0 }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Mappa Studio Legale Giuseppe Pitaro"
+                />
               </div>
             </div>
 
