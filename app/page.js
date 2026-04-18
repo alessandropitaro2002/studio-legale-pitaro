@@ -112,10 +112,19 @@ export default function LandingPage() {
           id="home"
           className="relative flex items-center overflow-hidden scroll-mt-24 min-h-[calc(100svh-72px)] pt-4 sm:pt-2 lg:pt-0"
         >
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(123,90,54,0.14),transparent_30%),radial-gradient(circle_at_bottom_left,rgba(66,52,39,0.10),transparent_35%),linear-gradient(to_bottom,rgba(255,255,255,0.45),rgba(247,244,238,0.96))]" />
+          <div className="absolute inset-0 lg:hidden">
+            <div
+              className="absolute inset-0 bg-cover bg-center opacity-25"
+              style={{ backgroundImage: "url('/avv-giuseppe-pitaro-home.jpg')" }}
+            />
+            <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(247,244,238,0.72),rgba(247,244,238,0.88)_35%,rgba(247,244,238,0.96)_100%)]" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(123,90,54,0.12),transparent_30%),radial-gradient(circle_at_bottom_left,rgba(66,52,39,0.08),transparent_35%)]" />
+          </div>
+
+          <div className="absolute inset-0 hidden lg:block bg-[radial-gradient(circle_at_top_right,rgba(123,90,54,0.14),transparent_30%),radial-gradient(circle_at_bottom_left,rgba(66,52,39,0.10),transparent_35%),linear-gradient(to_bottom,rgba(255,255,255,0.45),rgba(247,244,238,0.96))]" />
 
           <div className="relative mx-auto grid w-full max-w-7xl gap-6 px-4 py-6 sm:px-6 sm:py-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-10 lg:px-8 lg:py-16">
-            <div className="mx-auto flex max-w-3xl flex-col items-center text-center lg:mx-0 lg:items-start lg:text-left">
+            <div className="relative z-10 mx-auto flex max-w-3xl flex-col items-center text-center lg:mx-0 lg:items-start lg:text-left">
               <h1 className="max-w-[12ch] text-4xl font-semibold leading-[1.02] tracking-[-0.04em] sm:max-w-none sm:text-4xl md:text-6xl lg:text-7xl">
                 Studio Legale
                 <br />
@@ -162,7 +171,7 @@ export default function LandingPage() {
                 </a>
               </div>
 
-              <div className="mt-8 grid w-full max-w-2xl gap-3 sm:grid-cols-3">
+              <div className="relative z-10 mt-8 grid w-full max-w-2xl gap-3 sm:grid-cols-3">
                 {[
                   "Oltre 30 anni di esperienza legale maturata in molteplici settori del diritto.",
                   "Patrocinante in Cassazione, con attività anche dinanzi al Consiglio di Stato.",
@@ -170,7 +179,7 @@ export default function LandingPage() {
                 ].map((item) => (
                   <div
                     key={item}
-                    className="rounded-2xl border border-[#e7ddd1] bg-white/70 px-4 py-4 text-sm leading-6 text-[#5f5449] shadow-sm"
+                    className="rounded-2xl border border-[#e7ddd1] bg-white/70 px-4 py-4 text-sm leading-6 text-[#5f5449] shadow-sm backdrop-blur-sm"
                   >
                     {item}
                   </div>
@@ -178,7 +187,7 @@ export default function LandingPage() {
               </div>
             </div>
 
-            <div className="order-first mx-auto flex w-full max-w-sm items-center lg:order-none lg:max-w-none lg:pl-8">
+            <div className="hidden w-full items-center lg:flex lg:max-w-none lg:pl-8">
               <div className="w-full">
                 <div className="overflow-hidden rounded-[2rem] border border-[#d8ccbc] bg-white/80 p-3 shadow-[0_20px_80px_rgba(40,27,16,0.08)] backdrop-blur sm:p-4">
                   <div className="overflow-hidden rounded-[1.6rem] border border-[#ece3d8] bg-[#fcfaf7]">
