@@ -433,5 +433,3 @@ export default function LandingPage() {
     </div>
   );
 }
-
-Questa è la versione attuale, sistemamela con il problema del tastino scorri. Give me full code.
