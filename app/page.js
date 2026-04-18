@@ -8,6 +8,7 @@ import {
   Shield,
   Users,
   Landmark,
+  ChevronDown,
 } from "lucide-react";
 
 export default function LandingPage() {
@@ -113,15 +114,12 @@ export default function LandingPage() {
           className="relative flex items-center overflow-hidden scroll-mt-24 min-h-[calc(100svh-72px)] pt-4 sm:pt-2 lg:pt-0"
         >
           <div className="absolute inset-0 lg:hidden">
-            <div
-              className="absolute inset-0 bg-cover bg-center opacity-40"
-              style={{ backgroundImage: "url('/avv-giuseppe-pitaro-home.jpg')" }}
-            />
-            <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(247,244,238,0.40),rgba(247,244,238,0.58)_36%,rgba(247,244,238,0.84)_100%)]" />
-            <div className="absolute -left-10 top-0 h-44 w-44 animate-[pulse_7s_ease-in-out_infinite] rounded-full bg-[#f1e1cd]/45 blur-3xl" />
-            <div className="absolute right-[-20px] top-24 h-48 w-48 animate-[pulse_9s_ease-in-out_infinite] rounded-full bg-[#d8c0a1]/30 blur-3xl" />
-            <div className="absolute bottom-0 left-1/3 h-40 w-40 animate-[pulse_8s_ease-in-out_infinite] rounded-full bg-white/30 blur-3xl" />
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_68%_30%,rgba(255,255,255,0.02),transparent_20%),radial-gradient(circle_at_top_right,rgba(123,90,54,0.10),transparent_32%),radial-gradient(circle_at_bottom_left,rgba(66,52,39,0.06),transparent_35%)]" />
+            <div className="absolute -left-16 top-0 h-56 w-56 animate-[pulse_8s_ease-in-out_infinite] rounded-full bg-[#e7d1b8]/55 blur-3xl" />
+            <div className="absolute right-[-40px] top-20 h-60 w-60 animate-[pulse_10s_ease-in-out_infinite] rounded-full bg-[#d7b892]/35 blur-3xl" />
+            <div className="absolute bottom-8 left-1/3 h-48 w-48 animate-[pulse_9s_ease-in-out_infinite] rounded-full bg-white/35 blur-3xl" />
+            <div className="absolute bottom-0 right-1/4 h-40 w-40 animate-[pulse_11s_ease-in-out_infinite] rounded-full bg-[#f3e8da]/45 blur-3xl" />
+            <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(252,249,245,0.78),rgba(247,244,238,0.90)_38%,rgba(247,244,238,0.98)_100%)]" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(123,90,54,0.10),transparent_30%),radial-gradient(circle_at_bottom_left,rgba(66,52,39,0.06),transparent_35%)]" />
           </div>
 
           <div className="absolute inset-0 hidden lg:block bg-[radial-gradient(circle_at_top_right,rgba(123,90,54,0.14),transparent_30%),radial-gradient(circle_at_bottom_left,rgba(66,52,39,0.10),transparent_35%),linear-gradient(to_bottom,rgba(255,255,255,0.45),rgba(247,244,238,0.96))]" />
@@ -204,6 +202,19 @@ export default function LandingPage() {
               </div>
             </div>
           </div>
+
+          <a
+            href="#avvocato"
+            className="absolute bottom-5 left-1/2 z-20 flex -translate-x-1/2 flex-col items-center gap-1 text-[#7b6b5b] transition hover:text-[#7b5a36]"
+            aria-label="Scorri verso il basso"
+          >
+            <span className="text-[10px] uppercase tracking-[0.22em]">
+              Scorri
+            </span>
+            <span className="flex h-10 w-10 items-center justify-center rounded-full border border-[#d7c6b2] bg-white/70 backdrop-blur-sm animate-bounce">
+              <ChevronDown size={18} strokeWidth={1.8} />
+            </span>
+          </a>
         </section>
 
         <section
