@@ -197,31 +197,30 @@ export default function LandingPage() {
           id="home"
           className="relative overflow-hidden scroll-mt-24 min-h-[calc(100svh-72px)]"
         >
-          <div className="absolute inset-0 lg:hidden">
-            <div className="absolute -left-16 top-0 h-56 w-56 animate-[pulse_8s_ease-in-out_infinite] rounded-full bg-[#e7d1b8]/55 blur-3xl" />
-            <div className="absolute right-[-40px] top-20 h-60 w-60 animate-[pulse_10s_ease-in-out_infinite] rounded-full bg-[#d7b892]/35 blur-3xl" />
-            <div className="absolute bottom-8 left-1/3 h-48 w-48 animate-[pulse_9s_ease-in-out_infinite] rounded-full bg-white/35 blur-3xl" />
-            <div className="absolute bottom-0 right-1/4 h-40 w-40 animate-[pulse_11s_ease-in-out_infinite] rounded-full bg-[#f3e8da]/45 blur-3xl" />
-            <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(252,249,245,0.78),rgba(247,244,238,0.90)_38%,rgba(247,244,238,0.98)_100%)]" />
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(123,90,54,0.10),transparent_30%),radial-gradient(circle_at_bottom_left,rgba(66,52,39,0.06),transparent_35%)]" />
+          <div className="absolute inset-0">
+            <div
+              className="absolute inset-0 bg-cover bg-center"
+              style={{ backgroundImage: "url('/sfondo-home.png')" }}
+            />
+            <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(16,12,9,0.55),rgba(33,24,18,0.48)_20%,rgba(247,244,238,0.78)_58%,rgba(247,244,238,0.95)_100%)]" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.16),transparent_22%),radial-gradient(circle_at_top_right,rgba(123,90,54,0.18),transparent_28%),radial-gradient(circle_at_bottom_left,rgba(66,52,39,0.10),transparent_34%)]" />
+            <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(15,13,11,0.14),transparent_18%,transparent_82%,rgba(15,13,11,0.08))]" />
           </div>
-
-          <div className="absolute inset-0 hidden lg:block bg-[radial-gradient(circle_at_top_right,rgba(123,90,54,0.14),transparent_30%),radial-gradient(circle_at_bottom_left,rgba(66,52,39,0.10),transparent_35%),linear-gradient(to_bottom,rgba(255,255,255,0.45),rgba(247,244,238,0.96))]" />
 
           <div className="relative mx-auto flex min-h-[calc(100svh-72px)] max-w-7xl flex-col justify-center px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
             <div className="grid w-full items-center gap-6 lg:grid-cols-[1.15fr_0.85fr] lg:gap-10">
               <div className="relative z-10 mx-auto flex max-w-3xl flex-col items-center text-center lg:mx-0 lg:items-start lg:text-left">
-                <h1 className="max-w-[12ch] text-4xl font-semibold leading-[1.02] tracking-[-0.04em] sm:max-w-none sm:text-4xl md:text-6xl lg:text-7xl">
+                <h1 className="max-w-[12ch] text-4xl font-semibold leading-[1.02] tracking-[-0.04em] text-[#1f1a17] sm:max-w-none sm:text-4xl md:text-6xl lg:text-7xl">
                   Studio Legale
                   <br />
                   Giuseppe Pitaro
                 </h1>
 
-                <div className="mt-5 inline-flex flex-wrap items-center gap-2 rounded-[1.4rem] border border-[#d7c6b2] bg-gradient-to-r from-[#fffaf4] via-white to-[#f4ece2] px-4 py-3 shadow-[0_10px_30px_rgba(123,90,54,0.10)] sm:px-5">
+                <div className="mt-5 inline-flex flex-wrap items-center gap-2 rounded-[1.4rem] border border-[#d7c6b2] bg-white/78 px-4 py-3 shadow-[0_10px_30px_rgba(33,24,18,0.10)] backdrop-blur-sm sm:px-5">
                   <span className="text-[15px] font-medium tracking-[0.01em] text-[#5f5449] sm:text-lg">
                     Assistenza legale con
                   </span>
-                  <span className="relative inline-flex min-w-[170px] items-center justify-center overflow-hidden rounded-full bg-white/80 px-4 py-2 shadow-inner">
+                  <span className="relative inline-flex min-w-[170px] items-center justify-center overflow-hidden rounded-full bg-[#f8f4ee] px-4 py-2 shadow-inner">
                     <span
                       className={`text-[15px] font-semibold tracking-[0.01em] text-[#7b5a36] transition-all duration-300 sm:text-lg ${
                         isWordVisible
@@ -234,7 +233,7 @@ export default function LandingPage() {
                   </span>
                 </div>
 
-                <p className="mt-5 max-w-lg text-[15px] leading-7 text-[#5f5449] sm:text-lg sm:leading-8 md:max-w-2xl md:text-xl">
+                <p className="mt-5 max-w-lg text-[15px] leading-7 text-[#4f453d] sm:text-lg sm:leading-8 md:max-w-2xl md:text-xl">
                   Dal 1993 titolare dello Studio Legale Pitaro a Catanzaro,
                   l&apos;Avv. Giuseppe Pitaro offre assistenza e consulenza legale
                   con un profilo costruito su oltre 30 anni di esperienza,
@@ -245,20 +244,22 @@ export default function LandingPage() {
                 <div className="mt-7 flex w-full max-w-sm flex-col gap-3 sm:max-w-none sm:flex-row">
                   <a
                     href="#contatti"
-                    className="rounded-full bg-[#1f1a17] px-6 py-3 text-center text-sm font-medium text-white shadow-lg shadow-[#1f1a17]/10 transition hover:-translate-y-0.5 sm:px-7"
+                    className="w-full rounded-full bg-[#1f1a17] px-6 py-3 text-center text-sm font-medium text-white shadow-lg shadow-[#1f1a17]/15 transition hover:-translate-y-0.5 sm:w-auto sm:px-7"
                   >
                     Prenota un contatto
                   </a>
                   <a
                     href="#aree"
-                    className="rounded-full border border-[#cdbfaa] bg-white/70 px-6 py-3 text-center text-sm font-medium text-[#1f1a17] transition hover:bg-white sm:px-7"
+                    className="w-full rounded-full border border-[#cdbfaa] bg-white/80 px-6 py-3 text-center text-sm font-medium text-[#1f1a17] transition hover:bg-white sm:w-auto sm:px-7"
                   >
                     Scopri le aree di attività
                   </a>
                 </div>
 
+                <div className="mt-8 h-px w-full max-w-2xl bg-gradient-to-r from-transparent via-[#ccbba8] to-transparent lg:hidden" />
+
                 <div className="relative z-10 mt-8 w-full max-w-2xl">
-                  <div className="rounded-[1.8rem] border border-[#e7ddd1] bg-white/75 p-5 shadow-sm backdrop-blur-sm sm:p-6">
+                  <div className="rounded-[1.8rem] border border-[#e7ddd1] bg-white/78 p-5 shadow-sm backdrop-blur-sm sm:p-6">
                     <div className="min-h-[84px] sm:min-h-[72px]">
                       <p
                         className={`text-sm leading-7 text-[#5f5449] transition-all duration-300 sm:text-base ${
@@ -293,13 +294,13 @@ export default function LandingPage() {
 
                 <a
                   href="#avvocato"
-                  className="mt-8 flex flex-col items-center gap-1 text-[#7b6b5b] transition hover:text-[#7b5a36] lg:hidden"
+                  className="mt-8 flex flex-col items-center gap-1 text-[#6f6256] transition hover:text-[#7b5a36] lg:hidden"
                   aria-label="Scorri verso il basso"
                 >
                   <span className="text-[10px] uppercase tracking-[0.22em]">
                     Scorri
                   </span>
-                  <span className="flex h-10 w-10 items-center justify-center rounded-full border border-[#d7c6b2] bg-white/70 backdrop-blur-sm">
+                  <span className="flex h-10 w-10 items-center justify-center rounded-full border border-[#d7c6b2] bg-white/78 backdrop-blur-sm">
                     <ChevronDown size={18} strokeWidth={1.8} />
                   </span>
                 </a>
@@ -307,7 +308,7 @@ export default function LandingPage() {
 
               <div className="hidden w-full items-center lg:flex lg:max-w-none lg:pl-8">
                 <div className="w-full">
-                  <div className="overflow-hidden rounded-[2rem] border border-[#d8ccbc] bg-white/80 p-3 shadow-[0_20px_80px_rgba(40,27,16,0.08)] backdrop-blur sm:p-4">
+                  <div className="overflow-hidden rounded-[2rem] border border-[#d8ccbc] bg-white/82 p-3 shadow-[0_20px_80px_rgba(40,27,16,0.12)] backdrop-blur-sm sm:p-4">
                     <div className="overflow-hidden rounded-[1.6rem] border border-[#ece3d8] bg-[#fcfaf7]">
                       <img
                         src="/avv-giuseppe-pitaro-home.jpg"
@@ -322,13 +323,13 @@ export default function LandingPage() {
 
             <a
               href="#avvocato"
-              className="mx-auto mt-10 hidden flex-col items-center gap-1 text-[#7b6b5b] transition hover:text-[#7b5a36] lg:flex"
+              className="mx-auto mt-10 hidden flex-col items-center gap-1 text-[#6f6256] transition hover:text-[#7b5a36] lg:flex"
               aria-label="Scorri verso il basso"
             >
               <span className="text-[10px] uppercase tracking-[0.22em]">
                 Scorri
               </span>
-              <span className="flex h-10 w-10 items-center justify-center rounded-full border border-[#d7c6b2] bg-white/70 backdrop-blur-sm animate-bounce">
+              <span className="flex h-10 w-10 items-center justify-center rounded-full border border-[#d7c6b2] bg-white/78 backdrop-blur-sm animate-bounce">
                 <ChevronDown size={18} strokeWidth={1.8} />
               </span>
             </a>
@@ -543,58 +544,58 @@ export default function LandingPage() {
         </section>
       </main>
 
-      <footer className="border-t border-[#d8ccbc] bg-[#efe7dc]">
+      <footer className="border-t border-[#1f1915] bg-[linear-gradient(180deg,#15110e_0%,#100d0b_100%)] text-[#e9dfd2]">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 lg:grid-cols-4 lg:px-8">
           <div>
-            <h3 className="text-xl font-semibold tracking-tight text-[#1f1a17]">
+            <h3 className="text-xl font-semibold tracking-tight text-white">
               Studio Legale Giuseppe Pitaro
             </h3>
-            <p className="mt-4 max-w-sm text-sm leading-7 text-[#6f6256]">
+            <p className="mt-4 max-w-sm text-sm leading-7 text-[#b9aa98]">
               Assistenza e consulenza legale a Catanzaro, con oltre 30 anni di
               esperienza e attività in diversi ambiti del diritto.
             </p>
           </div>
 
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#8b6a45]">
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#b89567]">
               Navigazione
             </p>
-            <div className="mt-4 flex flex-col gap-3 text-sm text-[#4e4339]">
-              <a href="#home" className="transition hover:text-[#1f1a17]">
+            <div className="mt-4 flex flex-col gap-3 text-sm text-[#ddd1c2]">
+              <a href="#home" className="transition hover:text-white">
                 Home
               </a>
-              <a href="#avvocato" className="transition hover:text-[#1f1a17]">
+              <a href="#avvocato" className="transition hover:text-white">
                 L&apos;Avv. Giuseppe Pitaro
               </a>
-              <a href="#aree" className="transition hover:text-[#1f1a17]">
+              <a href="#aree" className="transition hover:text-white">
                 Le aree
               </a>
-              <a href="#contatti" className="transition hover:text-[#1f1a17]">
+              <a href="#contatti" className="transition hover:text-white">
                 Contatti
               </a>
             </div>
           </div>
 
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#8b6a45]">
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#b89567]">
               Contatti
             </p>
-            <div className="mt-4 flex flex-col gap-3 text-sm text-[#4e4339]">
+            <div className="mt-4 flex flex-col gap-3 text-sm text-[#ddd1c2]">
               <a
                 href="mailto:studiolegalepitaro@libero.it"
-                className="transition hover:text-[#1f1a17]"
+                className="transition hover:text-white"
               >
                 studiolegalepitaro@libero.it
               </a>
               <a
                 href="tel:+39335286550"
-                className="transition hover:text-[#1f1a17]"
+                className="transition hover:text-white"
               >
                 335 286550
               </a>
               <a
                 href="https://wa.me/39335286550"
-                className="transition hover:text-[#1f1a17]"
+                className="transition hover:text-white"
               >
                 WhatsApp
               </a>
@@ -604,13 +605,13 @@ export default function LandingPage() {
           </div>
 
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#8b6a45]">
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#b89567]">
               Legale
             </p>
-            <div className="mt-4 flex flex-col gap-3 text-sm text-[#4e4339]">
+            <div className="mt-4 flex flex-col gap-3 text-sm text-[#ddd1c2]">
               <a
                 href="/privacy-policy"
-                className="transition hover:text-[#1f1a17]"
+                className="transition hover:text-white"
               >
                 Privacy Policy
               </a>
@@ -618,8 +619,8 @@ export default function LandingPage() {
           </div>
         </div>
 
-        <div className="border-t border-[#ddd1c2]">
-          <div className="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-5 text-xs text-[#7a6d61] sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
+        <div className="border-t border-white/10">
+          <div className="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-5 text-xs text-[#8f8376] sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
             <p>© 2026 Studio Legale Giuseppe Pitaro. Tutti i diritti riservati.</p>
             <p>Catanzaro, Calabria</p>
           </div>
