@@ -37,9 +37,6 @@ export default function LandingPage() {
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const [mobileHeroSlide, setMobileHeroSlide] = useState(0);
-  const [mobileHeroVisible, setMobileHeroVisible] = useState(true);
-
   useEffect(() => {
     const interval = setInterval(() => {
       setIsWordVisible(false);
@@ -67,19 +64,6 @@ export default function LandingPage() {
 
     return () => clearInterval(interval);
   }, [profileHighlights.length]);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setMobileHeroVisible(false);
-
-      setTimeout(() => {
-        setMobileHeroSlide((prev) => (prev + 1) % 2);
-        setMobileHeroVisible(true);
-      }, 260);
-    }, 4200);
-
-    return () => clearInterval(interval);
-  }, []);
 
   const practiceAreas = [
     {
@@ -237,7 +221,7 @@ export default function LandingPage() {
 
           <div className="relative mx-auto flex min-h-[calc(100svh-72px)] max-w-7xl flex-col justify-center px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
             <div className="grid w-full items-center gap-6 lg:grid-cols-[1.15fr_0.85fr] lg:gap-10">
-              <div className="relative z-10 mx-auto hidden max-w-3xl flex-col items-center text-center lg:mx-0 lg:flex lg:items-start lg:text-left">
+              <div className="relative z-10 mx-auto flex max-w-3xl flex-col items-center text-center lg:mx-0 lg:items-start lg:text-left">
                 <h1 className="max-w-[12ch] text-4xl font-semibold leading-[1.02] tracking-[-0.04em] text-[#1f1a17] sm:max-w-none sm:text-4xl md:text-6xl lg:text-7xl">
                   Studio Legale
                   <br />
@@ -284,136 +268,20 @@ export default function LandingPage() {
                   </a>
                 </div>
 
+                <div className="mt-8 h-px w-full max-w-2xl bg-gradient-to-r from-transparent via-[#ccbba8] to-transparent lg:hidden" />
+
                 <div className="relative z-10 mt-8 w-full max-w-2xl">
-                  <div className="rounded-[1.8rem] border border-[#e7ddd1] bg-white/82 p-5 shadow-[0_12px_35px_rgba(33,24,18,0.10)] backdrop-blur-sm sm:p-6">
-                    <div className="min-h-[84px] sm:min-h-[72px]">
-                      <p
-                        className={`text-sm leading-7 text-[#5f5449] transition-all duration-300 sm:text-base ${
-                          isHighlightVisible
-                            ? "translate-y-0 opacity-100"
-                            : "translate-y-2 opacity-0"
-                        }`}
-                      >
-                        {profileHighlights[currentHighlightIndex]}
-                      </p>
-                    </div>
-
-                    <div className="mt-4 flex items-center justify-between">
-                      <div className="flex gap-2">
-                        {profileHighlights.map((_, index) => (
-                          <span
-                            key={index}
-                            className={`h-2 rounded-full transition-all duration-300 ${
-                              index === currentHighlightIndex
-                                ? "w-6 bg-[#7b5a36]"
-                                : "w-2 bg-[#d7c6b2]"
-                            }`}
-                          />
-                        ))}
-                      </div>
-                      <span className="text-[10px] uppercase tracking-[0.2em] text-[#8b7a68]">
-                        Profilo
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="relative z-10 mx-auto flex max-w-3xl flex-col items-center text-center lg:hidden">
-                {mobileHeroSlide === 0 ? (
-                  <div
-                    className={`w-full transition-all duration-500 ${
-                      mobileHeroVisible
-                        ? "translate-y-0 opacity-100"
-                        : "translate-y-3 opacity-0"
-                    }`}
-                  >
-                    <h1 className="text-4xl font-semibold leading-[1.02] tracking-[-0.04em] text-[#1f1a17] sm:text-4xl">
-                      Studio Legale
-                      <br />
-                      Giuseppe Pitaro
-                    </h1>
-
-                    <div className="mt-5 inline-flex max-w-full flex-wrap items-center justify-center gap-2 rounded-[1.4rem] border border-[#d7c6b2] bg-white/84 px-4 py-3 shadow-[0_10px_30px_rgba(33,24,18,0.12)] backdrop-blur-sm sm:px-5">
-                      <span className="text-[15px] font-medium tracking-[0.01em] text-[#5f5449] sm:text-lg">
-                        Assistenza legale con
-                      </span>
-                      <span className="relative inline-flex min-w-[170px] items-center justify-center overflow-hidden rounded-full bg-[#f8f4ee] px-4 py-2 shadow-inner">
-                        <span
-                          className={`text-[15px] font-semibold tracking-[0.01em] text-[#7b5a36] transition-all duration-300 sm:text-lg ${
-                            isWordVisible
-                              ? "translate-y-0 opacity-100"
-                              : "translate-y-2 opacity-0"
-                          }`}
-                        >
-                          {rotatingWords[currentWordIndex]}
-                        </span>
-                      </span>
-                    </div>
-
-                    <p className="mx-auto mt-5 max-w-lg text-[15px] leading-7 text-[#463d35] sm:text-lg sm:leading-8">
-                      Dal 1993 titolare dello Studio Legale Pitaro a Catanzaro,
-                      l&apos;Avv. Giuseppe Pitaro offre assistenza e consulenza
-                      legale con un profilo costruito su oltre 30 anni di
-                      esperienza, competenza multidisciplinare e attenzione
-                      rigorosa alla tutela degli interessi del cliente.
-                    </p>
-
-                    <div className="mt-7 flex w-full flex-col gap-3">
-                      <a
-                        href="#contatti"
-                        className="w-full rounded-full bg-[#1f1a17] px-6 py-3 text-center text-sm font-medium text-white shadow-lg shadow-[#1f1a17]/15 transition hover:-translate-y-0.5"
-                      >
-                        Prenota un contatto
-                      </a>
-                      <a
-                        href="#aree"
-                        className="w-full rounded-full border border-[#cdbfaa] bg-white/84 px-6 py-3 text-center text-sm font-medium text-[#1f1a17] transition hover:bg-white"
-                      >
-                        Scopri le aree di attività
-                      </a>
-                    </div>
-                  </div>
-                ) : (
-                  <div
-                    className={`w-full transition-all duration-500 ${
-                      mobileHeroVisible
-                        ? "translate-y-0 opacity-100"
-                        : "translate-y-3 opacity-0"
-                    }`}
-                  >
-                    <div className="overflow-hidden rounded-[2rem] border border-[#d8ccbc] bg-white/86 p-3 shadow-[0_24px_80px_rgba(40,27,16,0.16)] backdrop-blur-sm">
-                      <div className="overflow-hidden rounded-[1.6rem] border border-[#ece3d8] bg-[#fcfaf7]">
+                  <div className="rounded-[1.8rem] border border-[#e7ddd1] bg-white/82 p-4 shadow-[0_12px_35px_rgba(33,24,18,0.10)] backdrop-blur-sm sm:p-6">
+                    <div className="block sm:hidden">
+                      <div className="mb-4 overflow-hidden rounded-[1.3rem] border border-[#ece3d8] bg-[#fcfaf7]">
                         <img
                           src="/avv-giuseppe-pitaro-home.jpg"
                           alt="Avvocato Giuseppe Pitaro"
-                          className="h-[360px] w-full object-cover object-center"
+                          className="h-48 w-full object-cover object-center"
                         />
                       </div>
                     </div>
-                    <p className="mt-4 text-[11px] font-medium uppercase tracking-[0.22em] text-[#8b7a68]">
-                      Avv. Giuseppe Pitaro
-                    </p>
-                  </div>
-                )}
 
-                <div className="mt-6 flex gap-2">
-                  {[0, 1].map((index) => (
-                    <span
-                      key={index}
-                      className={`h-2 rounded-full transition-all duration-300 ${
-                        index === mobileHeroSlide
-                          ? "w-6 bg-[#7b5a36]"
-                          : "w-2 bg-[#d7c6b2]"
-                      }`}
-                    />
-                  ))}
-                </div>
-
-                <div className="mt-8 h-px w-full max-w-2xl bg-gradient-to-r from-transparent via-[#ccbba8] to-transparent" />
-
-                <div className="relative z-10 mt-8 w-full max-w-2xl">
-                  <div className="rounded-[1.8rem] border border-[#e7ddd1] bg-white/82 p-5 shadow-[0_12px_35px_rgba(33,24,18,0.10)] backdrop-blur-sm sm:p-6">
                     <div className="min-h-[84px] sm:min-h-[72px]">
                       <p
                         className={`text-sm leading-7 text-[#5f5449] transition-all duration-300 sm:text-base ${
@@ -448,7 +316,7 @@ export default function LandingPage() {
 
                 <a
                   href="#avvocato"
-                  className="mt-8 flex flex-col items-center gap-1 text-[#6f6256] transition hover:text-[#7b5a36]"
+                  className="mt-8 flex flex-col items-center gap-1 text-[#6f6256] transition hover:text-[#7b5a36] lg:hidden"
                   aria-label="Scorri verso il basso"
                 >
                   <span className="text-[10px] uppercase tracking-[0.22em]">
