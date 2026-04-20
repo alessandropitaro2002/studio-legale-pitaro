@@ -30,7 +30,7 @@ export const metadata = {
     title: "Studio Legale Giuseppe Pitaro | Avvocato a Catanzaro",
     description:
       "Assistenza e consulenza legale a Catanzaro con oltre 30 anni di esperienza.",
-    images: ["/og-image.jpg"],
+    images: ["/og-image.png"],
   },
 };
 
