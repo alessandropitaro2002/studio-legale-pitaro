@@ -38,7 +38,7 @@ export default function LandingPage() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const [showIntro, setShowIntro] = useState(true);
-  const [introVisible, setIntroVisible] = useState(true);
+  const [introVisible, setIntroVisible] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -69,15 +69,20 @@ export default function LandingPage() {
   }, [profileHighlights.length]);
 
   useEffect(() => {
+    const enterTimer = setTimeout(() => {
+      setIntroVisible(true);
+    }, 60);
+
     const fadeTimer = setTimeout(() => {
       setIntroVisible(false);
     }, 1650);
 
     const removeTimer = setTimeout(() => {
       setShowIntro(false);
-    }, 2250);
+    }, 2350);
 
     return () => {
+      clearTimeout(enterTimer);
       clearTimeout(fadeTimer);
       clearTimeout(removeTimer);
     };
@@ -128,41 +133,40 @@ export default function LandingPage() {
     <div className="min-h-screen scroll-smooth bg-[#f7f4ee] text-[#1f1a17]">
       {showIntro && (
         <div
-          className={`fixed inset-0 z-[999] flex items-center justify-center overflow-hidden bg-[linear-gradient(180deg,#15110e_0%,#100d0b_100%)] transition-all duration-700 ${
+          className={`fixed inset-0 z-[999] flex items-center justify-center overflow-hidden bg-[#f7f4ee] transition-all duration-700 ${
             introVisible ? "opacity-100" : "pointer-events-none opacity-0"
           }`}
         >
           <div className="absolute inset-0">
-            <div className="absolute -left-20 top-[-40px] h-72 w-72 animate-[pulse_8s_ease-in-out_infinite] rounded-full bg-[#b89567]/20 blur-3xl" />
-            <div className="absolute right-[-30px] top-1/4 h-80 w-80 animate-[pulse_10s_ease-in-out_infinite] rounded-full bg-[#8a6b47]/18 blur-3xl" />
-            <div className="absolute bottom-[-30px] left-1/3 h-72 w-72 animate-[pulse_9s_ease-in-out_infinite] rounded-full bg-white/8 blur-3xl" />
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.06),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(184,149,103,0.10),transparent_30%)]" />
+            <div className="absolute -left-20 top-[-40px] h-72 w-72 animate-[pulse_8s_ease-in-out_infinite] rounded-full bg-[#ead9c6]/50 blur-3xl" />
+            <div className="absolute right-[-30px] top-1/4 h-80 w-80 animate-[pulse_10s_ease-in-out_infinite] rounded-full bg-[#d8b894]/28 blur-3xl" />
+            <div className="absolute bottom-[-30px] left-1/3 h-72 w-72 animate-[pulse_9s_ease-in-out_infinite] rounded-full bg-white/30 blur-3xl" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.16),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(123,90,54,0.10),transparent_30%)]" />
+            <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(252,249,245,0.86),rgba(247,244,238,0.94)_45%,rgba(247,244,238,1)_100%)]" />
           </div>
 
           <div
-            className={`relative z-10 flex flex-col items-center px-6 text-center transition-all duration-700 ${
+            className={`relative z-10 flex flex-col items-center px-6 text-center transition-all duration-1000 ${
               introVisible
                 ? "translate-y-0 scale-100 opacity-100"
                 : "translate-y-3 scale-[1.02] opacity-0"
             }`}
           >
-            <div className="mb-6 flex h-20 w-20 items-center justify-center rounded-2xl border border-white/10 bg-white/5 shadow-[0_20px_60px_rgba(0,0,0,0.35)] backdrop-blur-md sm:h-24 sm:w-24">
-              <img
-                src="/icon.png"
-                alt="Logo Studio Legale Giuseppe Pitaro"
-                className="h-11 w-11 object-contain sm:h-14 sm:w-14"
-              />
-            </div>
+            <img
+              src="/icon.png"
+              alt="Logo Studio Legale Giuseppe Pitaro"
+              className="mb-6 h-16 w-16 object-contain sm:h-20 sm:w-20"
+            />
 
-            <p className="text-[11px] font-medium uppercase tracking-[0.38em] text-[#b89567] sm:text-xs">
-              Catanzaro
-            </p>
-
-            <h1 className="mt-4 max-w-[12ch] text-3xl font-semibold uppercase tracking-[0.12em] text-white sm:max-w-none sm:text-4xl md:text-5xl">
+            <h1 className="max-w-[12ch] text-3xl font-semibold uppercase tracking-[0.14em] text-[#1f1a17] sm:max-w-none sm:text-4xl md:text-5xl">
               Studio Legale
               <br />
               Giuseppe Pitaro
             </h1>
+
+            <p className="mt-4 text-[11px] font-medium uppercase tracking-[0.34em] text-[#8b7a68] sm:text-xs">
+              Catanzaro
+            </p>
 
             <div className="mt-6 h-px w-28 bg-gradient-to-r from-transparent via-[#b89567] to-transparent" />
           </div>
