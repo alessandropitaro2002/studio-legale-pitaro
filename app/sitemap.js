@@ -1,5 +1,5 @@
 export default function sitemap() {
-  const baseUrl = "https://studiolegalepitaro.it";
+  const baseUrl = "https://www.studiolegalepitaro.it";
 
   return [
     {
