@@ -71,15 +71,15 @@ export default function LandingPage() {
   useEffect(() => {
     const enterTimer = setTimeout(() => {
       setIntroVisible(true);
-    }, 60);
+    }, 80);
 
     const fadeTimer = setTimeout(() => {
       setIntroVisible(false);
-    }, 1650);
+    }, 2400);
 
     const removeTimer = setTimeout(() => {
       setShowIntro(false);
-    }, 2350);
+    }, 3200);
 
     return () => {
       clearTimeout(enterTimer);
