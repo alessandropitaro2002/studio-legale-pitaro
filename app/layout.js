@@ -18,7 +18,7 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "https://www.studiolegalepitaro.it/og-image.jpeg",
+        url: "https://www.studiolegalepitaro.it/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Studio Legale Giuseppe Pitaro",
@@ -30,7 +30,7 @@ export const metadata = {
     title: "Studio Legale Giuseppe Pitaro | Avvocato a Catanzaro",
     description:
       "Assistenza e consulenza legale a Catanzaro con oltre 30 anni di esperienza.",
-    images: ["https://www.studiolegalepitaro.it/og-image.jpeg"],
+    images: ["https://www.studiolegalepitaro.it/og-image.jpg"],
   },
 };
 
