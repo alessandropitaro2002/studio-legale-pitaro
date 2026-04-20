@@ -277,7 +277,7 @@ export default function LandingPage() {
                         <img
                           src="/avv-giuseppe-pitaro-home.jpg"
                           alt="Avvocato Giuseppe Pitaro"
-                          className="h-48 w-full object-cover object-[center_35%]"
+                          className="h-48 w-full object-cover object-[center_38%]"
                         />
                       </div>
                     </div>
