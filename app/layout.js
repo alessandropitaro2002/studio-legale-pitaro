@@ -1,18 +1,33 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Studio Legale Pitaro | Avvocato a Catanzaro",
+  metadataBase: new URL("https://www.studiolegalepitaro.it"),
+  title: "Studio Legale Giuseppe Pitaro | Avvocato a Catanzaro",
   description:
     "Studio Legale Giuseppe Pitaro a Catanzaro. Assistenza e consulenza legale con oltre 30 anni di esperienza in diritto amministrativo, civile, del lavoro, appalti pubblici e patrocinio in Cassazione.",
   alternates: {
-    canonical: "https://www.studiolegalepitaro.it",
+    canonical: "/",
   },
+};
+
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  url: "https://www.studiolegalepitaro.it/",
+  name: "Studio Legale Giuseppe Pitaro",
+  alternateName: "Studio Legale Pitaro",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="it">
-      <body>{children}</body>
+      <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
+        {children}
+      </body>
     </html>
   );
 }
