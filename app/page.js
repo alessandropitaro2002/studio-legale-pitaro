@@ -549,7 +549,7 @@ export default function LandingPage() {
                   </p>
                   <a
                     href="mailto:segreteria@studiolegalepitaro.it"
-                    className="mt-2 block overflow-hidden text-ellipsis whitespace-nowrap text-[13px] font-medium leading-7 text-white sm:text-[14px] lg:text-[15px]"
+                    className="mt-2 block whitespace-nowrap text-[11px] font-medium leading-none tracking-[-0.03em] text-white sm:text-[12px] md:text-[13px] lg:text-[14px]"
                   >
                     segreteria@studiolegalepitaro.it
                   </a>
@@ -664,7 +664,7 @@ export default function LandingPage() {
             <div className="mt-4 flex flex-col gap-3 text-sm text-[#ddd1c2]">
               <a
                 href="mailto:segreteria@studiolegalepitaro.it"
-                className="overflow-hidden text-ellipsis whitespace-nowrap transition hover:text-white"
+                className="whitespace-nowrap text-[11px] tracking-[-0.02em] transition hover:text-white sm:text-xs md:text-sm"
               >
                 segreteria@studiolegalepitaro.it
               </a>
