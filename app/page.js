@@ -547,16 +547,21 @@ export default function LandingPage() {
                   <p className="text-xs uppercase tracking-[0.2em] text-[#cdbca8]">
                     Email
                   </p>
-                  <p className="mt-2 text-base font-medium">
+                  <a
+                    href="mailto:segreteria@studiolegalepitaro.it"
+                    className="mt-2 block overflow-hidden text-ellipsis whitespace-nowrap text-[13px] font-medium leading-7 text-white sm:text-[14px] lg:text-[15px]"
+                  >
                     segreteria@studiolegalepitaro.it
-                  </p>
+                  </a>
                 </div>
+
                 <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
                   <p className="text-xs uppercase tracking-[0.2em] text-[#cdbca8]">
                     Telefono e WhatsApp
                   </p>
                   <p className="mt-2 text-base font-medium">335 286550</p>
                 </div>
+
                 <div className="rounded-2xl border border-white/10 bg-white/5 p-5 sm:col-span-2">
                   <p className="text-xs uppercase tracking-[0.2em] text-[#cdbca8]">
                     Studio
@@ -659,7 +664,7 @@ export default function LandingPage() {
             <div className="mt-4 flex flex-col gap-3 text-sm text-[#ddd1c2]">
               <a
                 href="mailto:segreteria@studiolegalepitaro.it"
-                className="transition hover:text-white"
+                className="overflow-hidden text-ellipsis whitespace-nowrap transition hover:text-white"
               >
                 segreteria@studiolegalepitaro.it
               </a>
