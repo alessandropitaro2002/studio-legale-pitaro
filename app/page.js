@@ -38,7 +38,7 @@ export default function LandingPage() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const [showIntro, setShowIntro] = useState(true);
-  const [introVisible, setIntroVisible] = useState(false);
+  const [introVisible, setIntroVisible] = useState(true);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -69,10 +69,6 @@ export default function LandingPage() {
   }, [profileHighlights.length]);
 
   useEffect(() => {
-    const enterTimer = setTimeout(() => {
-      setIntroVisible(true);
-    }, 80);
-
     const fadeTimer = setTimeout(() => {
       setIntroVisible(false);
     }, 2400);
@@ -82,7 +78,6 @@ export default function LandingPage() {
     }, 3200);
 
     return () => {
-      clearTimeout(enterTimer);
       clearTimeout(fadeTimer);
       clearTimeout(removeTimer);
     };
@@ -133,7 +128,7 @@ export default function LandingPage() {
     <div className="min-h-screen scroll-smooth bg-[#f7f4ee] text-[#1f1a17]">
       {showIntro && (
         <div
-          className={`fixed inset-0 z-[999] flex items-center justify-center overflow-hidden bg-[#f7f4ee] transition-all duration-700 ${
+          className={`fixed inset-0 z-[999] flex items-center justify-center overflow-hidden bg-[#f7f4ee] transition-opacity duration-700 ${
             introVisible ? "opacity-100" : "pointer-events-none opacity-0"
           }`}
         >
@@ -145,13 +140,7 @@ export default function LandingPage() {
             <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(252,249,245,0.86),rgba(247,244,238,0.94)_45%,rgba(247,244,238,1)_100%)]" />
           </div>
 
-          <div
-            className={`relative z-10 flex flex-col items-center px-6 text-center transition-all duration-1000 ${
-              introVisible
-                ? "translate-y-0 scale-100 opacity-100"
-                : "translate-y-3 scale-[1.02] opacity-0"
-            }`}
-          >
+          <div className="relative z-10 flex flex-col items-center px-6 text-center">
             <img
               src="/icon.png"
               alt="Logo Studio Legale Giuseppe Pitaro"
@@ -559,7 +548,7 @@ export default function LandingPage() {
                     Email
                   </p>
                   <p className="mt-2 text-base font-medium">
-                    studiolegalepitaro@libero.it
+                    segreteria@studiolegalepitaro.it
                   </p>
                 </div>
                 <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
@@ -614,7 +603,7 @@ export default function LandingPage() {
                   Chiama
                 </a>
                 <a
-                  href="mailto:studiolegalepitaro@libero.it"
+                  href="mailto:segreteria@studiolegalepitaro.it"
                   className="block rounded-full border border-[#1f1a17] px-6 py-3 text-center text-sm font-medium text-[#1f1a17] transition hover:bg-[#1f1a17] hover:text-white"
                 >
                   Invia una email
@@ -669,10 +658,10 @@ export default function LandingPage() {
             </p>
             <div className="mt-4 flex flex-col gap-3 text-sm text-[#ddd1c2]">
               <a
-                href="mailto:studiolegalepitaro@libero.it"
+                href="mailto:segreteria@studiolegalepitaro.it"
                 className="transition hover:text-white"
               >
-                studiolegalepitaro@libero.it
+                segreteria@studiolegalepitaro.it
               </a>
               <a
                 href="tel:+39335286550"
