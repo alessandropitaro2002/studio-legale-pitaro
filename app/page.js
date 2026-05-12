@@ -191,8 +191,8 @@ export default function LandingPage() {
             <a href="/attivita-professionale" className="transition hover:text-[#7b5a36]">
               Attività professionale
             </a>
-            <a href="#aree" className="transition hover:text-[#7b5a36]">
-              Le aree
+            <a href="/aree-di-attivita" className="transition hover:text-[#7b5a36]">
+              Aree di attività
             </a>
             <a href="/contatti" className="transition hover:text-[#7b5a36]">
               Contatti
@@ -244,11 +244,11 @@ export default function LandingPage() {
                 Attività professionale
               </a>
                   <a
-                href="#aree"
+                href="/aree-di-attivita"
                 onClick={closeMobileMenu}
                 className="rounded-xl px-3 py-3 transition hover:bg-white/70"
               >
-                Le aree
+                Aree di attività
               </a>
               <a
                 href="/contatti"
@@ -325,7 +325,7 @@ export default function LandingPage() {
                     Prenota un contatto
                   </a>
                   <a
-                    href="#aree"
+                    href="/aree-di-attivita"
                     className="w-full rounded-full border border-[#cdbfaa] bg-white/84 px-6 py-3 text-center text-sm font-medium text-[#1f1a17] transition hover:bg-white sm:w-auto sm:px-7"
                   >
                     Scopri le aree di attività
@@ -661,8 +661,8 @@ export default function LandingPage() {
               <a href="/attivita-professionale" className="transition hover:text-white">
                 Attività professionale
               </a>
-              <a href="#aree" className="transition hover:text-white">
-                Le aree
+              <a href="/aree-di-attivita" className="transition hover:text-white">
+                Aree di attività
               </a>
               <a href="/contatti" className="transition hover:text-white">
                 Contatti
