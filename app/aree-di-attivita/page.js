@@ -348,12 +348,12 @@ function AreaMarquee({ items, reverse = false }) {
   const repeated = [...items, ...items];
 
   return (
-    <div className="relative overflow-hidden">
-      <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-14 bg-gradient-to-r from-white/90 to-transparent" />
-      <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-14 bg-gradient-to-l from-white/90 to-transparent" />
+    <div className="relative w-full max-w-full overflow-hidden">
+      <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-12 bg-gradient-to-r from-[#fcfaf7] to-transparent" />
+      <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-12 bg-gradient-to-l from-[#fcfaf7] to-transparent" />
 
       <div
-        className={`flex w-max gap-3 py-1 ${
+        className={`flex w-max max-w-none gap-3 py-1 ${
           reverse
             ? "animate-[areaMarqueeReverse_34s_linear_infinite]"
             : "animate-[areaMarquee_34s_linear_infinite]"
@@ -362,7 +362,7 @@ function AreaMarquee({ items, reverse = false }) {
         {repeated.map((item, index) => (
           <span
             key={`${item}-${index}`}
-            className="rounded-full border border-[#ddd1c2] bg-[#fcfaf7] px-4 py-2 text-sm font-medium text-[#5f5449] shadow-sm"
+            className="shrink-0 rounded-full border border-[#ddd1c2] bg-white px-4 py-2 text-sm font-medium text-[#5f5449] shadow-sm"
           >
             {item}
           </span>
@@ -613,7 +613,7 @@ export default function AreeDiAttivitaPage() {
             <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(252,249,245,0.78),rgba(247,244,238,0.98)_100%)]" />
           </div>
 
-          <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-4 py-14 sm:px-6 sm:py-20 lg:grid-cols-[0.95fr_1.05fr] lg:px-8 lg:py-24">
+          <div className="relative mx-auto grid max-w-7xl items-center gap-10 overflow-hidden px-4 py-14 sm:px-6 sm:py-20 lg:grid-cols-[0.95fr_1.05fr] lg:px-8 lg:py-24">
             <div className="min-w-0">
               <p className="text-sm font-medium uppercase tracking-[0.22em] text-[#8b7a68]">
                 Aree di attività
@@ -647,48 +647,51 @@ export default function AreeDiAttivitaPage() {
               </div>
             </div>
 
-            <div className="rounded-[2rem] border border-[#ddd1c2] bg-white/75 p-5 shadow-[0_24px_80px_rgba(40,27,16,0.10)]">
-              <div className="rounded-[1.6rem] bg-[#fcfaf7] p-6">
-                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#8b7a68]">
-                  Ambiti di assistenza
-                </p>
-
-                <h2 className="mt-3 text-2xl font-semibold tracking-[-0.03em]">
-                  Aree principali
-                </h2>
-
-                <div className="mt-5 grid gap-3 sm:grid-cols-2">
-                  {[
-                    "Diritto amministrativo",
-                    "Ricorsi al TAR",
-                    "Appalti pubblici",
-                    "Diritto del lavoro",
-                    "Diritto civile",
-                    "Cassazione",
-                  ].map((area) => (
-                    <div
-                      key={area}
-                      className="rounded-2xl border border-[#e2d7ca] bg-white px-4 py-3 text-sm font-semibold text-[#3d332c] shadow-sm"
-                    >
-                      {area}
-                    </div>
-                  ))}
-                </div>
-
-                <div className="mt-7 border-t border-[#e8ded2] pt-6">
-                  <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-[#8b7a68]">
-                    Ulteriori ambiti trattati
+            <div className="min-w-0 lg:justify-self-end">
+              <div className="mx-auto w-full max-w-xl rounded-[2rem] border border-[#ddd1c2] bg-white/75 p-4 shadow-[0_24px_80px_rgba(40,27,16,0.10)] sm:p-5 lg:mx-0">
+                <div className="min-w-0 overflow-hidden rounded-[1.6rem] bg-[#fcfaf7] p-5 sm:p-6">
+                  <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#8b7a68]">
+                    Ambiti di assistenza
                   </p>
 
-                  <div className="space-y-3">
-                    <AreaMarquee items={rotatingAreasOne} />
-                    <AreaMarquee items={rotatingAreasTwo} reverse />
+                  <h2 className="mt-3 text-2xl font-semibold tracking-[-0.03em]">
+                    Aree principali
+                  </h2>
+
+                  <div className="mt-5 grid gap-3 sm:grid-cols-2">
+                    {[
+                      "Diritto amministrativo",
+                      "Ricorsi al TAR",
+                      "Appalti pubblici",
+                      "Diritto del lavoro",
+                      "Diritto civile",
+                      "Cassazione",
+                    ].map((area) => (
+                      <div
+                        key={area}
+                        className="rounded-2xl border border-[#e2d7ca] bg-white px-4 py-3 text-sm font-semibold text-[#3d332c] shadow-sm"
+                      >
+                        {area}
+                      </div>
+                    ))}
                   </div>
 
-                  <p className="mt-5 text-sm leading-6 text-[#6d6053]">
-                    Le aree indicate non esauriscono l’attività dello studio:
-                    ogni richiesta viene valutata in relazione al caso concreto.
-                  </p>
+                  <div className="mt-7 border-t border-[#e8ded2] pt-6">
+                    <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-[#8b7a68]">
+                      Ulteriori ambiti trattati
+                    </p>
+
+                    <div className="max-w-full space-y-3 overflow-hidden">
+                      <AreaMarquee items={rotatingAreasOne} />
+                      <AreaMarquee items={rotatingAreasTwo} reverse />
+                    </div>
+
+                    <p className="mt-5 text-sm leading-6 text-[#6d6053]">
+                      Le aree indicate non esauriscono l’attività dello studio:
+                      ogni richiesta viene valutata in relazione al caso
+                      concreto.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
