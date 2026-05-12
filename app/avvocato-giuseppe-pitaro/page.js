@@ -112,14 +112,14 @@ export default function AvvocatoGiuseppePitaroPage() {
             <Link href="/#aree" className="transition hover:text-[#7b5a36]">
               Le aree
             </Link>
-            <Link href="/#contatti" className="transition hover:text-[#7b5a36]">
+            <Link href="/contatti" className="transition hover:text-[#7b5a36]">
               Contatti
             </Link>
           </nav>
 
           <div className="hidden md:block">
             <Link
-              href="/#contatti"
+              href="/contatti"
               className="rounded-full border border-[#1f1a17] px-4 py-2 text-sm font-medium transition hover:bg-[#1f1a17] hover:text-white"
             >
               Richiedi un contatto
@@ -159,13 +159,13 @@ export default function AvvocatoGiuseppePitaroPage() {
                   Le aree
                 </Link>
                 <Link
-                  href="/#contatti"
+                  href="/contatti"
                   className="rounded-xl px-3 py-3 transition hover:bg-white/70"
                 >
                   Contatti
                 </Link>
                 <Link
-                  href="/#contatti"
+                  href="/contatti"
                   className="mt-2 rounded-full border border-[#1f1a17] px-4 py-3 text-center transition hover:bg-[#1f1a17] hover:text-white"
                 >
                   Richiedi un contatto
@@ -482,7 +482,7 @@ export default function AvvocatoGiuseppePitaroPage() {
               <Link href="/#aree" className="transition hover:text-white">
                 Le aree
               </Link>
-              <Link href="/#contatti" className="transition hover:text-white">
+              <Link href="/contatti" className="transition hover:text-white">
                 Contatti
               </Link>
             </div>
