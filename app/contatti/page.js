@@ -170,8 +170,8 @@ export default function ContattiPage() {
             >
               Attività professionale
             </Link>
-            <Link href="/#aree" className="transition hover:text-[#7b5a36]">
-              Le aree
+            <Link href="/aree-di-attivita" className="transition hover:text-[#7b5a36]">
+              Aree di attività
             </Link>
             <Link
               href="/contatti"
@@ -215,10 +215,10 @@ export default function ContattiPage() {
                   Attività professionale
                 </Link>
                 <Link
-                  href="/#aree"
+                  href="/aree-di-attivita"
                   className="rounded-xl px-3 py-3 transition hover:bg-white/70"
                 >
-                  Le aree
+                  Aree di attività
                 </Link>
                 <Link
                   href="/contatti"
@@ -636,8 +636,8 @@ export default function ContattiPage() {
               >
                 Attività professionale
               </Link>
-              <Link href="/#aree" className="transition hover:text-white">
-                Le aree
+              <Link href="/aree-di-attivita" className="transition hover:text-white">
+                Aree di attività
               </Link>
               <Link href="/contatti" className="transition hover:text-white">
                 Contatti
