@@ -557,7 +557,7 @@ function HeroCarousel() {
 
 export default function AttivitaProfessionalePage() {
   return (
-    <div className="min-h-screen bg-[#f7f4ee] text-[#1f1a17]">
+    <div className="min-h-screen overflow-x-hidden bg-[#f7f4ee] text-[#1f1a17]">
       <header className="sticky top-0 z-50 border-b border-[#d9cec0]/70 bg-[#f7f4ee]/90 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3 sm:px-6 sm:py-4 lg:px-8">
           <Link
@@ -667,8 +667,8 @@ export default function AttivitaProfessionalePage() {
             <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(252,249,245,0.78),rgba(247,244,238,0.98)_100%)]" />
           </div>
 
-          <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-4 py-14 sm:px-6 sm:py-16 lg:grid-cols-[1.08fr_0.72fr] lg:px-8 lg:py-20">
-            <div>
+          <div className="relative mx-auto grid max-w-7xl items-center gap-10 overflow-hidden px-4 py-14 sm:px-6 sm:py-16 lg:grid-cols-[1.08fr_0.72fr] lg:px-8 lg:py-20">
+            <div className="min-w-0">
               <p className="text-sm font-medium uppercase tracking-[0.22em] text-[#8b7a68]">
                 Attività professionale
               </p>
@@ -686,7 +686,7 @@ export default function AttivitaProfessionalePage() {
                 e Corte dei conti.
               </p>
 
-              <div className="mt-8 flex flex-wrap gap-3">
+              <div className="mt-8 flex max-w-full flex-wrap gap-3">
                 {[
                   "Diritto amministrativo",
                   "Contenzioso elettorale",
@@ -704,7 +704,7 @@ export default function AttivitaProfessionalePage() {
               </div>
             </div>
 
-            <aside className="mx-auto w-full max-w-md lg:mx-0 lg:justify-self-end">
+            <aside className="hidden w-full max-w-md md:block lg:justify-self-end">
               <div className="mb-4">
                 <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#8b7a68]">
                   In evidenza
