@@ -436,17 +436,6 @@ const newsItems = [
   },
 ];
 
-const timeline = [
-  "2017 · Assoluzione in appello contabile",
-  "2021 · Scuole in presenza, TAR e Consiglio di Stato",
-  "2022 · Guardavalle, annullamento dello scioglimento del Comune",
-  "2022 · Reintegro lavoratrice del Consorzio di Bonifica",
-  "2024 · Pol.Service / Dulbecco, affidamento annullato",
-  "2025 · Servizio di vigilanza del Consiglio regionale a Pol.Service",
-  "2026 · Simbario, chiusura definitiva del contenzioso elettorale",
-  "2026 · Ricorso sulle elezioni provinciali di Catanzaro",
-];
-
 function SourceLogo({ logoUrl, source }) {
   if (logoUrl) {
     return (
@@ -465,14 +454,14 @@ function SourceLogo({ logoUrl, source }) {
   );
 }
 
-function NewsImage({ imageUrl, title, large = false }) {
+function NewsImage({ imageUrl, title, large = false, compact = false }) {
   if (imageUrl) {
     return (
       <img
         src={imageUrl}
         alt={title}
         className={`w-full object-cover ${
-          large ? "h-[260px] lg:h-[430px]" : "h-48"
+          compact ? "h-40" : large ? "h-[260px] lg:h-[430px]" : "h-48"
         }`}
       />
     );
@@ -481,14 +470,14 @@ function NewsImage({ imageUrl, title, large = false }) {
   return (
     <div
       className={`flex w-full items-center justify-center bg-[radial-gradient(circle_at_top_left,rgba(216,184,148,0.45),transparent_34%),linear-gradient(135deg,#fcfaf7_0%,#eadfd3_45%,#d8c5af_100%)] ${
-        large ? "h-[260px] lg:h-[430px]" : "h-48"
+        compact ? "h-40" : large ? "h-[260px] lg:h-[430px]" : "h-48"
       }`}
     >
       <div className="mx-auto max-w-xs px-6 text-center">
-        <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#8b7a68]">
+        <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-[#8b7a68]">
           Studio Legale
         </p>
-        <p className="mt-3 text-xl font-semibold leading-tight tracking-[-0.03em] text-[#1f1a17]">
+        <p className="mt-2 text-lg font-semibold leading-tight tracking-[-0.03em] text-[#1f1a17]">
           Giuseppe Pitaro
         </p>
       </div>
@@ -498,7 +487,7 @@ function NewsImage({ imageUrl, title, large = false }) {
 
 function HeroCarousel() {
   return (
-    <div className="relative overflow-hidden rounded-[2rem] border border-[#ddd1c2] bg-white/75 p-3 shadow-[0_24px_80px_rgba(40,27,16,0.10)]">
+    <div className="relative overflow-hidden rounded-[1.7rem] border border-[#ddd1c2] bg-white/75 p-3 shadow-[0_18px_50px_rgba(40,27,16,0.10)]">
       <style>
         {`
           @keyframes heroCarousel {
@@ -532,34 +521,34 @@ function HeroCarousel() {
         `}
       </style>
 
-      <div className="overflow-hidden rounded-[1.6rem]">
+      <div className="overflow-hidden rounded-[1.35rem]">
         <div className="hero-carousel-track flex">
           {featuredNews.map((item) => (
             <article key={item.title} className="min-w-full bg-[#fcfaf7]">
-              <NewsImage imageUrl={item.imageUrl} title={item.title} large />
+              <NewsImage imageUrl={item.imageUrl} title={item.title} compact />
 
-              <div className="p-6 md:p-7">
-                <div className="flex flex-wrap items-center gap-3">
+              <div className="p-5">
+                <div className="flex flex-wrap items-center gap-2">
                   <SourceLogo logoUrl={item.logoUrl} source={item.source} />
-                  <span className="text-sm font-medium text-[#8b7a68]">
+                  <span className="text-xs font-medium text-[#8b7a68]">
                     {item.date}
                   </span>
                 </div>
 
-                <p className="mt-5 text-xs font-semibold uppercase tracking-[0.2em] text-[#8b7a68]">
+                <p className="mt-4 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#8b7a68]">
                   {item.category}
                 </p>
 
-                <h2 className="mt-3 text-2xl font-semibold leading-tight tracking-[-0.03em]">
+                <h2 className="mt-2 text-xl font-semibold leading-tight tracking-[-0.03em]">
                   {item.title}
                 </h2>
 
-                <p className="mt-4 line-clamp-3 leading-7 text-[#564b41]">
+                <p className="mt-3 line-clamp-2 text-sm leading-6 text-[#564b41]">
                   {item.description}
                 </p>
 
-                <div className="mt-5 flex items-center justify-between gap-4">
-                  <span className="rounded-full bg-[#f1e7dc] px-4 py-2 text-xs font-semibold text-[#6d5540]">
+                <div className="mt-4 flex items-center justify-between gap-4">
+                  <span className="rounded-full bg-[#f1e7dc] px-3 py-1.5 text-[11px] font-semibold text-[#6d5540]">
                     {item.status}
                   </span>
 
@@ -693,7 +682,7 @@ export default function AttivitaProfessionalePage() {
             <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(252,249,245,0.78),rgba(247,244,238,0.98)_100%)]" />
           </div>
 
-          <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-4 py-14 sm:px-6 sm:py-20 lg:grid-cols-[0.95fr_1.05fr] lg:px-8 lg:py-24">
+          <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-4 py-14 sm:px-6 sm:py-16 lg:grid-cols-[1.08fr_0.72fr] lg:px-8 lg:py-20">
             <div>
               <p className="text-sm font-medium uppercase tracking-[0.22em] text-[#8b7a68]">
                 Attività professionale
@@ -730,9 +719,18 @@ export default function AttivitaProfessionalePage() {
               </div>
             </div>
 
-            <div className="lg:pl-4">
+            <aside className="mx-auto w-full max-w-md lg:mx-0 lg:justify-self-end">
+              <div className="mb-4">
+                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#8b7a68]">
+                  In evidenza
+                </p>
+                <h2 className="mt-2 text-2xl font-semibold tracking-[-0.03em]">
+                  Notizie principali
+                </h2>
+              </div>
+
               <HeroCarousel />
-            </div>
+            </aside>
           </div>
         </section>
 
@@ -872,32 +870,6 @@ export default function AttivitaProfessionalePage() {
                 </div>
               </article>
             ))}
-          </div>
-        </section>
-
-        <section className="border-y border-[#ddd1c2] bg-white/45">
-          <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20 lg:px-8">
-            <div className="grid gap-10 lg:grid-cols-[0.75fr_1.25fr] lg:items-start">
-              <div>
-                <p className="text-sm font-medium uppercase tracking-[0.22em] text-[#8b7a68]">
-                  Timeline
-                </p>
-                <h2 className="mt-3 text-3xl font-semibold tracking-[-0.03em] sm:text-4xl">
-                  Alcune tappe documentate
-                </h2>
-              </div>
-
-              <div className="space-y-4">
-                {timeline.map((item) => (
-                  <div
-                    key={item}
-                    className="rounded-[1.4rem] border border-[#ddd1c2] bg-[#fcfaf7] px-6 py-5 shadow-sm"
-                  >
-                    <p className="font-medium text-[#3d332c]">{item}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
           </div>
         </section>
 
