@@ -53,7 +53,7 @@ const featuredNews = [
     description:
       "Il TAR ha accolto il ricorso di Pol.Service, annullando l'affidamento del servizio e riconoscendo anche profili risarcitori.",
     imageUrl: null,
-    logoUrl: null,
+    logoUrl: "/loghi/catanzaroinforma.jpg",
   },
   {
     title: "Simbario, confermata la regolarità delle elezioni",
