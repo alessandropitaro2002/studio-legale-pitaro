@@ -194,14 +194,14 @@ export default function LandingPage() {
             <a href="#aree" className="transition hover:text-[#7b5a36]">
               Le aree
             </a>
-            <a href="#contatti" className="transition hover:text-[#7b5a36]">
+            <a href="/contatti" className="transition hover:text-[#7b5a36]">
               Contatti
             </a>
           </nav>
 
           <div className="flex items-center gap-2">
             <a
-              href="#contatti"
+              href="/contatti"
               className="hidden rounded-full border border-[#1f1a17] px-3 py-2 text-[11px] font-medium transition hover:bg-[#1f1a17] hover:text-white sm:px-4 sm:text-sm md:inline-flex"
             >
               Richiedi un contatto
@@ -251,14 +251,14 @@ export default function LandingPage() {
                 Le aree
               </a>
               <a
-                href="#contatti"
+                href="/contatti"
                 onClick={closeMobileMenu}
                 className="rounded-xl px-3 py-3 transition hover:bg-white/70"
               >
                 Contatti
               </a>
               <a
-                href="#contatti"
+                href="/contatti"
                 onClick={closeMobileMenu}
                 className="mt-2 rounded-full border border-[#1f1a17] px-4 py-3 text-center transition hover:bg-[#1f1a17] hover:text-white"
               >
@@ -319,7 +319,7 @@ export default function LandingPage() {
 
                 <div className="mt-7 flex w-full max-w-sm flex-col gap-3 sm:max-w-none sm:flex-row">
                   <a
-                    href="#contatti"
+                    href="/contatti"
                     className="w-full rounded-full bg-[#1f1a17] px-6 py-3 text-center text-sm font-medium text-white shadow-lg shadow-[#1f1a17]/15 transition hover:-translate-y-0.5 sm:w-auto sm:px-7"
                   >
                     Prenota un contatto
@@ -664,7 +664,7 @@ export default function LandingPage() {
               <a href="#aree" className="transition hover:text-white">
                 Le aree
               </a>
-              <a href="#contatti" className="transition hover:text-white">
+              <a href="/contatti" className="transition hover:text-white">
                 Contatti
               </a>
             </div>
