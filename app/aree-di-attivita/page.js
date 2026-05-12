@@ -334,10 +334,11 @@ function AnimatedContactButton({ href = "/contatti#recapiti", children }) {
   return (
     <a
       href={href}
-      className="group relative inline-flex overflow-hidden rounded-full p-[1px] shadow-lg shadow-[#1f1a17]/15 transition hover:-translate-y-0.5"
+      className="group relative isolate inline-flex w-full overflow-hidden rounded-full p-[1px] shadow-lg shadow-[#1f1a17]/15 transition hover:-translate-y-0.5 sm:w-auto"
     >
-      <span className="absolute inset-[-120%] animate-[spin_7s_linear_infinite] bg-[conic-gradient(from_90deg,#b89567,#ead9c6,#ffffff,#7b5a36,#b89567)] opacity-80 transition group-hover:opacity-100" />
-      <span className="relative inline-flex items-center justify-center gap-2 rounded-full bg-[#1f1a17] px-7 py-3 text-sm font-medium text-white">
+      <span className="absolute left-1/2 top-1/2 -z-10 h-[260%] w-[260%] -translate-x-1/2 -translate-y-1/2 animate-[spin_7s_linear_infinite] bg-[conic-gradient(from_90deg,#b89567,#ead9c6,#ffffff,#7b5a36,#b89567)] opacity-80 transition group-hover:opacity-100" />
+
+      <span className="relative inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#1f1a17] px-7 py-3 text-center text-sm font-medium text-white sm:w-auto">
         {children}
       </span>
     </a>
