@@ -92,7 +92,7 @@ const featuredNews = [
     description:
       "Il Consiglio di Stato ha confermato la decisione del TAR sulla prosecuzione della didattica in presenza per elementari e medie.",
     imageUrl: null,
-    logoUrl: null,
+    logoUrl: "/loghi/catanzaroinforma.jpg",
   },
 ];
 
@@ -109,7 +109,7 @@ const newsItems = [
     description:
       "La notizia segnala il deposito di un ricorso elettorale da parte degli avvocati Giuseppe Pitaro e Gaetano Liperoti. Trattandosi di un giudizio introdotto di recente, viene riportato come attività professionale in corso.",
     imageUrl: null,
-    logoUrl: null,
+    logoUrl: "/loghi/catanzaroinforma.jpg",
   },
   {
     title: "Simbario, regolari le elezioni comunali",
@@ -138,7 +138,7 @@ const newsItems = [
     description:
       "Il servizio di vigilanza presso il Consiglio regionale della Calabria viene attribuito a Pol Service, assistita dall'Avv. Giuseppe Pitaro.",
     imageUrl: null,
-    logoUrl: null,
+    logoUrl: "/loghi/catanzaroinforma.jpg",
   },
   {
     title: "Elezioni comunali valide a Simbario, il TAR respinge il ricorso",
@@ -182,7 +182,7 @@ const newsItems = [
     description:
       "L'articolo riferisce l'assoluzione di quattro dipendenti dopo un lungo dibattimento. L'Avv. Giuseppe Pitaro compare nel collegio difensivo.",
     imageUrl: null,
-    logoUrl: null,
+    logoUrl: "/loghi/catanzaroinforma.jpg",
   },
   {
     title:
@@ -197,7 +197,7 @@ const newsItems = [
     description:
       "Il TAR ha accolto il ricorso di Pol.Service, assistita dagli avvocati Giuseppe Pitaro e Gaetano Liperoti, annullando l'affidamento e riconoscendo profili risarcitori.",
     imageUrl: null,
-    logoUrl: null,
+    logoUrl: "/loghi/catanzaroinforma.jpg",
   },
   {
     title: "Pitaro: prova selettiva illegittima all'Università Magna Graecia",
@@ -211,7 +211,7 @@ const newsItems = [
     description:
       "La notizia segnala una seconda diffida e messa in mora nei confronti dell'ateneo. Viene riportata come attività professionale precontenziosa, non come esito giudiziale.",
     imageUrl: null,
-    logoUrl: null,
+    logoUrl: "/loghi/catanzaroinforma.jpg",
   },
   {
     title:
@@ -226,7 +226,7 @@ const newsItems = [
     description:
       "La notizia riguarda una diffida indirizzata all'Università Magna Graecia su incarico di sigle sindacali, in relazione a un profilo di incompatibilità.",
     imageUrl: null,
-    logoUrl: null,
+    logoUrl: "/loghi/catanzaroinforma.jpg",
   },
   {
     title:
@@ -241,7 +241,7 @@ const newsItems = [
     description:
       "La notizia documenta la proposizione di un ricorso alla Corte Europea dei Diritti dell'Uomo. Viene riportata come ricorso presentato, senza indicare un esito definitivo.",
     imageUrl: null,
-    logoUrl: null,
+    logoUrl: "/loghi/catanzaroinforma.jpg",
   },
   {
     title: "Nomina AMC a Catanzaro, cessata la materia del contendere",
@@ -373,7 +373,7 @@ const newsItems = [
     description:
       "Il Consiglio di Stato ha confermato la decisione del TAR sulla prosecuzione della didattica in presenza.",
     imageUrl: null,
-    logoUrl: null,
+    logoUrl: "/loghi/catanzaroinforma.jpg",
   },
   {
     title:
@@ -388,7 +388,7 @@ const newsItems = [
     description:
       "Il TAR Calabria ha accolto il ricorso presentato nell'interesse di genitori contro l'ordinanza regionale di chiusura delle scuole.",
     imageUrl: null,
-    logoUrl: null,
+    logoUrl: "/loghi/catanzaroinforma.jpg",
   },
   {
     title: "Cropani, elezioni in regola e nessuna scheda ballerina",
@@ -432,7 +432,7 @@ const newsItems = [
     description:
       "La notizia riferisce l'assoluzione dell'assistito in sede contabile dinanzi alla Corte dei conti.",
     imageUrl: null,
-    logoUrl: null,
+    logoUrl: "/loghi/catanzaroinforma.jpg",
   },
 ];
 
