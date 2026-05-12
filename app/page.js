@@ -188,6 +188,9 @@ export default function LandingPage() {
             <a href="/avvocato-giuseppe-pitaro" className="transition hover:text-[#7b5a36]">
               L&apos;Avv. Giuseppe Pitaro
             </a>
+            <a href="/attivita-professionale" className="transition hover:text-[#7b5a36]">
+              Attività professionale
+            </a>            </a>
             <a href="#aree" className="transition hover:text-[#7b5a36]">
               Le aree
             </a>
@@ -234,6 +237,13 @@ export default function LandingPage() {
                 L&apos;Avv. Giuseppe Pitaro
               </a>
               <a
+                href="/attivita-professionale"
+                onClick={closeMobileMenu}
+                className="rounded-xl px-3 py-3 transition hover:bg-white/70"
+              >
+                Attività professionale
+              </a>
+                  <a
                 href="#aree"
                 onClick={closeMobileMenu}
                 className="rounded-xl px-3 py-3 transition hover:bg-white/70"
@@ -647,6 +657,9 @@ export default function LandingPage() {
               </a>
               <a href="/avvocato-giuseppe-pitaro" className="transition hover:text-white">
                 L&apos;Avv. Giuseppe Pitaro
+              </a>
+              <a href="/attivita-professionale" className="transition hover:text-white">
+                Attività professionale
               </a>
               <a href="#aree" className="transition hover:text-white">
                 Le aree
