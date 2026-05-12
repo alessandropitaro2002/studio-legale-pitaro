@@ -187,12 +187,12 @@ export default function AvvocatoGiuseppePitaroPage() {
                 Titolare dello Studio Legale Pitaro a Catanzaro dal 1993,
                 l&apos;Avv. Giuseppe Pitaro offre assistenza e consulenza legale
                 a privati, imprese ed enti pubblici, con un profilo
-                professionale costruito su oltre 30 anni di esperienza.
+                professionale costruito su oltre 35 anni di esperienza.
               </p>
 
               <div className="mt-8 grid gap-3 sm:grid-cols-3">
                 <div className="rounded-2xl border border-[#e2d7ca] bg-white/75 p-5 shadow-sm">
-                  <p className="text-2xl font-semibold tracking-tight">30+</p>
+                  <p className="text-2xl font-semibold tracking-tight">35+</p>
                   <p className="mt-1 text-sm leading-6 text-[#6d6053]">
                     anni di esperienza
                   </p>
@@ -442,7 +442,7 @@ export default function AvvocatoGiuseppePitaroPage() {
               Studio Legale Giuseppe Pitaro
             </h3>
             <p className="mt-4 max-w-sm text-sm leading-7 text-[#b9aa98]">
-              Assistenza e consulenza legale a Catanzaro, con oltre 30 anni di
+              Assistenza e consulenza legale a Catanzaro, con oltre 35 anni di
               esperienza e attività in diversi ambiti del diritto.
             </p>
           </div>
