@@ -21,6 +21,12 @@ export default function sitemap() {
       priority: 0.8,
     },
     {
+      url: `${baseUrl}/aree-di-attivita`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/contatti`,
       lastModified: new Date(),
       changeFrequency: "monthly",
