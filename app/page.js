@@ -185,7 +185,7 @@ export default function LandingPage() {
             <a href="#home" className="transition hover:text-[#7b5a36]">
               Home
             </a>
-            <a href="#avvocato" className="transition hover:text-[#7b5a36]">
+            <a href="/avvocato-giuseppe-pitaro" className="transition hover:text-[#7b5a36]">
               L&apos;Avv. Giuseppe Pitaro
             </a>
             <a href="#aree" className="transition hover:text-[#7b5a36]">
@@ -227,7 +227,7 @@ export default function LandingPage() {
                 Home
               </a>
               <a
-                href="#avvocato"
+                href="/avvocato-giuseppe-pitaro"
                 onClick={closeMobileMenu}
                 className="rounded-xl px-3 py-3 transition hover:bg-white/70"
               >
@@ -645,7 +645,7 @@ export default function LandingPage() {
               <a href="#home" className="transition hover:text-white">
                 Home
               </a>
-              <a href="#avvocato" className="transition hover:text-white">
+              <a href="/avvocato-giuseppe-pitaro" className="transition hover:text-white">
                 L&apos;Avv. Giuseppe Pitaro
               </a>
               <a href="#aree" className="transition hover:text-white">
