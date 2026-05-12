@@ -58,23 +58,31 @@ const legalServiceJsonLd = {
     postalCode: "88100",
     addressLocality: "Catanzaro",
     addressRegion: "Calabria",
-    addressCountry: "IT",
+    addressCountry: "IT"
   },
-  areaServed: ["Catanzaro", "Provincia di Catanzaro", "Calabria"],
+  areaServed: [
+    "Catanzaro",
+    "Calabria",
+    "Provincia di Catanzaro"
+  ],
   founder: {
     "@type": "Person",
     name: "Giuseppe Pitaro",
-    jobTitle: "Avvocato",
-    url: "https://www.studiolegalepitaro.it/avvocato-giuseppe-pitaro",
+    jobTitle: "Avvocato"
   },
   knowsAbout: [
     "Diritto amministrativo",
-    "Ricorsi al TAR",
+    "Ricorsi TAR",
     "Appalti pubblici",
     "Diritto civile",
     "Diritto del lavoro",
-    "Patrocinio in Cassazione",
+    "Patrocinio in Cassazione"
   ],
+  sameAs: [
+    "URL_PROFILO_GOOGLE_BUSINESS",
+    "eventuale pagina Ordine Avvocati",
+    "eventuale LinkedIn"
+  ]
 };
 export default function RootLayout({ children }) {
   return (
