@@ -103,6 +103,12 @@ export default function AvvocatoGiuseppePitaroPage() {
             >
               L&apos;Avv. Giuseppe Pitaro
             </Link>
+            <Link
+              href="/attivita-professionale"
+              className="transition hover:text-[#7b5a36]"
+            >
+              Attività professionale
+            </Link>
             <Link href="/#aree" className="transition hover:text-[#7b5a36]">
               Le aree
             </Link>
@@ -139,6 +145,12 @@ export default function AvvocatoGiuseppePitaroPage() {
                   className="rounded-xl bg-white/70 px-3 py-3 text-[#7b5a36]"
                 >
                   L&apos;Avv. Giuseppe Pitaro
+                </Link>
+                <Link
+                  href="/attivita-professionale"
+                  className="rounded-xl px-3 py-3 transition hover:bg-white/70"
+                >
+                  Attività professionale
                 </Link>
                 <Link
                   href="/#aree"
@@ -461,6 +473,12 @@ export default function AvvocatoGiuseppePitaroPage() {
               >
                 L&apos;Avv. Giuseppe Pitaro
               </Link>
+              <Link
+                href="/attivita-professionale"
+                className="transition hover:text-white"
+              >
+                Attività professionale
+              </Link>
               <Link href="/#aree" className="transition hover:text-white">
                 Le aree
               </Link>
@@ -500,7 +518,10 @@ export default function AvvocatoGiuseppePitaroPage() {
               Legale
             </p>
             <div className="mt-4 flex flex-col gap-3 text-sm text-[#ddd1c2]">
-              <Link href="/privacy-policy" className="transition hover:text-white">
+              <Link
+                href="/privacy-policy"
+                className="transition hover:text-white"
+              >
                 Privacy Policy
               </Link>
             </div>
@@ -509,7 +530,9 @@ export default function AvvocatoGiuseppePitaroPage() {
 
         <div className="border-t border-white/10">
           <div className="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-5 text-xs text-[#8f8376] sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
-            <p>© 2026 Studio Legale Giuseppe Pitaro. Tutti i diritti riservati.</p>
+            <p>
+              © 2026 Studio Legale Giuseppe Pitaro. Tutti i diritti riservati.
+            </p>
             <p>Catanzaro, Calabria</p>
           </div>
         </div>
