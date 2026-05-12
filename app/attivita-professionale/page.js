@@ -680,9 +680,9 @@ export default function AttivitaProfessionalePage() {
               <p className="mt-6 max-w-3xl text-lg leading-8 text-[#564b41] md:text-xl md:leading-9">
                 Una selezione di casi, procedimenti e notizie pubbliche
                 collegate all&apos;attività dell&apos;Avv. Giuseppe Pitaro, con
-                particolare riferimento a diritto amministrativo, contenzioso
+                particolare riferimento al diritto amministrativo, contenzioso
                 elettorale, appalti pubblici, diritto del lavoro, enti locali e
-                giudizi dinanzi a TAR, Consiglio di Stato, Corte d&apos;Appello
+                giudizi dinanzi il TAR, Consiglio di Stato, Corte d&apos;Appello
                 e Corte dei conti.
               </p>
 
@@ -922,7 +922,7 @@ export default function AttivitaProfessionalePage() {
               Studio Legale Giuseppe Pitaro
             </h3>
             <p className="mt-4 max-w-sm text-sm leading-7 text-[#b9aa98]">
-              Assistenza e consulenza legale a Catanzaro, con oltre 30 anni di
+              Assistenza e consulenza legale a Catanzaro, con oltre 35 anni di
               esperienza e attività in diversi ambiti del diritto.
             </p>
           </div>
