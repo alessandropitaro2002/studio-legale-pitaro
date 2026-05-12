@@ -190,7 +190,7 @@ export default function LandingPage() {
             </a>
             <a href="/attivita-professionale" className="transition hover:text-[#7b5a36]">
               Attività professionale
-            </a>            </a>
+            </a>
             <a href="#aree" className="transition hover:text-[#7b5a36]">
               Le aree
             </a>
