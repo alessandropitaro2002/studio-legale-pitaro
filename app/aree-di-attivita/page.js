@@ -412,7 +412,7 @@ function Header() {
             href="/aree-di-attivita"
             className="text-[#7b5a36] transition hover:text-[#7b5a36]"
           >
-            Le aree
+            Aree di attività
           </Link>
           <Link href="/contatti" className="transition hover:text-[#7b5a36]">
             Contatti
@@ -456,7 +456,7 @@ function Header() {
                 href="/aree-di-attivita"
                 className="rounded-xl bg-white/70 px-3 py-3 text-[#7b5a36]"
               >
-                Le aree
+                Aree di attività
               </Link>
               <Link
                 href="/contatti"
@@ -516,7 +516,7 @@ function Footer() {
               href="/aree-di-attivita"
               className="transition hover:text-white"
             >
-              Le aree
+              Aree di attività
             </Link>
             <Link href="/contatti" className="transition hover:text-white">
               Contatti
