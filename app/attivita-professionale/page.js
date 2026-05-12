@@ -66,7 +66,7 @@ const featuredNews = [
     description:
       "Il Consiglio di Stato ha rigettato il ricorso per revocazione, chiudendo definitivamente il contenzioso elettorale a favore del Comune difeso.",
     imageUrl: null,
-    logoUrl: null,
+    logoUrl: "/loghi/lanuovacalabria.png",
   },
   {
     title: "Green pass, reintegra e risarcimento",
@@ -79,7 +79,7 @@ const featuredNews = [
     description:
       "La Corte d'Appello di Catanzaro ha disposto la reintegra del lavoratore e il riconoscimento dell'indennità risarcitoria.",
     imageUrl: null,
-    logoUrl: null,
+    logoUrl: "/loghi/lanuovacalabria.png",
   },
   {
     title: "Scuole in presenza, confermata la decisione del TAR",
@@ -123,7 +123,7 @@ const newsItems = [
     description:
       "La notizia riferisce il rigetto del ricorso per revocazione e la chiusura definitiva del contenzioso elettorale a favore del Comune.",
     imageUrl: null,
-    logoUrl: null,
+    logoUrl: "/loghi/lanuovacalabria.png",
   },
   {
     title:
@@ -152,7 +152,7 @@ const newsItems = [
     description:
       "Il TAR Calabria ha accolto le tesi dell'amministrazione comunale rappresentata dall'Avv. Giuseppe Pitaro, confermando la validità delle elezioni comunali.",
     imageUrl: null,
-    logoUrl: null,
+    logoUrl: "/loghi/corrieredellacalabria.svg",
   },
   {
     title:
@@ -167,7 +167,7 @@ const newsItems = [
     description:
       "La Corte d'Appello di Catanzaro ha riformato la decisione di primo grado, disponendo la reintegra del lavoratore e il riconoscimento dell'indennità risarcitoria.",
     imageUrl: null,
-    logoUrl: null,
+    logoUrl: "/loghi/lanuovacalabria.png",
   },
   {
     title:
@@ -255,7 +255,7 @@ const newsItems = [
     description:
       "La vicenda riguarda l'accesso agli atti relativo alla procedura comparativa per la nomina dell'amministratore unico di AMC.",
     imageUrl: null,
-    logoUrl: null,
+    logoUrl: "/loghi/lanuovacalabria.png",
   },
   {
     title: "Assolto l'ex direttore dell'Agenzia delle Entrate di Catanzaro",
@@ -269,7 +269,7 @@ const newsItems = [
     description:
       "La notizia riferisce l'assoluzione in appello contabile dell'ex direttore dell'Agenzia delle Entrate di Catanzaro.",
     imageUrl: null,
-    logoUrl: null,
+    logoUrl: "/loghi/corrieredellacalabria.svg",
   },
   {
     title:
@@ -284,7 +284,7 @@ const newsItems = [
     description:
       "Il Consiglio di Stato ha riformato il rigetto della sospensiva pronunciato in primo grado, disponendo una rapida fissazione del merito.",
     imageUrl: null,
-    logoUrl: null,
+    logoUrl: "/loghi/lanuovacalabria.png",
   },
   {
     title:
@@ -299,7 +299,7 @@ const newsItems = [
     description:
       "La vicenda riguarda il diritto di precedenza nella scelta della sede di lavoro per l'assistenza a un familiare disabile.",
     imageUrl: null,
-    logoUrl: null,
+    logoUrl: "/loghi/corrieredellacalabria.svg",
   },
   {
     title: "Soverato, legittimo il Piano spiaggia comunale",
@@ -313,7 +313,7 @@ const newsItems = [
     description:
       "Il TAR ha dichiarato inammissibile il ricorso e respinto i motivi aggiunti, confermando la legittimità del piano spiaggia comunale.",
     imageUrl: null,
-    logoUrl: null,
+    logoUrl: "/loghi/corrieredellacalabria.svg",
   },
   {
     title:
@@ -328,7 +328,7 @@ const newsItems = [
     description:
       "La Corte d'Appello di Catanzaro ha accolto il reclamo della lavoratrice contro il licenziamento collettivo.",
     imageUrl: null,
-    logoUrl: null,
+    logoUrl: "/loghi/corrieredellacalabria.svg",
   },
   {
     title:
@@ -343,7 +343,7 @@ const newsItems = [
     description:
       "La notizia documenta l'attività professionale in favore di docenti abilitati all'estero, con ricorso proposto al TAR Lazio.",
     imageUrl: null,
-    logoUrl: null,
+    logoUrl: "/loghi/corrieredellacalabria.svg",
   },
   {
     title:
@@ -402,7 +402,7 @@ const newsItems = [
     description:
       "La sentenza descritta conferma la legittimità delle elezioni comunali di Cropani.",
     imageUrl: null,
-    logoUrl: null,
+    logoUrl: "/loghi/lanuovacalabria.png",
   },
   {
     title:
@@ -417,7 +417,7 @@ const newsItems = [
     description:
       "La notizia riguarda un contenzioso elettorale regionale in cui l'Avv. Giuseppe Pitaro compare tra i difensori.",
     imageUrl: null,
-    logoUrl: null,
+    logoUrl: "/loghi/lanuovacalabria.png",
   },
   {
     title:
