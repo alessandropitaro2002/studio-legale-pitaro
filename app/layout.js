@@ -79,9 +79,9 @@ const legalServiceJsonLd = {
     "Patrocinio in Cassazione"
   ],
   sameAs: [
-    "URL_PROFILO_GOOGLE_BUSINESS",
-    "eventuale pagina Ordine Avvocati",
-    "eventuale LinkedIn"
+    "https://share.google/tKmI4ca2uHOo2NLVG",
+    "https://www.consiglionazionaleforense.it/",
+    "https://www.linkedin.com/in/giuseppe-pitaro-07916a318/"
   ]
 };
 export default function RootLayout({ children }) {
