@@ -200,8 +200,7 @@ const newsItems = [
     logoUrl: null,
   },
   {
-    title:
-      "Pitaro: prova selettiva illegittima all'Università Magna Graecia",
+    title: "Pitaro: prova selettiva illegittima all'Università Magna Graecia",
     source: "CatanzaroInforma",
     sourceUrl:
       "https://www.catanzaroinforma.it/cronaca/2024/05/07/pitaro-prova-selettiva-illeggittima-alluniversita-magna-graecia/326730/",
@@ -332,7 +331,8 @@ const newsItems = [
     logoUrl: null,
   },
   {
-    title: "Docenti calabresi inoltrano ricorso al TAR del Lazio contro il Ministero",
+    title:
+      "Docenti calabresi inoltrano ricorso al TAR del Lazio contro il Ministero",
     source: "Corriere della Calabria",
     sourceUrl:
       "https://www.corrieredellacalabria.it/2022/06/28/docenti-calabresi-inoltrano-ricorso-al-tar-del-lazio-contro-il-ministero/",
@@ -376,7 +376,8 @@ const newsItems = [
     logoUrl: null,
   },
   {
-    title: "TAR su ordinanza scuole, la soddisfazione degli avvocati Pitaro e Liperoti",
+    title:
+      "TAR su ordinanza scuole, la soddisfazione degli avvocati Pitaro e Liperoti",
     source: "CatanzaroInforma",
     sourceUrl:
       "https://www.catanzaroinforma.it/cronaca/2021/01/08/tar-su-ordinanza-scuole-la-soddisfazione-degli-avvocati-pitaro-e-liperoti/182120/",
@@ -479,7 +480,7 @@ function NewsImage({ imageUrl, title, large = false }) {
 
   return (
     <div
-      className={`flex w-full items-center justify-center bg-[radial-gradient(circle_at_top_left,rgba(216,184,148,0.45),transparent_34%),linear-gradient(135deg,#fcfaf7_0%,#eadfD3_45%,#d8c5af_100%)] ${
+      className={`flex w-full items-center justify-center bg-[radial-gradient(circle_at_top_left,rgba(216,184,148,0.45),transparent_34%),linear-gradient(135deg,#fcfaf7_0%,#eadfd3_45%,#d8c5af_100%)] ${
         large ? "h-[260px] lg:h-[430px]" : "h-48"
       }`}
     >
@@ -490,6 +491,91 @@ function NewsImage({ imageUrl, title, large = false }) {
         <p className="mt-3 text-xl font-semibold leading-tight tracking-[-0.03em] text-[#1f1a17]">
           Giuseppe Pitaro
         </p>
+      </div>
+    </div>
+  );
+}
+
+function HeroCarousel() {
+  return (
+    <div className="relative overflow-hidden rounded-[2rem] border border-[#ddd1c2] bg-white/75 p-3 shadow-[0_24px_80px_rgba(40,27,16,0.10)]">
+      <style>
+        {`
+          @keyframes heroCarousel {
+            0%, 16% {
+              transform: translateX(0%);
+            }
+            20%, 36% {
+              transform: translateX(-100%);
+            }
+            40%, 56% {
+              transform: translateX(-200%);
+            }
+            60%, 76% {
+              transform: translateX(-300%);
+            }
+            80%, 96% {
+              transform: translateX(-400%);
+            }
+            100% {
+              transform: translateX(0%);
+            }
+          }
+
+          .hero-carousel-track {
+            animation: heroCarousel 28s ease-in-out infinite;
+          }
+
+          .hero-carousel-track:hover {
+            animation-play-state: paused;
+          }
+        `}
+      </style>
+
+      <div className="overflow-hidden rounded-[1.6rem]">
+        <div className="hero-carousel-track flex">
+          {featuredNews.map((item) => (
+            <article key={item.title} className="min-w-full bg-[#fcfaf7]">
+              <NewsImage imageUrl={item.imageUrl} title={item.title} large />
+
+              <div className="p-6 md:p-7">
+                <div className="flex flex-wrap items-center gap-3">
+                  <SourceLogo logoUrl={item.logoUrl} source={item.source} />
+                  <span className="text-sm font-medium text-[#8b7a68]">
+                    {item.date}
+                  </span>
+                </div>
+
+                <p className="mt-5 text-xs font-semibold uppercase tracking-[0.2em] text-[#8b7a68]">
+                  {item.category}
+                </p>
+
+                <h2 className="mt-3 text-2xl font-semibold leading-tight tracking-[-0.03em]">
+                  {item.title}
+                </h2>
+
+                <p className="mt-4 line-clamp-3 leading-7 text-[#564b41]">
+                  {item.description}
+                </p>
+
+                <div className="mt-5 flex items-center justify-between gap-4">
+                  <span className="rounded-full bg-[#f1e7dc] px-4 py-2 text-xs font-semibold text-[#6d5540]">
+                    {item.status}
+                  </span>
+
+                  <a
+                    href={item.sourceUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm font-semibold text-[#7b5a36] transition hover:text-[#1f1a17]"
+                  >
+                    Leggi
+                  </a>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
       </div>
     </div>
   );
@@ -607,8 +693,8 @@ export default function AttivitaProfessionalePage() {
             <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(252,249,245,0.78),rgba(247,244,238,0.98)_100%)]" />
           </div>
 
-          <div className="relative mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
-            <div className="max-w-4xl">
+          <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-4 py-14 sm:px-6 sm:py-20 lg:grid-cols-[0.95fr_1.05fr] lg:px-8 lg:py-24">
+            <div>
               <p className="text-sm font-medium uppercase tracking-[0.22em] text-[#8b7a68]">
                 Attività professionale
               </p>
@@ -642,6 +728,10 @@ export default function AttivitaProfessionalePage() {
                   </span>
                 ))}
               </div>
+            </div>
+
+            <div className="lg:pl-4">
+              <HeroCarousel />
             </div>
           </div>
         </section>
@@ -710,21 +800,6 @@ export default function AttivitaProfessionalePage() {
                 </div>
               </article>
             ))}
-          </div>
-        </section>
-
-        <section className="mx-auto max-w-7xl px-4 pb-12 sm:px-6 sm:pb-16 lg:px-8">
-          <div className="rounded-[2rem] border border-[#ddd1c2] bg-white/70 p-7 shadow-sm md:p-9">
-            <p className="text-sm font-medium uppercase tracking-[0.22em] text-[#8b7a68]">
-              Nota editoriale
-            </p>
-            <p className="mt-4 max-w-4xl text-lg leading-8 text-[#564b41]">
-              Le notizie raccolte in questa pagina riguardano contenuti
-              pubblicamente disponibili e sono riportate con finalità
-              informativa, distinguendo tra risultati giudiziali, attività
-              professionali, ricorsi proposti, fasi cautelari e procedimenti
-              ancora privi di esito definitivo.
-            </p>
           </div>
         </section>
 
@@ -864,6 +939,21 @@ export default function AttivitaProfessionalePage() {
                 WhatsApp
               </a>
             </div>
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-7xl px-4 pb-10 sm:px-6 sm:pb-12 lg:px-8">
+          <div className="rounded-[1.4rem] border border-[#ddd1c2] bg-white/55 px-5 py-4 text-sm leading-6 text-[#6d6053] shadow-sm md:px-6">
+            <p>
+              <span className="font-semibold text-[#1f1a17]">
+                Nota editoriale.
+              </span>{" "}
+              Le notizie raccolte in questa pagina riguardano contenuti
+              pubblicamente disponibili e sono riportate con finalità
+              informativa, distinguendo tra risultati giudiziali, attività
+              professionali, ricorsi proposti, fasi cautelari e procedimenti
+              ancora privi di esito definitivo.
+            </p>
           </div>
         </section>
       </main>
