@@ -406,21 +406,6 @@ const newsItems = [
   },
   {
     title:
-      "L'elezione di Francesco Pitaro è legittima, il TAR dichiara improcedibile il ricorso",
-    source: "La Nuova Calabria",
-    sourceUrl:
-      "https://lanuovacalabria.it/post/lelezione-di-francesco-pitaro-e-legittima-il-tar-dichiara-improcedibile-il-ricorso-di-consoli",
-    date: "25/06/2020",
-    category: "Contenzioso elettorale regionale",
-    role: "Co-difesa",
-    status: "Ricorso improcedibile",
-    description:
-      "La notizia riguarda un contenzioso elettorale regionale in cui l'Avv. Giuseppe Pitaro compare tra i difensori.",
-    imageUrl: null,
-    logoUrl: "/loghi/lanuovacalabria.png",
-  },
-  {
-    title:
       "Non vi fu danno nei confronti dell'ASP, la Corte dei conti assolve Mauro Notarangelo",
     source: "CatanzaroInforma",
     sourceUrl:
