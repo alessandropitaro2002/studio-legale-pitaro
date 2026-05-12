@@ -71,11 +71,11 @@ export default function LandingPage() {
   useEffect(() => {
     const fadeTimer = setTimeout(() => {
       setIntroVisible(false);
-    }, 2400);
+    }, 1500);
 
     const removeTimer = setTimeout(() => {
       setShowIntro(false);
-    }, 3200);
+    }, 2100);
 
     return () => {
       clearTimeout(fadeTimer);
@@ -126,6 +126,19 @@ export default function LandingPage() {
 
   return (
     <div className="min-h-screen scroll-smooth bg-[#f7f4ee] text-[#1f1a17]">
+      <style>
+        {`
+          @keyframes introLoading {
+            0% {
+              transform: scaleX(0);
+            }
+            100% {
+              transform: scaleX(1);
+            }
+          }
+        `}
+      </style>
+
       {showIntro && (
         <div
           className={`fixed inset-0 z-[999] flex items-center justify-center overflow-hidden bg-[#f7f4ee] transition-opacity duration-700 ${
@@ -140,24 +153,30 @@ export default function LandingPage() {
             <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(252,249,245,0.86),rgba(247,244,238,0.94)_45%,rgba(247,244,238,1)_100%)]" />
           </div>
 
-          <div className="relative z-10 flex flex-col items-center px-6 text-center">
+          <div className="relative z-10 flex w-full max-w-md flex-col items-center px-6 text-center">
             <img
               src="/icon.png"
               alt="Logo Studio Legale Giuseppe Pitaro"
-              className="mb-6 h-16 w-16 object-contain sm:h-20 sm:w-20"
+              className="mb-6 h-14 w-14 object-contain sm:h-16 sm:w-16"
             />
 
-            <h1 className="max-w-[12ch] text-3xl font-semibold uppercase tracking-[0.14em] text-[#1f1a17] sm:max-w-none sm:text-4xl md:text-5xl">
+            <p className="text-xs font-medium uppercase tracking-[0.34em] text-[#8b7a68]">
+              Benvenuto
+            </p>
+
+            <h1 className="mt-4 max-w-[14ch] text-3xl font-semibold uppercase tracking-[0.14em] text-[#1f1a17] sm:max-w-none sm:text-4xl">
               Studio Legale
               <br />
               Giuseppe Pitaro
             </h1>
 
-            <p className="mt-4 text-[11px] font-medium uppercase tracking-[0.34em] text-[#8b7a68] sm:text-xs">
+            <p className="mt-4 text-[11px] font-medium uppercase tracking-[0.3em] text-[#8b7a68] sm:text-xs">
               Catanzaro
             </p>
 
-            <div className="mt-6 h-px w-28 bg-gradient-to-r from-transparent via-[#b89567] to-transparent" />
+            <div className="mt-7 w-full max-w-[220px] overflow-hidden rounded-full bg-[#e6d9ca]">
+              <div className="h-[3px] w-full origin-left animate-[introLoading_1.5s_ease-in-out_forwards] rounded-full bg-gradient-to-r from-[#7b5a36] via-[#d8b894] to-[#1f1a17]" />
+            </div>
           </div>
         </div>
       )}
@@ -185,13 +204,22 @@ export default function LandingPage() {
             <a href="#home" className="transition hover:text-[#7b5a36]">
               Home
             </a>
-            <a href="/avvocato-giuseppe-pitaro" className="transition hover:text-[#7b5a36]">
+            <a
+              href="/avvocato-giuseppe-pitaro"
+              className="transition hover:text-[#7b5a36]"
+            >
               L&apos;Avv. Giuseppe Pitaro
             </a>
-            <a href="/attivita-professionale" className="transition hover:text-[#7b5a36]">
+            <a
+              href="/attivita-professionale"
+              className="transition hover:text-[#7b5a36]"
+            >
               Attività professionale
             </a>
-            <a href="/aree-di-attivita" className="transition hover:text-[#7b5a36]">
+            <a
+              href="/aree-di-attivita"
+              className="transition hover:text-[#7b5a36]"
+            >
               Aree di attività
             </a>
             <a href="/contatti" className="transition hover:text-[#7b5a36]">
@@ -243,7 +271,7 @@ export default function LandingPage() {
               >
                 Attività professionale
               </a>
-                  <a
+              <a
                 href="/aree-di-attivita"
                 onClick={closeMobileMenu}
                 className="rounded-xl px-3 py-3 transition hover:bg-white/70"
@@ -272,7 +300,7 @@ export default function LandingPage() {
       <main>
         <section
           id="home"
-          className="relative overflow-hidden scroll-mt-24 min-h-[calc(100svh-72px)]"
+          className="relative min-h-[calc(100svh-72px)] scroll-mt-24 overflow-hidden"
         >
           <div className="absolute inset-0">
             <div className="absolute -left-24 top-0 h-72 w-72 rounded-full bg-[#ead9c6]/55 blur-3xl" />
@@ -311,10 +339,10 @@ export default function LandingPage() {
 
                 <p className="mt-5 max-w-lg text-[15px] leading-7 text-[#463d35] sm:text-lg sm:leading-8 md:max-w-2xl md:text-xl">
                   Dal 1993 titolare dello Studio Legale Pitaro a Catanzaro,
-                  l&apos;Avv. Giuseppe Pitaro offre assistenza e consulenza legale
-                  con un profilo costruito su oltre 30 anni di esperienza,
-                  competenza multidisciplinare e attenzione rigorosa alla tutela
-                  degli interessi del cliente.
+                  l&apos;Avv. Giuseppe Pitaro offre assistenza e consulenza
+                  legale con un profilo costruito su oltre 30 anni di
+                  esperienza, competenza multidisciplinare e attenzione rigorosa
+                  alla tutela degli interessi del cliente.
                 </p>
 
                 <div className="mt-7 flex w-full max-w-sm flex-col gap-3 sm:max-w-none sm:flex-row">
@@ -415,7 +443,7 @@ export default function LandingPage() {
               <span className="text-[10px] uppercase tracking-[0.22em]">
                 Scorri
               </span>
-              <span className="flex h-10 w-10 items-center justify-center rounded-full border border-[#d7c6b2] bg-white/84 backdrop-blur-sm animate-bounce">
+              <span className="flex h-10 w-10 animate-bounce items-center justify-center rounded-full border border-[#d7c6b2] bg-white/84 backdrop-blur-sm">
                 <ChevronDown size={18} strokeWidth={1.8} />
               </span>
             </a>
@@ -501,10 +529,10 @@ export default function LandingPage() {
                 Principali aree di assistenza e consulenza legale.
               </h2>
               <p className="mt-6 text-lg leading-8 text-[#5f5449]">
-                Lo studio offre assistenza giudiziale e stragiudiziale in diversi
-                ambiti del diritto, con un approccio fondato su competenza,
-                attenzione al caso concreto e tutela effettiva degli interessi
-                del cliente.
+                Lo studio offre assistenza giudiziale e stragiudiziale in
+                diversi ambiti del diritto, con un approccio fondato su
+                competenza, attenzione al caso concreto e tutela effettiva degli
+                interessi del cliente.
               </p>
             </div>
 
@@ -655,13 +683,22 @@ export default function LandingPage() {
               <a href="#home" className="transition hover:text-white">
                 Home
               </a>
-              <a href="/avvocato-giuseppe-pitaro" className="transition hover:text-white">
+              <a
+                href="/avvocato-giuseppe-pitaro"
+                className="transition hover:text-white"
+              >
                 L&apos;Avv. Giuseppe Pitaro
               </a>
-              <a href="/attivita-professionale" className="transition hover:text-white">
+              <a
+                href="/attivita-professionale"
+                className="transition hover:text-white"
+              >
                 Attività professionale
               </a>
-              <a href="/aree-di-attivita" className="transition hover:text-white">
+              <a
+                href="/aree-di-attivita"
+                className="transition hover:text-white"
+              >
                 Aree di attività
               </a>
               <a href="/contatti" className="transition hover:text-white">
@@ -681,10 +718,7 @@ export default function LandingPage() {
               >
                 segreteria@studiolegalepitaro.it
               </a>
-              <a
-                href="tel:+39335286550"
-                className="transition hover:text-white"
-              >
+              <a href="tel:+39335286550" className="transition hover:text-white">
                 335 286550
               </a>
               <a
@@ -715,7 +749,9 @@ export default function LandingPage() {
 
         <div className="border-t border-white/10">
           <div className="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-5 text-xs text-[#8f8376] sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
-            <p>© 2026 Studio Legale Giuseppe Pitaro. Tutti i diritti riservati.</p>
+            <p>
+              © 2026 Studio Legale Giuseppe Pitaro. Tutti i diritti riservati.
+            </p>
             <p>Catanzaro, Calabria</p>
           </div>
         </div>
