@@ -40,7 +40,7 @@ const featuredNews = [
     description:
       "Il Consiglio di Stato ha annullato lo scioglimento degli organi elettivi del Comune di Guardavalle, con conseguente rientro in carica di sindaco, giunta e consiglio comunale.",
     imageUrl: null,
-    logoUrl: null,
+    logoUrl: "/loghi/laCnews.png",
   },
   {
     title: "Pol.Service / Dulbecco, affidamento annullato",
@@ -358,7 +358,7 @@ const newsItems = [
     description:
       "Il Consiglio di Stato ha accolto il ricorso degli amministratori, annullando il decreto di scioglimento del Comune.",
     imageUrl: null,
-    logoUrl: null,
+    logoUrl: "/loghi/laCnews.png",
   },
   {
     title:
