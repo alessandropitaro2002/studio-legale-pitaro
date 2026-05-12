@@ -42,7 +42,40 @@ const websiteJsonLd = {
   name: "Studio Legale Giuseppe Pitaro",
   alternateName: "Studio Legale Pitaro",
 };
-
+const legalServiceJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  "@id": "https://www.studiolegalepitaro.it/#studio-legale",
+  name: "Studio Legale Giuseppe Pitaro",
+  alternateName: "Studio Legale Pitaro",
+  url: "https://www.studiolegalepitaro.it/",
+  image: "https://www.studiolegalepitaro.it/og-image.jpg",
+  telephone: "+39335286550",
+  email: "segreteria@studiolegalepitaro.it",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Via Francesco Acri, 88",
+    postalCode: "88100",
+    addressLocality: "Catanzaro",
+    addressRegion: "Calabria",
+    addressCountry: "IT",
+  },
+  areaServed: ["Catanzaro", "Provincia di Catanzaro", "Calabria"],
+  founder: {
+    "@type": "Person",
+    name: "Giuseppe Pitaro",
+    jobTitle: "Avvocato",
+    url: "https://www.studiolegalepitaro.it/avvocato-giuseppe-pitaro",
+  },
+  knowsAbout: [
+    "Diritto amministrativo",
+    "Ricorsi al TAR",
+    "Appalti pubblici",
+    "Diritto civile",
+    "Diritto del lavoro",
+    "Patrocinio in Cassazione",
+  ],
+};
 export default function RootLayout({ children }) {
   return (
     <html lang="it">
@@ -50,6 +83,10 @@ export default function RootLayout({ children }) {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(legalServiceJsonLd) }}
         />
         {children}
         <Analytics />
