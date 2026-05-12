@@ -2,7 +2,6 @@ import Link from "next/link";
 import {
   ArrowRight,
   BadgeCheck,
-  Balance,
   Banknote,
   Briefcase,
   Building2,
@@ -13,7 +12,6 @@ import {
   Home,
   Landmark,
   Mail,
-  MapPin,
   MessageCircle,
   Phone,
   Scale,
@@ -150,7 +148,7 @@ const highlightedAreas = [
   },
   {
     title: "Responsabilità amministrativo-contabile",
-    icon: Balance,
+    icon: Scale,
     text:
       "Difesa in giudizi dinanzi alla Corte dei conti, responsabilità erariale, danno pubblico e controversie amministrativo-contabili.",
   },
