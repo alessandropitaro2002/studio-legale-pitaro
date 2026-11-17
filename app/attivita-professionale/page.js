@@ -332,21 +332,6 @@ const newsItems = [
   },
   {
     title:
-      "Docenti calabresi inoltrano ricorso al TAR del Lazio contro il Ministero",
-    source: "Corriere della Calabria",
-    sourceUrl:
-      "https://www.corrieredellacalabria.it/2022/06/28/docenti-calabresi-inoltrano-ricorso-al-tar-del-lazio-contro-il-ministero/",
-    date: "28/06/2022",
-    category: "Scuola / Pubblico impiego",
-    role: "Difesa",
-    status: "Ricorso proposto",
-    description:
-      "La notizia documenta l'attività professionale in favore di docenti abilitati all'estero, con ricorso proposto al TAR Lazio.",
-    imageUrl: null,
-    logoUrl: "/loghi/corrieredellacalabria.svg",
-  },
-  {
-    title:
       "A Guardavalle scioglimento per mafia illegittimo: tornano in carica sindaco, giunta e Consiglio",
     source: "LaC News24",
     sourceUrl:
